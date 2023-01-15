@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- metas, link, style, title -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,  initial-scale=1" />
+    <meta author="Vinay" description="I am teaching HTML & CSS" />
+    <title>HTML -1</title>
+
+    <style>
+      /*
+      Selectors: 
+      1. select by Tag --> div, h1, p, 
+      2. Select by class Name --> use dot(.) before class name
+      3. Select by id --> use #(hash) before id name
+      4. High priority
+          Inline styling
+          ID
+          Class
+          Tag
+      */
+      #header-id {
+        background-color: pink;
+      }
+      .header-class {
+        background-color: blue;
+        color: yellow;
+      }
+      div {
+        background-color: red;
+      }
+
+      .p1 {
+        color: blueviolet;
+        width: 500px;
+        height: 50px;
+        border: 2px solid green;
+      }
+      .p2 {
+        color: blanchedalmond;
+        width: 600px;
+        height: 60px;
+        border: 5px dotted blue;
+      }
+      .pre {
+        color: aquamarine;
+        width: 500px;
+        height: 200px;
+        border: 3px dashed black;
+      }
+      .div-1 {
+        border: 2px solid black;
+        border-radius: 5px;
+      }
+      .iron-man-2 {
+        border: 2px solid black;
+        border-radius: 50%;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!--Header Tag-->
+    <!-- 
+    <h1>This is H1</h1>
+    <h2>This is H2</h2>
+    <h3>This is H3</h3>
+
+    <h4>This is H4</h4>
+    <h5>This is H5</h5>
+    <h6>This is H6</h6> -->
+
+    <!--Paragraph Tag-->
+    <!-- <p>I'm writing any para</p>
+    <p>I'm writing any para2</p>
+
+    <p>
+      In publishing and <b>graphic design</b>, <strong>Lorem ipsum</strong> is a
+      placeholder text commonly used to demonstrate the visual form of a
+      document or a typeface without relying on meaningful content. Lorem ipsum
+      may be used as a <i>placeholder</i> before <em>final copy</em> is
+      <em>
+        <strong><u>available</u></strong></em
+      >
+    </p>
+    <hr />
+    <p>
+      <strong>What does Lorem Ipsum mean?</strong>
+      <br />
+      Image result for lorem ipsum Originally from Latin, Lorem ipsum has no
+      intelligible meaning. It is simply a display of letters to be viewed as a
+      sample with given graphical elements in a file. "Lipsum"
+      <s>(a portmanteau of lorem and ipsum)</s> generators are commonly used to
+      form generic text in a file.
+      <br />
+      <br />
+      <br />
+    </p>
+
+    <hr />
+    <p>H<sub>2</sub>O</p>
+    <br />
+
+    <p>a<sup>2</sup>-b<sup>2</sup> = (a-b)(a+b)</p> -->
+    <div class="header-class" id="header-id" style="background-color: brown">
+      <a href="#">Home</a>
+      <a href="services.html">Services</a>
+      <a href="about.html">About</a>
+      <a href="http://vinaymaurya.in/" target="blank">Contact</a>
+      <p>Products</p>
+    </div>
+    <!-- div-- division -->
+    <div style="width: 500px; height: 250px" class="div-1">
+      <!-- Absolute link/source -->
+      <img
+        src="https://images.hindustantimes.com/tech/img/2022/09/21/1600x900/Iron_Man_game_1663763152566_1663763165963_1663763165963.jpg"
+        height="100"
+        width="150"
+        alt="iron-man posing"
+        style="border-radius: 50px; border: 3px dotted white"
+      />
+      <br />
+      <!-- Relative source or link -->
+      <img
+        src="ironman.jpg"
+        alt="Iron man using his powers"
+        height="150"
+        width="100"
+        class="iron-man-2"
+      />
+    </div>
+    <span style="background-color: bisque">
+      <!-- Absolute link -->
+      <a href="http://vinaymaurya.in/" target="blank">Click here</a>
+    </span>
+
+    <div class="div-class" id="div-id">
+      <p>p vs pre</p>
+      <p class="p1">Both are used for text</p>
+      <p class="p2">
+        The random paragraph generator creates random paragraphs to be used for
+        creative writing or other creative endeavors.Random Para (reload the
+        page for another). A member of the former Czech government, now
+        imperilled anew in the Red blight which has fallen on his land, .
+      </p>
+      <br />
+      <br />
+      <br />
+      <br />
+
+      <pre class="pre">
+        The random paragraph 
+           generator creates random
+               paragraphs to be used for
+        creative writing or
+        The random paragraph 
+        generator creates random
+            paragraphs to be used for
+     creative writing or
+      </pre>
+    </div>
+  </body>
+</html>

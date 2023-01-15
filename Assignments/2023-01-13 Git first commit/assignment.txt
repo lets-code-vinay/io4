@@ -1,0 +1,6 @@
+Why about your self?
+--Note: Write about yourself and commit. 
+
+Why yoo want to be a software Engineer?
+--Note: this must be your second commit. 
+
