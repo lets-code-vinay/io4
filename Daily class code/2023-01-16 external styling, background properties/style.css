@@ -1,0 +1,135 @@
+body {
+  background-color: beige;
+}
+
+.red-div {
+  background-color: aqua;
+  height: 100px;
+
+  /* You can add images from absolute(online) and relative (from system) */
+  /* background-image: url(pikachu.png); */
+  /* background-image: url(https://images.unsplash.com/photo-1586957469525-7850e7bef283?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTV8fGp1bmdsZXxlbnwwfHwwfHw%3D&w=1000&q=80); */
+
+  /* --To use multiple images */
+  /* background-image: url(pikachu.png), url(https://images.unsplash.com/photo-1586957469525-7850e7bef283?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTV8fGp1bmdsZXxlbnwwfHwwfHw%3D&w=1000&q=80); */
+  /* background-image: url(pikachu.png),  url(star.png); */
+
+  /* to use image with gradient*/
+  background-image: url(pikachu.png), linear-gradient(white, black);
+
+  /*default*/
+  /* background-size: auto; */
+  /* background-size: contain; */
+  /* background-size: 20%; */
+  background-size: 100px;
+  /* background-size: 200px 100px; */
+
+  /* ---Background Repeat--- */
+  /*No-repeat: don't repeat the images*/
+  /* background-repeat: no-repeat; */
+
+  /*repeat:  repeat the images continuously*/
+  /* background-repeat: repeat; */
+
+  /*Repeat: horizontally*/
+  /* background-repeat: repeat-x; */
+
+  /*Repeat: Vertically*/
+  /* background-repeat: repeat-y; */
+
+  background-repeat: round;
+  /* background-repeat: space ; */
+}
+
+.green-div {
+  background-color: red;
+  height: 500px;
+  /* background-size: 100px; */
+
+  background-image: url(https://akm-img-a-in.tosshub.com/sites/cosmo/sites/default/files/2021-07/shraddha.jpg?t4XLKA.8oMvfFnXfETjFLqWHEqtxBtUs);
+  background-repeat: no-repeat;
+
+  /* -- To position image from bottom */
+  /* background-position: bottom; */
+
+  /* -- To position image from top */
+  /* background-position: top; */
+
+  /* -- To position image from center */
+  /* background-position: center; */
+
+  /* -- To position image from right */
+  /* background-position: right; */
+
+  /* -- To position image from left */
+  /* background-position: left; */
+
+  /* -- To position image on X axis */
+  /* background-position-x: right; */
+
+  /* -- To position image on X axis */
+  /* background-position-x: left; */
+
+  /* -- To position image on center of X axis */
+  /* background-position-x: center; */
+
+  /* -- To position image at any position */
+  /* background-position-x: 40%; */
+  background-position-x: 40px;
+
+  /* -- To position image on Y axis */
+  /* background-position-y: top; */
+
+  /* -- To position image on Y axis */
+  background-position-y: bottom;
+
+  /* -- To position image on center of Y axis */
+  /* background-position-y: center; */
+
+  /* -- To position image at any position */
+  /* background-position-y: 4%; */
+  background-position-y: 40px;
+
+  /* -- To blend any images */
+  /* background-blend-mode: normal; */
+  /* background-blend-mode: multiply; */
+  /* background-blend-mode: hard-light; */
+  /* background-blend-mode: difference; */
+
+  /* --- Filters on any images*/
+
+  /*To blur a any image*/
+  /* filter: blur(10px); */
+
+  /*To Bright a any image*/
+  /* filter: brightness(1.5); */
+  /* filter: brightness(0.1); */
+
+  /* --To invert a any image*/
+  /* filter: invert(75%); */
+  /* filter: invert(100%); */
+
+  /* --To opacity a any image*/
+  /* filter: opacity(10%); */
+
+  /* --to Contrast any image*/
+  /* filter: contrast(200%); */
+
+  /* --to Sepia any image*/
+  /* filter: sepia(50%); */
+
+  /* --to Saturate any image*/
+  /* filter: saturate(50%); */
+
+  /* --to Grayscale any image*/
+  /* filter: grayscale(100%); */
+
+  /* --to hue-rotate any image*/
+  /* filter: hue-rotate(270deg); */
+
+  /* --to add drop shadow to any image*/
+  /* filter: drop-shadow(16px 20px 20px blue); */
+
+  /* -- Short hand : to use multiple properties together*/
+  filter: brightness(1.2) contrast(150%) blur(5px) grayscale(90%);
+}
