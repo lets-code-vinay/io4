@@ -4,8 +4,12 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="list.css" />
+    <link rel="icon" type="image" href="button.svg" />
     <title>List</title>
   </head>
+
   <body>
     <!-- Types of List
     We have 3 types of Lists -->
@@ -53,7 +57,12 @@
       <li>Mango</li>
       <li>Strawberry</li>
       <ul>
-        <li>Apple</li>
+        <li style="list-style-type: none">Apple</li>
+        <ol type="A">
+          <li>Kashmiri Apple</li>
+          <li>Himachali Apple</li>
+          <li>Green Apple</li>
+        </ol>
         <li>Banana</li>
       </ul>
       <li>Raspberry</li>
@@ -75,16 +84,16 @@
 
     <strong> Movies:</strong>
     <ul>
-      <li>Avengers</li>
-      <li>Bloody Mary</li>
-      <li>Avatar</li>
+      <li class="no-bullets">Avengers</li>
+      <li class="no-bullets">Bloody Mary</li>
+      <li class="no-bullets">Avatar</li>
     </ul>
 
     <strong> Food:</strong>
     <ul style="list-style-type: square">
       <li>Burger</li>
       <li>kulcha</li>
-      <li>Pizza</li>
+      <li class="no-bullets">Pizza</li>
     </ul>
   </body>
 </html>
