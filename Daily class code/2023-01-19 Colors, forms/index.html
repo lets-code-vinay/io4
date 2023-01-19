@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="style.css" />
+    <title>Colors</title>
+  </head>
+  <body>
+    <main>
+      <!--
+            How many types of colors:
+            7 -> As per light
+        -->
+
+      <!--
+            1. Primary Color:  Red, Yellow, Blue
+            2. Secondary Color:(2 or more colors added together to make a new color)
+                Grey -- White + Black
+                ParrotColor -- Yellow + Green
+                Green -- Red + Blue
+
+
+
+                Applications:
+                    Font Color
+                    Background color
+                    border
+
+         Colors:
+            By color name:
+            RGB:
+            Hex:
+            HSL:
+            HWB:
+            CMYK:
+
+
+            ---------------------------------
+            RGB:
+                Red-Green-Blue
+                rgb(red, green, blue)
+                rgb(0,0,0) -- Black
+                rgb(255,255,255) -- white
+                rgb(255,0,0) -- Red
+                rgb(0,255,0) -- Green
+                rgb(0,0,255) -- blue
+
+                To make transparency use ALPHA 0.0-1.0
+                rgba(180,65,47, 0)
+
+            Hex:
+                Hexadecimal
+                we use # ro define color
+                #RR GG BB
+                #ff55aa
+
+                #ffffff for white
+                #000000 for black
+                #888888 for grey
+
+                to add opacity add value (00 - ff)
+                #45bbcc88
+
+
+                HSL
+                    Hue Saturation Lightness
+                    Hue -- in degrees from 0 to 360
+                    Saturation and Lightness are  in Percentage from 0 - 100
+                    hsl(180, 90%, 80%)
+                    HSL is not supported by CSS3, But it will use in CSS4
+
+                HWB
+                    Hue Whiteness Blackness
+                    Hue -- in degrees from 0 to 360
+                    Blackness and Whiteness are  in Percentage from 0 - 100
+                    hwb(180, 90%, 80%)
+                    HWB is not supported by CSS3, But it will use in CSS4
+
+                CMYK
+                    Cyan Magenta Yellow Black
+                    all values are in Percentage
+                    cmyk(75%, 56%, 40%, 50%)
+                    CMYK is not supported by CSS3, But it will use in CSS4
+
+
+            Gradients
+                Adding two or more colors
+                1. Linear Gradient
+                2. Radial Gradient
+                3. Conical Gradient
+
+                    Linear Gradient
+                        background: linear-gradient(direction, first color percentage, second color percentage, 3rd color percentage)
+                        background(to right, #ee4578 40%, rgb(180,45,30) 40%, black 80%)
+                            Direction:
+                                to top
+                                to bottom
+                                to left
+                                to right
+                    -->
+      <section>
+        <div class="color-box-1" id="color-box-1">
+          <h2>Let's Play with the colors</h2>
+        </div>
+
+        <div class="color-box-2" id="color-box-2">
+          <h2>Let's play with colors in div2</h2>
+        </div>
+
+        <div class="color-box-3" id="color-box-3">
+          <h2>Let's play with colors in div3</h2>
+        </div>
+
+        <div class="color-box-4" id="color-box-4">
+          <h2>Let's Play with the colors div4</h2>
+        </div>
+
+        <div class="color-box-5" id="color-box-5">
+          <h2>Let's play with colors in div5</h2>
+        </div>
+
+        <div class="color-box-6" id="color-box-6">
+          <h2>Let's play with colors in div6</h2>
+        </div>
+
+        <div class="color-box-7" id="color-box-7">
+          <h2>Let's play with colors in div7</h2>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

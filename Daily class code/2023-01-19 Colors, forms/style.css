@@ -1,0 +1,54 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url(https://res.cloudinary.com/dk-find-out/image/upload/q_80,w_1920,f_auto/A-dreamstime_1601578_t5w61h.jpg);
+}
+
+div {
+  height: 150px;
+}
+#color-box-1 {
+  /* background-color: red; */
+  background-color: rgba(133, 96, 96, 0.5);
+  color: aqua;
+}
+
+.color-box-2 {
+  background-color: yellow;
+  background-color: rgb(100, 100, 100);
+  color: rgb(45, 150, 120);
+}
+
+.color-box-3 {
+  background-color: blanchedalmond;
+  background-color: rgba(100, 100, 100, 0.7);
+}
+
+.color-box-4 {
+  background-color: #ffffff;
+  color: #abcdef;
+}
+
+.color-box-5 {
+  background-color: #888888;
+  border: 5px dashed #8b5050;
+}
+
+.color-box-6 {
+  background-color: #1473e633;
+  color: #888888;
+}
+
+#color-box-7 {
+  background: linear-gradient(
+    to right,
+    #888888 0%,
+    yellow 20%,
+    yellowgreen 30%,
+    red 80%
+  );
+}
