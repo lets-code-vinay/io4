@@ -1,0 +1,91 @@
+/*
+universal Selector
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.div-1,
+.div-2,
+.div-3 {
+  border: 2px solid black;
+  height: 100px;
+}
+.div-1 {
+  background-color: aqua;
+  color: brown;
+}
+
+/*
+
+:::::::  Notes ::::::::
+Margin: to provide gap from parent and sibling we use margin
+margin: 10px; --> Provide gap at all four sides Top, right, bottom, left  
+margin-left: 10px; --> provide gap at left
+  margin-top: 20px; --> provide gap at top
+  margin-bottom: 2px; --> provide gap at bottom
+  margin-right: 60px; --> provide gap at right
+
+    Short hand
+    margin: 10px 5px 2px 12px; 
+    Top Right Bottom Left 
+
+    Shorthand for top+bottom Right+left
+    margin: 10px 20px;
+             Top+bottom Right+ left
+
+    To centralized any element
+    margin: 10% (divide remaining space / 2) 
+    margin: 0  auto;
+
+
+
+*/
+
+.div-1 {
+  /* padding-top: 2%;
+  padding-right: 5%;
+  padding-bottom: 3%;
+  padding-left: 4%; */
+  /*Shorthand*/
+  /* padding: 2% 1% 2% 4%; */
+  padding: 2% 3%;
+}
+.child-div-1 {
+  background-color: yellowgreen;
+  height: 100%;
+}
+.div-2 {
+  background-color: beige;
+  color: blue;
+  /* margin-left: 10px;
+  margin-top: 20px;
+  margin-bottom: 2px;
+  margin-right: 60px; */
+
+  /*Short hand*/
+  /* margin: 10px 5px 2px 12px; */
+  /* Top Right Bottom Left */
+
+  margin: 10px 20px;
+  /* Top+bottom Right+ left */
+
+  padding: 2%;
+}
+
+.heading-tag {
+  background-color: blueviolet;
+}
+
+.h3-tag {
+  margin: 5px;
+  padding: 5px;
+}
+
+.div-3 {
+  width: 80%;
+  margin: 5% auto;
+}
