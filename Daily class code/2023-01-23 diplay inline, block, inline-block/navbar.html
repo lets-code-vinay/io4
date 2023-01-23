@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=\, initial-scale=1.0" />
+    <title>Navbar</title>
+
+    <style>
+      header {
+        width: 50%;
+        margin: 0 auto;
+      }
+      div {
+        display: inline;
+      }
+
+      .imageProp {
+        width: 3%;
+        height: 15px;
+      }
+      a {
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <a href="index.html">
+        <img
+          src="https://picsum.photos/200/300"
+          alt="random images"
+          class="imageProp"
+        />
+      </a>
+      <a href="#">Home</a>
+      <a href="index.html">About</a>
+      <a href="#">Projects</a>
+      <a href="#">Contact</a>
+    </header>
+    <section>
+      <!--FORM Tag attributes: action="./action.php" method="get" -->
+      <form autocomplete="off">
+        <!--
+            Input tag
+                Type: Text, number, date,  radio, checkbox, email, password, url, 
+                        button, 
+        -->
+        <!--
+            Label is used to define what kind of input box or title
+            FOR: For attribute is used to target input box
+                    For property must be same as id of input box
+        -->
+        <label for="first_name">First Name</label>
+        <!--1. type="text" -- You can add any text inside type text
+            2. id="first_name" -- id must be unique, it helps to style element 
+                                 and helps label to target input box
+            3. placeholder="Enter your first name"
+                                Placeholder used to define what user needs to insert in input box
+        -->
+        <input
+          type="text"
+          id="first_name"
+          placeholder="Enter your first Name"
+        />
+        <br />
+
+        <label for="last_name">Last Name</label>
+        <input type="text" id="last_name" placeholder="Enter your Last Name" />
+        <br />
+
+        <label for="Number">Number</label>
+        <input
+          type="Number"
+          id="Number"
+          placeholder="Enter your phone Number"
+        />
+        <br />
+
+        <label for="password">Password</label>
+        <input
+          type="password"
+          id="password"
+          placeholder="Enter your Password"
+        />
+        <br />
+        <!--
+            Types of button
+        -->
+        <button type="button">1 Click me</button>
+        <button type="submit">2 Submit</button>
+
+        <input type="button" value="3 Click me" />
+        <input type="submit" value="4. submit" />
+      </form>
+    </section>
+  </body>
+</html>

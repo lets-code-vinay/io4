@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Display Properties</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      div {
+        width: 22%;
+        height: 50px;
+        display: inline-block;
+        margin-bottom: 5px;
+      }
+      .span1,
+      .span3,
+      .span2,
+      .span4 {
+        width: 22%;
+        height: 50px;
+        border: 1px dotted blue;
+        display: inline-block;
+      }
+      .div1,
+      .div3,
+      .span1,
+      .span3 {
+        background: red;
+      }
+
+      .div2,
+      .div4,
+      .span2,
+      .span4 {
+        background-color: rgb(27, 118, 118);
+      }
+
+      .p1,
+      .p2 {
+        background-color: darkgray;
+        display: inline;
+        width: 50%;
+      }
+      .p3 {
+        background-color: aquamarine;
+        width: 60%;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <section>
+        <div class="div1">div1</div>
+        <div class="div2">div223456</div>
+        <div class="div3">div3</div>
+        <div class="div4">div4</div>
+      </section>
+      <section>
+        <span class="span1">span1</span>
+        <span class="span2">span2</span>
+        <span class="span3">span3</span>
+        <span class="span4">span4</span>
+      </section>
+      <section>
+        <p class="p1">This is my paragraph</p>
+        <p class="p2">This is 2nd line</p>
+
+        <p class="p3">
+          The front-rank position which Indian yoga holds in the mystical world
+          may easily make it the chief claimant to humanity's attention when
+          humanity turns appreciatively towards mysticism.
+          <span>
+            But such a position is itself partly the outcome of India's having
+            retained the medieval way of life longer than the Western nations.
+            There was plenty of mysticism in medieval Europe.
+          </span>
+          It was India's failure to keep pace with Western intellectual and
+          physical development that permitted her to retain her mystical
+          predominance.
+        </p>
+      </section>
+    </main>
+  </body>
+</html>
