@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FORM</title>
+  </head>
+  <body>
+    <main>
+      <form action="./action.php" method="get" target="blank" autocomplete="on">
+        <!--
+
+            https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input
+
+
+            Buttons
+                Button are of three types
+                1. Submit : used to submit form 
+                2. Button: Use only for click purpose
+                3. Reset: To clear the form
+
+            We can create button with 2 method
+            1. label
+                    for='id name of input'
+                    class
+                    id
+            2. input
+                    type
+                        button, submit, reset
+                        type="text"
+                            value
+                            minlength
+                            maxlength
+                            disabled
+                            autofocus
+                            placeholder
+                            id
+                            class
+                            name
+                            readonly
+                            required
+                        type="password"
+                            value
+                            minlength
+                            maxlength
+                            disabled
+                            autofocus
+                            placeholder
+                            id
+                            class
+                            name
+                            readonly
+                            required
+                        
+                        type="number"
+                            min="5"
+                            max="15"
+                            id="number"
+                            class="number"
+                            step="3"
+                            disabled
+                            autofocus
+                            placeholder
+                            id
+                            class
+                            name
+                            readonly
+                            required
+                            value
+
+                        type="email"
+                            minlength="5"
+                            maxlength="50"
+                            id="email"
+                            class="email"
+                            required
+                            class="email"
+                            disabled
+                            autofocus
+                            placeholder
+                            name='email'
+                            readonly
+                            required
+                            value
+
+                        type="date"
+                            id="date"
+                            class="date"
+                            max="2024-01-01"
+                            min="1916-01-01"
+                            value="2022-10-18"
+                            step="4"
+                            name='date'
+                            readonly
+                            required
+                            disabled
+
+
+                        type="week"
+                            id="week"
+                            min="2022-W40"
+                            max="2023-W40"
+                            value="2022-W41"
+                            class="week"
+                            name='date'
+                            readonly
+                            required
+                            disabled
+
+
+                        type="month" 
+                            id="month"
+                            class="month"
+                            readonly
+                            required
+                            mix
+                            max
+                            value
+                            disabled
+                        type="url"
+                            id="url"
+                            class="url"
+                            placeholder="Enter your website"
+                            required
+                            pattern="http://.*"
+                            disabled
+                            readonly
+                        type="radio" 
+                            id="other"
+                            value="Other"
+                            name="gender"  | provide from which group this radio is being used
+                            checked 
+                            class="radio-button"
+                                | Label tag used after radio tags
+                        type="checkbox" 
+                            id="html"
+                            value="html" 
+                            checked 
+                            disabled
+                            name
+                            class
+                            required
+                            readonly 
+                        
+                        type="color"
+                            id="color"  
+                            value="#bb5fab" 
+                            required
+                            readonly
+                            disabled
+
+                    class
+                    id
+                    autofocus
+                    disabled
+            3. Button
+                    attributes
+                        Type='button'
+                        Type='submit'
+                        Type='reset'
+                    disabled
+                    class
+                    id
+                    name
+                    value
+                    accesskey='s' -- shortcut to go to button (alt+s)
+                
+        -->
+        <label for="first_name">First Name*:</label>
+        <input
+          type="text"
+          id="first_name"
+          autofocus
+          maxlength="10"
+          minlength="3"
+          placeholder="Enter your first name"
+        />
+        <br />
+        <br />
+
+        <label for="last_name">Last Name:</label>
+        <input
+          type="text"
+          id="last_name"
+          disabled
+          placeholder="Enter your Last name"
+        />
+        <br />
+        <br />
+
+        <label for="password">Password:</label>
+        <input type="password" minlength="5" id="password" class="password" />
+        <br />
+        <br />
+
+        <label for="number">Number:</label>
+        <input
+          type="number"
+          min="5"
+          max="15"
+          id="number"
+          class="number"
+          step="3"
+        />
+        <br />
+        <br />
+
+        <label for="email">Email:</label>
+        <input
+          type="email"
+          minlength="5"
+          maxlength="50"
+          id="email"
+          class="email"
+        />
+        <br />
+        <br />
+
+        <label for="date">Date:</label>
+        <input type="date" id="date" class="date" value="2022-10-18" step="4" />
+        <br />
+        <br />
+
+        <label for="week">Week:</label>
+        <input type="week" id="week" value="2022-W41" class="week" />
+        <br />
+        <br />
+
+        <label for="month">Month:</label>
+        <input type="month" id="month" class="month" />
+        <br />
+        <br />
+
+        <label for="url">Website:</label>
+        <input
+          type="url"
+          id="url"
+          class="url"
+          placeholder="Enter your website"
+          pattern="http://.*"
+          disabled
+        />
+        <br />
+        <br />
+
+        <h6>Gender</h6>
+        <input type="radio" id="male" value="Male" name="gender" />
+        <label for="male">Male</label>
+        <br />
+
+        <input type="radio" id="female" value="Female" name="gender" />
+        <label for="female">Female</label>
+        <br />
+
+        <input type="radio" id="other" value="Other" name="gender" checked />
+        <label for="other">Other</label>
+
+        <br />
+        <br />
+
+        <h6>Select Programming Languages</h6>
+        <input type="checkbox" id="c" value="c" />
+        <label for="c">C</label>
+        <br />
+        <input type="checkbox" id="cpp" value="cpp" disabled />
+        <label for="cp">C++</label>
+        <br />
+        <input type="checkbox" id="html" value="html" checked disabled />
+        <label for="html">HTML</label>
+        <br />
+        <input type="checkbox" id="css" value="css" />
+        <label for="css">CSS</label>
+        <br />
+        <input type="checkbox" id="js" value="js" />
+        <label for="js">Javascript</label>
+        <br />
+        <br />
+
+        <label for="color">Select color</label>
+        <input id="color" type="color" value="#bb5fab" />
+        <br />
+        <br />
+
+        <!-- lets continue from here-->
+        <label for="price">Price Range</label>
+        <input type="range" />
+
+        <!--Buttons-->
+        <input value="i-Submit" type="submit" disabled />
+        <input value="i-button" type="button" disabled />
+        <input value="i-reset" type="reset" disabled />
+        <br />
+
+        <button type="submit">Submit</button>
+        <button type="button" accesskey="s">Click</button>
+        <button type="reset" accesskey="r">Reset</button>
+      </form>
+    </main>
+  </body>
+</html>
