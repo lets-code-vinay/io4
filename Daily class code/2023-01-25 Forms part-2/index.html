@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FORM</title>
+    <style>
+      .admission-form {
+        width: 30%;
+        margin: 5% auto;
+        padding: 2%;
+        border: 2px solid red;
+      }
+
+      .admission-form-legend {
+        color: red;
+      }
+      .required-field {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <form
+        action="./action.php"
+        method="get"
+        target="blank"
+        autocomplete="off"
+      >
+        <!--
+          Fieldset: provides a border around the form
+          Legend: Legend is like a title or label for that form or input boxes
+        -->
+
+        <fieldset class="admission-form">
+          <legend class="admission-form-legend">School Admission Form</legend>
+          <!--
+
+            https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input
+
+
+            Buttons
+                Button are of three types
+                1. Submit : used to submit form 
+                2. Button: Use only for click purpose
+                3. Reset: To clear the form
+
+            We can create button with 2 method
+            1. label
+                    for='id name of input'
+                    class
+                    id
+            2. input
+                    type
+                        button, submit, reset
+                        type="text"
+                            value
+                            minlength
+                            maxlength
+                            disabled
+                            autofocus
+                            placeholder
+                            id
+                            class
+                            name
+                            readonly
+                            required
+                        type="password"
+                            value
+                            minlength
+                            maxlength
+                            disabled
+                            autofocus
+                            placeholder
+                            id
+                            class
+                            name
+                            readonly
+                            required
+                        
+                        type="number"
+                            min="5"
+                            max="15"
+                            id="number"
+                            class="number"
+                            step="3"
+                            disabled
+                            autofocus
+                            placeholder
+                            id
+                            class
+                            name
+                            readonly
+                            required
+                            value
+
+                        type="email"
+                            minlength="5"
+                            maxlength="50"
+                            id="email"
+                            class="email"
+                            required
+                            class="email"
+                            disabled
+                            autofocus
+                            placeholder
+                            name='email'
+                            readonly
+                            required
+                            value
+
+                        type="date"
+                            id="date"
+                            class="date"
+                            max="2024-01-01"
+                            min="1916-01-01"
+                            value="2022-10-18"
+                            step="4"
+                            name='date'
+                            readonly
+                            required
+                            disabled
+
+
+                        type="week"
+                            id="week"
+                            min="2022-W40"
+                            max="2023-W40"
+                            value="2022-W41"
+                            class="week"
+                            name='date'
+                            readonly
+                            required
+                            disabled
+
+
+                        type="month" 
+                            id="month"
+                            class="month"
+                            readonly
+                            required
+                            mix
+                            max
+                            value
+                            disabled
+                        type="url"
+                            id="url"
+                            class="url"
+                            placeholder="Enter your website"
+                            required
+                            pattern="http://.*"
+                            disabled
+                            readonly
+                        type="radio" 
+                            id="other"
+                            value="Other"
+                            name="gender"  | provide from which group this radio is being used
+                            checked 
+                            class="radio-button"
+                                | Label tag used after radio tags
+                        type="checkbox" 
+                            id="html"
+                            value="html" 
+                            checked 
+                            disabled
+                            name
+                            class
+                            required
+                            readonly 
+                        
+                        type="color"
+                            id="color"  
+                            value="#bb5fab" 
+                            required
+                            readonly
+                            disabled
+
+                        type="datetime-local"
+                            id="admission-time"
+                            class="admission-time-id"
+                            name="admission-date-time"
+                            value="2022-06-30T18:00"
+                            min="2021-06-16T01:30"
+                            max="2023-06-30T22:20"
+                            pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}"
+                            readonly
+                            required
+                            disabled
+
+                        type="range" 
+                            min="100" 
+                            max="5000" 
+                            value="1000" 
+                            step="2"
+                            required
+                            disabled
+                            readonly
+
+                        type="hidden" 
+                            id="account-number" 
+                            value="78787878" 
+                        
+                        // It is a image button
+                        type="image"
+                            src="arrow-button.png"
+                            alt="arrow button for next page"
+                            height="50px"
+                            width="50px"
+
+                        type="file"
+                            id="profile-picture"
+                            accept="image/png, image/jpg, image/jpeg"4
+                            accept='.doc, .docx, .pdf'
+                            multiple
+
+                        type="search"
+                            id,
+                            readonly,
+                            disabled,
+                            required
+                            minlength,
+                            maxlength,
+                            class
+                            value
+                        
+
+                    class
+                    id
+                    autofocus
+                    disabled
+            3. Button
+                    attributes
+                        Type='button'
+                        Type='submit'
+                        Type='reset'
+                    disabled
+                    class
+                    id
+                    name
+                    value
+                    accesskey='s' -- shortcut to go to button (alt+s)
+                
+        -->
+
+          <fieldset>
+            <legend>Student Name</legend>
+            <label for="first_name"
+              >First Name<span class="required-field">*</span>:</label
+            >
+            <input
+              type="text"
+              id="first_name"
+              maxlength="10"
+              minlength="3"
+              placeholder="Enter your first name"
+            />
+            <br />
+            <br />
+
+            <label for="last_name">Last Name:</label>
+            <input
+              type="text"
+              id="last_name"
+              disabled
+              placeholder="Enter your Last name"
+            />
+            <br />
+            <br />
+
+            <label for="password">Password:</label>
+            <input
+              type="password"
+              minlength="5"
+              id="password"
+              class="password"
+            />
+            <br />
+          </fieldset>
+          <br />
+
+          <fieldset>
+            <legend>Date and time</legend>
+            <label>Date-Time Local<span class="required-field">*</span>:</label>
+            <input
+              type="datetime-local"
+              id="admission-time"
+              class="admission-time-id"
+              name="admission-date-time"
+              value="2022-06-30T18:00"
+              min="2021-06-16T01:30"
+              max="2023-06-30T22:20"
+              pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}"
+            />
+            <br />
+            <br />
+
+            <label for="date">Date:</label>
+            <input type="date" id="date" class="date" value="2022-10-18" />
+            <br />
+            <br />
+
+            <label for="week">Week:</label>
+            <input type="week" id="week" value="2022-W41" class="week" />
+            <br />
+            <br />
+
+            <label for="month">Month:</label>
+            <input type="month" id="month" class="month" />
+            <br />
+          </fieldset>
+          <br />
+
+          <fieldset>
+            <legend>Contact Details</legend>
+
+            <label for="telephone">Telephone:</label>
+            <input
+              type="tel"
+              id="telephone"
+              name="telephone"
+              class="telephone-class"
+              placeholder="Enter your Telephone number"
+              minlength="12"
+              maxlength="12"
+              pattern="[0-9]{4}-[0-9]{3}-[0-9]{3}"
+            />
+            <br />
+            <br />
+
+            <label for="number">Age:</label>
+            <input
+              type="number"
+              min="15"
+              max="30"
+              id="number"
+              class="number"
+              step="1"
+            />
+            <br />
+            <br />
+
+            <label for="email">Email:</label>
+            <input
+              type="email"
+              minlength="5"
+              maxlength="50"
+              id="email"
+              class="email"
+            />
+            <br />
+            <br />
+
+            <label for="url">Website:</label>
+            <input
+              type="url"
+              id="url"
+              class="url"
+              placeholder="Enter your website"
+              pattern="http://.*"
+              disabled
+            />
+            <br />
+            <br />
+
+            <label for="address">Address:</label>
+            <textarea id="address" rows="50" cols="15">this</textarea>
+          </fieldset>
+          <br />
+
+          <fieldset>
+            <legend>Gender</legend>
+            <input type="radio" id="male" value="Male" name="gender" />
+            <label for="male">Male</label>
+            <br />
+
+            <input type="radio" id="female" value="Female" name="gender" />
+            <label for="female">Female</label>
+            <br />
+
+            <input
+              type="radio"
+              id="other"
+              value="Other"
+              name="gender"
+              checked
+            />
+            <label for="other">Other</label>
+
+            <br />
+          </fieldset>
+          <br />
+
+          <fieldset>
+            <legend>Select Programming Languages</legend>
+
+            <input type="checkbox" id="c" value="c" />
+            <label for="c">C</label>
+            <br />
+            <input type="checkbox" id="cpp" value="cpp" disabled />
+            <label for="cp">C++</label>
+            <br />
+            <input type="checkbox" id="html" value="html" checked disabled />
+            <label for="html">HTML</label>
+            <br />
+            <input type="checkbox" id="css" value="css" />
+            <label for="css">CSS</label>
+            <br />
+            <input type="checkbox" id="js" value="js" />
+            <label for="js">Javascript</label>
+            <br />
+          </fieldset>
+          <br />
+
+          <fieldset>
+            <legend>Filters</legend>
+            <label for="color">Select color</label>
+            <input id="color" type="color" value="#bb5fab" />
+            <br />
+            <br />
+
+            <label>Price Range</label>
+            <input type="range" min="100" max="5000" value="1000" step="2" />
+            <br />
+
+            <label for="account-number"
+              >Student Acc. No: <em>Hidden</em>
+            </label>
+            <input type="hidden" id="account-number" value="78787878" />
+          </fieldset>
+          <br />
+
+          <fieldset>
+            <legend>Uploads</legend>
+            <label for="profile-picture">Profile Picture:</label>
+            <input
+              type="file"
+              id="profile-picture"
+              accept="image/png, image/jpg, image/jpeg"
+            />
+            <br />
+            <br />
+
+            <label for="resume">Resume:</label>
+            <input type="file" accept=".doc, .docx, .pdf" />
+            <br />
+            <br />
+
+            <label for="certificates">Certificates:</label>
+            <input type="file" accept=".pdf" multiple />
+            <br />
+            <br />
+          </fieldset>
+
+          <fieldset>
+            <legend>Search</legend>
+            <input
+              type="search"
+              id="search"
+              autofocus
+              placeholder="Search in your site"
+              class="search"
+              name="search"
+              minlength="2"
+              maxlength="12"
+            />
+          </fieldset>
+
+          <fieldset>
+            <legend>Buttons</legend>
+            <!--Buttons-->
+            <input
+              type="image"
+              src="arrow-button.png"
+              alt="arrow button for next page"
+              height="50px"
+              width="50px"
+            />
+
+            <br />
+            <br />
+
+            <input value="i-Submit" type="submit" disabled />
+            <input value="i-button" type="button" disabled />
+            <input value="i-reset" type="reset" disabled />
+            <br />
+            <br />
+
+            <button type="submit">Submit</button>
+            <button type="button" accesskey="s">Click</button>
+            <button type="reset" accesskey="r">Reset</button>
+          </fieldset>
+        </fieldset>
+      </form>
+    </main>
+  </body>
+</html>
