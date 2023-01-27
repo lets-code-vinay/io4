@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Text styling</title>
+    <style>
+      .text-1 {
+        color: #990e0ede;
+        border: 1px solid black;
+        direction: rtl;
+      }
+      .text-2 {
+        color: #4a16c3de;
+        border: 1px solid black;
+        direction: rtl;
+        unicode-bidi: bidi-override;
+      }
+      .text-3 {
+        color: #3ef108de;
+        border: 1px solid black;
+        text-align: justify;
+      }
+      .text-dec-style {
+        width: 50%;
+      }
+
+      .text-dec-overline {
+        text-decoration-line: overline;
+        text-decoration-color: red;
+      }
+
+      .text-dec-underline {
+        text-decoration-line: underline;
+        text-decoration-color: blue;
+      }
+      .text-dec-line-through {
+        text-decoration-line: line-through;
+        text-decoration-color: yellowgreen;
+      }
+      .text-dec-overline-underline {
+        text-decoration-line: overline underline;
+        text-decoration-color: blueviolet;
+      }
+
+      .dashed {
+        /* text-decoration-line: overline; */
+        /* text-decoration-line: underline; */
+        /* text-decoration-line: line-through; */
+        text-decoration-line: overline underline;
+
+        text-decoration-color: rgb(50, 7, 90);
+        text-decoration-style: dashed;
+      }
+
+      .dotted {
+        /* text-decoration-line: overline underline; */
+        /* text-decoration-line: overline; */
+        /* text-decoration-line: underline; */
+        text-decoration-line: line-through;
+
+        text-decoration-color: rgb(26, 16, 222);
+        text-decoration-style: dotted;
+      }
+
+      .double {
+        text-decoration-line: overline underline;
+        /* text-decoration-line: overline; */
+        /* text-decoration-line: underline; */
+        /* text-decoration-line: line-through; */
+
+        text-decoration-color: rgb(58, 195, 72);
+        text-decoration-style: double;
+      }
+      .wavy {
+        text-decoration-line: overline underline;
+        /* text-decoration-line: overline; */
+        /* text-decoration-line: underline; */
+        /* text-decoration-line: line-through; */
+
+        text-decoration-color: rgb(181, 220, 12);
+        text-decoration-style: wavy;
+      }
+
+      .text-dec-thickness {
+        /* text-decoration-line: overline underline; */
+        /* text-decoration-line: overline; */
+        /* text-decoration-line: underline; */
+        text-decoration-line: line-through;
+
+        text-decoration-color: rgb(63, 77, 3);
+        text-decoration-style: wavy;
+        text-decoration-thickness: 10px;
+      }
+
+      a {
+        text-decoration: none;
+        /* text-shadow: x y blur color; */
+        color: red;
+        /* text-shadow: 1px 1px 5px black; */
+        text-shadow: 1px 1px 1px yellow, 2px 2px 1px blue, 0px 0px 5px black;
+      }
+      .text-dec-shorthand {
+        /* text-decoration: line color style thickness; */
+        text-decoration: underline rgb(38, 3, 177) dashed 1px;
+      }
+      .text-transform-uppercase {
+        text-transform: uppercase;
+        line-height: 10;
+      }
+      .text-transform-lowercase {
+        text-transform: lowercase;
+        word-spacing: 50px;
+      }
+      .text-transform-capitalize {
+        text-transform: capitalize;
+        letter-spacing: 2px;
+      }
+      .text-indentation-p {
+        width: 50%;
+        text-indent: 20px;
+      }
+      .wrap {
+        width: 40%;
+        border: 1px solid blue;
+        white-space: wrap;
+        /* overflow: hidden; */
+        /* overflow: scroll; */
+        /* overflow-x: scroll; */
+        /* overflow-y: scroll; */
+        overflow: visible;
+      }
+    </style>
+    <!--
+        1. Color
+        2. Direction
+            rtl: right to left
+            ltr: left to right
+        3. unicode-bidi
+            bidi-override
+        4. Text-align
+            left
+            right
+            center
+            justify  
+        5. text-decoration-line
+            underline
+            overline
+            line-through
+            overline underline
+        6. text-decoration-color
+            color:#44abff
+        7. text-decoration-style
+            solid
+            dashed
+            dotted
+            wavy  
+        8. text-decoration-thickness
+            auto
+            5px
+            10px
+        9. text-decoration
+            none
+        10. Shorthand- text-decoration
+                line color style thickness
+        11. Text-transform
+                uppercase: to make all texts in capital letters
+                lowercase: to make all texts in lower case
+                capitalize: To make all first letter of any text in capital letter
+        12. text-indent: provide space from beginning
+            text-indent: 50px
+        13. letter spacing: Provide space between two letters
+                letter-spacing:5px
+                letter-spacing:-5px
+        14. word   spacing: provide space between two words
+                word-spacing:5px;
+                word-spacing:-5px;
+        15. line-height: Provide gap from upper and bottom line
+                line-height:1;
+                line-height:10;
+        16. white-space
+                white-space: wrap;
+                white-space: nowrap;
+                white-space: pre;
+        17. overflow: when any element exceed from parent
+                overflow: hidden
+                overflow: scroll
+                overflow: visible
+                overflow-x: scroll
+                overflow-y: scroll
+        18. text-shadow: x y blur color
+                text-shadow: 2px 2px 5px red // single shadow
+                text-shadow: 2px 2px 5px red, 2px 2px 5px black // multiple shadow
+            -->
+  </head>
+  <body>
+    <main>
+      <p class="text-1">Hello! This is direction RTL</p>
+      <p class="text-2">Hello! This is direction RTL with unicode-bidi</p>
+      <p class="text-3">
+        Hello! This is text-align property--What’s to wonder about water?”, you
+        might ask. Professor Ture will tell you why. Filled with compelling
+        illustrations, this free children’s book takes a dive into a whirlpool
+        of knowledge about the ubiquitous water that we often take for granted.
+      </p>
+      <br />
+      <p>---Hello ! this is text decoration--</p>
+      <p class="text-dec-overline">
+        Hello ! this is text decoration with color-- overline
+      </p>
+      <p class="text-dec-underline">
+        Hello ! this is text decoration with color-- underline
+      </p>
+      <p class="text-dec-line-through">
+        Hello ! this is text decoration with color-- line-through
+      </p>
+      <p class="text-dec-overline-underline">
+        Hello ! this is text decoration with color-- overline underline
+      </p>
+
+      <p class="text-dec-style">
+        Hello ! this is text decoration style
+        <br />
+        <br />
+        <span class="dashed">Storybook is a frontend workshop</span> for
+        <span class="dotted"
+          >building UI components and pages in isolation.</span
+        >
+        <span class="double"
+          >Thousands of teams use it for UI development,</span
+        >
+        <br />
+        <br />
+
+        <span class="wavy">
+          testing, and documentation. It’s open source and free.</span
+        >
+      </p>
+
+      <p class="text-dec-thickness">
+        Hello ! this is text decoration with color-- Thickness
+      </p>
+
+      <a href="#">This is an anchor tag for any link</a>
+      <p class="text-dec-shorthand">
+        Hello ! this is text decoration with color-- shorthand
+      </p>
+
+      <p class="text-transform-uppercase">
+        Hello ! this is text transform -uppercase
+      </p>
+      <!-- <input type="text" style="text-transform: uppercase" /> -->
+      <p class="text-transform-lowercase">
+        Hello ! this is text transform- lowercase
+      </p>
+      <br />
+      <p class="text-transform-capitalize">
+        Hello ! this is text transform- capitalize
+      </p>
+
+      <p class="text-indentation-p">
+        Storybooks are the best way to engage children and impart knowledge. A
+        good book can get the message through better than a verbal conversation.
+        Everything from vocabulary, grammar, language, articulation, expression,
+        creativity to important life values can be instilled in a child through
+        books.
+      </p>
+
+      <p class="text-indentation-p">
+        We have compiled a list of some of the best storybooks for your children
+        from Amazon, have a look.
+      </p>
+      <p class="text-indentation-p">
+        How we do our research Our ranking criteria While creating a buying
+        guide for the best story books we consider factors like genre, book
+        length, storyline and more.
+      </p>
+      <p class="text-indentation-p">
+        We look for books that are recommended for children and are easy to
+        understand. Also, we consider the user ratings.
+      </p>
+
+      <br />
+      <p class="wrap">
+        When buying a storybook, one must look for the genre or type of stories
+        that the book comprises. One should look for a book that is easy to read
+        and fun to read. Also, one should buy a book by reviewing the reviews to
+        make your purchase worthwhile.
+      </p>
+    </main>
+  </body>
+</html>

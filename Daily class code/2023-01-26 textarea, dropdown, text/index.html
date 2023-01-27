@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Textarea, Dropdown</title>
+
+    <style>
+      .main-div {
+        width: 30%;
+        margin: 0 auto;
+      }
+
+      #animals {
+        width: 50%;
+        background-color: rgb(38, 94, 94);
+        color: blue;
+      }
+
+      .animal-option {
+        background-color: aqua;
+      }
+
+      kbd {
+        background-color: #eee;
+        border-radius: 3px;
+        border: 1px solid #b4b4b4;
+        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2),
+          0 2px 0 0 rgba(255, 255, 255, 0.7) inset;
+        color: #333;
+        display: inline-block;
+        font-size: 0.85em;
+        font-weight: 700;
+        line-height: 1;
+        padding: 2px 4px;
+        white-space: nowrap;
+      }
+    </style>
+  </head>
+  <body>
+    <!--
+        Textarea:
+            id="address"
+            value=""
+            name="address"
+            class="text-area-class"
+            placeholder="Enter your address here"
+            autofocus
+            rows="5"
+            cols="50"
+            spellcheck="true"
+            disabled
+            readonly
+
+        Dropdown
+            Tags:
+                select: used to create dropdown
+                    class
+                    id
+                optgroup: used to create groups of options
+                    label
+                    class
+                option: options will be used with option
+                    id
+                    class
+                    value
+
+        Text tag:
+            b
+            strong
+            i
+            em
+            u
+            q
+            blockquote
+            cite
+            code
+            pre
+            kbd
+            del
+            s
+            mark
+            span with background color
+            small
+            sub
+            sup
+            var
+    -->
+    <div class="main-div">
+      <form>
+        <fieldset>
+          <legend>Address:</legend>
+          <textarea
+            id="address"
+            value=""
+            name="address"
+            class="text-area-class"
+            placeholder="Enter your address here"
+            autofocus
+            rows="5"
+            cols="50"
+            spellcheck="true"
+            disabled
+          ></textarea>
+        </fieldset>
+
+        <fieldset>
+          <legend>Dropdown/select</legend>
+
+          <label for="animals">Select Animals</label>
+          <select class="animals" id="animals">
+            <option value="">Please select an option</option>
+            <option id="1" class="animal-option" value="rat">Rat</option>
+            <option id="2" class="animal-option" value="cat">Cat</option>
+            <option id="3" class="animal-option" value="lion">Lion</option>
+            <option id="4" class="animal-option" value="parrot">Parrot</option>
+            <option id="5" class="animal-option" value="spider">Spider</option>
+            <option id="6" class="animal-option" value="tiger">Tiger</option>
+            <option id="7" class="animal-option" value="crab">Crab</option>
+          </select>
+          <br />
+          <br />
+
+          <label for="animals-group">Select Animals</label>
+          <select class="aniamls-group" id="animals-group">
+            <option value="">Please select an option</option>
+            <optgroup label="Domestic Animals">
+              <option id="1" class="animal-option" value="rat">Rat</option>
+              <option id="2" class="animal-option" value="cat">Cat</option>
+            </optgroup>
+
+            <optgroup label="Wild Animals">
+              <option id="3" class="animal-option" value="lion">Lion</option>
+              <option id="6" class="animal-option" value="tiger">Tiger</option>
+            </optgroup>
+
+            <optgroup label="Birds">
+              <option id="4" class="animal-option" value="parrot">
+                Parrot
+              </option>
+            </optgroup>
+
+            <optgroup label="Aquatic Animals">
+              <option id="7" class="animal-option" value="crab">Crab</option>
+            </optgroup>
+            <optgroup label="Insects">
+              <option id="5" class="animal-option" value="spider">
+                Spider
+              </option>
+            </optgroup>
+          </select>
+          <br />
+          <br />
+
+          <label for="datalist">Datalist of Animals</label>
+          <input
+            list="datalist"
+            id="datalist-animals"
+            name="datalist-animals"
+          />
+          <datalist id="datalist">
+            <option id="1" value="rat"></option>
+            <option id="2" value="cat"></option>
+            <option id="3" value="lion"></option>
+            <option id="4" value="parrot"></option>
+            <option id="5" value="spider"></option>
+            <option id="6" value="tiger"></option>
+            <option id="7" value="crab"></option>
+            <option id="8" value="Goldfish"></option>
+            <option id="9" value="Scorpion"></option>
+            <option id="10" value="Cow"></option>
+            <option id="11" value="Crow"></option>
+          </datalist>
+        </fieldset>
+      </form>
+
+      <div class="html-text-types">
+        <p>
+          Once upon a time there was an <del>old mother pig</del> who had three
+          <s>little pigs</s> and not enough <b>food</b> to
+          <strong>feed</strong> them. So when they were <i>old enough</i>, she
+          sent them out into the world to seek <em>their fortunes</em>. The
+          <span style="background-color: aqua">first little pig</span> was very
+          lazy. He <mark>didn't want</mark> to work at all and he built his
+          <u>house out of straw</u>. The second little pig worked a little bit
+          harder but he was <small>somewhat lazy</small> too and he built his
+          house out of sticks. Then, they sang and danced and played together
+          the rest of the day. The third little pig worked hard all day and
+          built his house with bricks. It was a sturdy house complete with a
+          fine fireplace and chimney. It looked like it could withstand the
+          strongest winds. The next day, a wolf happened to pass by the lane
+          where the three little pigs lived; and he saw the straw house, and he
+          smelled the pig inside. He thought the pig would make a mighty fine
+          meal and his mouth began to water.
+        </p>
+        <blockquote
+          cite="https://americanliterature.com/childrens-stories/the-three-little-pigs"
+        >
+          Little pig! Little pig! Let me in! Let me in!
+        </blockquote>
+        <p>
+          But the little pig saw the wolf's big paws through the keyhole, so he
+          answered back:
+
+          <q style="display: block">
+            No! No! No! Not by the hairs on my chinny chin chin!
+          </q>
+
+          Ram: <q>Not by the hairs on my chinny</q>
+          <br />
+          <cite
+            cite="https://americanliterature.com/childrens-stories/the-three-little-pigs"
+            >Story by: Vinay Maurya</cite
+          >
+        </p>
+        <pre>
+            Then I'll huff 
+            and I'll puff 
+            and I'll blow your house down.
+            <br/>
+            Vinay               Vinay
+            Vinay           Vinay
+                Vinay       Vinay        
+                Vinay  Vinay 
+                    Vinay       
+        </pre>
+
+        <code>
+          const a = 10; <br />
+          const b = 20; <br />
+          const c = a + b;
+        </code>
+
+        <br />
+        To copy paste use
+        <kbd>ctrl</kbd> + <kbd>c</kbd> and <kbd>ctrl</kbd> +
+        <kbd>v</kbd>
+        <br />
+        H + O<sub>2</sub> == H<sub>2</sub>O
+        <br />
+        (a<sup>2</sup>-b<sup>2</sup>) == (a+b)(a-b) i read this in 10<sup
+          >th</sup
+        >
+        class
+
+        <p>
+          let <var>x</var> = 10+2; <br />
+          the value of <var>x</var> is 12
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
