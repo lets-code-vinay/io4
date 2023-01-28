@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Indie+Flower&family=Lobster&family=Sassy+Frass&display=swap"
+      rel="stylesheet"
+    />
+    <title>Float, writing-mode, border, font</title>
+
+    <style>
+      .first-p-tag {
+        width: 50%;
+        background-color: aqua;
+        border: 1px solid black;
+        height: 98px;
+        padding: 12px;
+      }
+
+      .html-image {
+        float: left;
+      }
+      .div-first {
+        width: 50%;
+        background-color: aqua;
+        border: 1px solid black;
+        height: 98px;
+        padding: 12px;
+      }
+      .html-image-2 {
+        float: right;
+      }
+
+      .second-p-tag {
+        margin: 2%;
+        writing-mode: horizontal-tb;
+
+        /* border: 1px solid red; */
+        border-block: 2px dotted red;
+        padding: 2px;
+        width: 50%;
+      }
+
+      .comman-div-class {
+        width: 100px;
+        height: 100px;
+        display: inline-block;
+        margin: 2%;
+        background-color: bisque;
+      }
+
+      .div_1 {
+        /* border-style: solid;
+        border-color: rgb(179, 2, 105); */
+        /* shorthand   */
+        border: 1px dashed firebrick;
+      }
+
+      .div_2 {
+        background-color: firebrick;
+        border-style: dashed;
+        border-color: rgb(30, 18, 107);
+      }
+
+      .div_3 {
+        background-color: gray;
+        border-style: dotted;
+        border-color: rgb(68, 6, 6);
+      }
+
+      .div_4 {
+        background-color: indianred;
+        border-style: double;
+        border-color: rgb(233, 7, 7);
+      }
+      .div_5 {
+        background-color: rgb(176, 125, 213);
+        /* border-top-style: solid;  */
+        /* border-right-style: solid; */
+        /* border-bottom-style: solid; */
+        border-left-style: solid;
+        border-top-style: dashed;
+        border-bottom-style: dotted;
+        border-right-style: double;
+
+        border-color: rgb(89, 157, 6);
+      }
+
+      .div_6 {
+        border: 2px solid green;
+        border-radius: 10px;
+      }
+      .div_7 {
+        border: 2px solid rgb(1, 28, 1);
+        border-radius: 60%;
+      }
+
+      .div_8 {
+        width: 200px;
+        background-color: blanchedalmond;
+        border: 2px solid green;
+        border-radius: 100px;
+      }
+      .div_9 {
+        width: 200px;
+        background-color: rgb(194, 127, 26);
+        border: 2px solid rgb(8, 55, 8);
+        border-radius: 50%;
+      }
+
+      .div_10 {
+        width: 200px;
+        background-color: rgb(122, 104, 184);
+        border: 2px solid rgb(49, 62, 3);
+        border-bottom-right-radius: 20px;
+        border-bottom-left-radius: 50px;
+        border-top-left-radius: 100px;
+        border-top-right-radius: 70px;
+      }
+
+      .div_11 {
+        width: 200px;
+        background-color: rgb(136, 199, 129);
+        /* border: 2px solid rgb(27, 34, 4); */
+        border-left: 5px solid blue;
+        border-right: 5px solid blue;
+
+        border-bottom-right-radius: 20%;
+        border-bottom-left-radius: 50%;
+        border-top-left-radius: 100%;
+        border-top-right-radius: 70%;
+      }
+
+      .div_12 {
+        width: 200px;
+        background-color: rgb(220, 152, 64);
+        /* border: 2px solid rgb(27, 34, 4); */
+        border-bottom-right-radius: 50px;
+        border-top-left-radius: 50px;
+        border-left: 5px solid blue;
+        border-right: 5px solid blue;
+      }
+
+      .div_13 {
+        width: 200px;
+        background-color: rgb(210, 93, 228);
+        border-left: 5px solid rgb(58, 58, 169);
+        border-right: 5px solid rgb(2, 2, 42);
+        /* border-radius: 10px 40px 30px 50px; */
+        border-radius: 0px 40px 0px 50px;
+      }
+
+      .div_14 {
+        width: 80%;
+        display: block;
+        margin: 0 auto;
+        height: 300px;
+        background-color: none;
+        border: 30px solid red;
+        border-image-source: url(flower.jpg);
+        border-image-slice: 20;
+        border-image-repeat: round;
+        /* repeat, round, space */
+
+        border-image-outset: 5px;
+        border-image-width: 10px;
+      }
+      .avengers-title {
+        width: fit-content;
+        margin: 0 auto;
+        font-family: "Fredericka the Great", cursive;
+      }
+      .avengers-details {
+        /* font-family: "Indie Flower", cursive; */
+        padding: 2%;
+        /* font: font-style, font-variant, font-weight, font-size/line-height, font-family; */
+        font: normal small-caps 100 10px/10px "Fredericka the Grea", cursive;
+      }
+
+      .font-styling {
+        font-variant: all-small-caps;
+        /* normal, small-caps, all-small-caps */
+        /* font-style: oblique; */
+        /* font-style: italic; */
+        /* font-weight: bold; */
+        /* font-weight: 700; */
+        /* normal, lighter, bold, bolder, 100-900 */
+
+        font-size: 20px;
+
+        /* Shorthand for fonts */
+      }
+
+      .div_15 {
+        width: 80%;
+        background-color: rgba(0, 255, 255, 0.476);
+        display: block;
+        margin: 2% auto;
+        height: 300px;
+        background-color: none;
+        border: 30px solid red;
+        border-image-source: url(flower3.jpg);
+        border-image-slice: 50;
+        border-image-repeat: round;
+        /* repeat, round, space */
+
+        border-image-outset: 2px;
+        border-image-width: 30px;
+      }
+    </style>
+  </head>
+  <!--
+    1. Float: to adjust image on right or left side in any paragraph/div
+    2. Writing-mode: We have 3 types of writing mode. 
+        a. writing-mode: horizontal-tb // this is default to preview text. Texts are in horizontal mode 
+        B. writing-mode: vertical-lr; Text will be in vertical mode from left side;
+        c. writing-mode: vertical-rl; Text will be in vertical mode from right side;
+
+    -->
+  <body>
+    <main>
+      <p class="first-p-tag">
+        <img
+          class="html-image"
+          src="html_logo.png"
+          alt=""
+          height="100"
+          width="100px"
+        />
+        The HyperText Markup Language or HTML is the standard markup language
+        for documents designed to be displayed in a web browser. It can be
+        assisted by technologies such as Cascading Style Sheets (CSS) and
+        scripting languages such as JavaScript.
+      </p>
+      <div class="div-first">
+        <img
+          class="html-image-2"
+          src="html_logo.png"
+          alt=""
+          height="100"
+          width="100px"
+        />
+      </div>
+      <p class="second-p-tag">Hello! This world is so beautiful</p>
+
+      <div class="comman-div-class div_1"></div>
+      <div class="comman-div-class div_2"></div>
+      <div class="comman-div-class div_3"></div>
+      <div class="comman-div-class div_4"></div>
+      <div class="comman-div-class div_5"></div>
+
+      <div class="comman-div-class div_6"></div>
+      <div class="comman-div-class div_7"></div>
+      <div class="comman-div-class div_8"></div>
+      <div class="comman-div-class div_9"></div>
+      <div class="comman-div-class div_10"></div>
+      <div class="comman-div-class div_11"></div>
+      <div class="comman-div-class div_12"></div>
+      <div class="comman-div-class div_13"></div>
+      <div class="comman-div-class div_14">
+        <h1 class="avengers-title">Avengers</h1>
+        <p class="avengers-details">
+          The Avengers are an all-star ensemble cast of established superhero
+          characters from the Marvel Comics portfolio. Diegetically, these
+          superheroes usually operate independently but occasionally assemble as
+          a team to tackle especially formidable villains. This in contrast to
+          certain other superhero teams such as the X-Men, whose characters were
+          created specifically to be part of their team, with the team being
+          central to their identity. The Avengers were created to create a new
+          line of books to sell and to cross-promote Marvel Comics characters.
+          An Iron Man fan might buy an Avengers book because Iron Man appears in
+          them, and perhaps in turn take an interest in Thor, who appears in the
+          same book as Iron Man's friend and comrade.[2] The cast usually
+          features a few highly popular characters who have their own solo
+          books, such as Iron Man, alongside a number of lesser-known characters
+          who benefit from exposure, such as Quicksilver.[3
+        </p>
+      </div>
+
+      <div class="comman-div-class div_15">
+        <h1 class="avengers-title">Avengers Assemble</h1>
+        <p class="avengers-details">
+          The Avengers are an all-star ensemble cast of established superhero
+          characters from the
+          <span class="font-styling">Marvel Comics portfolio.</span>
+          Diegetically, these superheroes usually operate independently but
+          occasionally assemble as a team to tackle especially formidable
+          villains. This in contrast to certain other superhero teams such as
+          the X-Men, whose characters were created specifically to be part of
+          their team, with the team being central to their identity. The
+          Avengers were created to create a new line of books to sell and to
+          cross-promote Marvel Comics characters. An Iron Man fan might buy an
+          Avengers book because Iron Man appears in them, and perhaps in turn
+          take an interest in Thor, who appears in the same book as Iron Man's
+          friend and comrade.[2] The cast usually features a few highly popular
+          characters who have their own solo books, such as Iron Man, alongside
+          a number of lesser-known characters who benefit from exposure, such as
+          Quicksilver.[3
+        </p>
+      </div>
+    </main>
+  </body>
+</html>
