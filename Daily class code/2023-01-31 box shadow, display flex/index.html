@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Box shadow, Display flex</title>
+    <!--
+    1. Box-shadow: to provide shadow around any box(div, p, img, )
+                box-shadow: x, y, blur, spread, color
+                box-shadow: 2px 2px 3px 2px blue; 
+   
+     2. display-flex: flexbox, because it is flexible
+        display: flex;
+        flex-direction:
+            column, row, row-reverse, column-reverse
+ 
+
+
+-->
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .main-class {
+        height: 500px;
+        background-color: #dfc6d0;
+        /* width: fit-content; */
+        /* margin: 1% auto; */
+
+        display: flex;
+        flex-direction: row;
+        /* flex-direction: row-reverse; */
+        /* flex-direction: column; */
+        /* flex-direction: column-reverse; */
+
+        /* To wrap contents inside the screen width */
+        /* flex-wrap: wrap; */
+        /* flex-wrap:nowrap; */
+
+        /* To position any flexbox*/
+        justify-content: center;
+        /* justify-content: flex-start; */
+        /* justify-content: flex-end; */
+        /* justify-content: start; */
+        /* justify-content: end; */
+        /* justify-content: right; */
+        /* justify-content: left; */
+        /* justify-content: space-between; */
+        /* justify-content: space-around; */
+        /* justify-content: space-evenly; */
+
+        /* align-items: center; */
+        /* align-items: start; */
+        /* align-items: flex-start; */
+        /* align-items: self-start; */
+        /* align-items: self-end; */
+        /* align-items: flex-end; */
+        /* align-items: end; */
+        /* align-items: stretch; */
+        /* --- Stretch make full height of children, but down;t affect any child with its height */
+
+        /*align-self is same as align-items, but it applies on individual children*/
+        /* align-self: center; */
+        /* align-self: start; */
+        /* align-self: flex-start; */
+        /* align-self: self-start; */
+        /* align-self: self-end; */
+        /* align-self: flex-end; */
+        /* align-self: end; */
+        /* align-self: stretch; */
+        /* --- Stretch make full height of children, but down;t affect any child with its height */
+      }
+      div {
+        width: 150px;
+        height: 150px;
+
+        margin: 0;
+        padding: 0;
+      }
+      .div-1 {
+        /* box-shadow: 1px 1px 1px 1px blue; */
+        background-color: #fa76ab;
+      }
+
+      .div-2 {
+        /* box-shadow: 0px 0px 3px 1px rgb(156, 11, 33); */
+        background-color: #8a76ab;
+        height: 200px;
+        align-self: center;
+      }
+
+      .div-3 {
+        /* box-shadow: 0px 0px 3px 1px rgb(156, 11, 33), 2px 2px 1px 1px blue; */
+        background-color: #fa7677;
+      }
+
+      .div-4 {
+        background-color: #ee7812;
+        align-self: center;
+      }
+
+      .div-5 {
+        background-color: #ee7878;
+      }
+      .div-6 {
+        background-color: #907812;
+      }
+      .div-7 {
+        background-color: #547812;
+      }
+
+      section {
+        display: flex;
+        flex-direction: column;
+        height: 1600px;
+        background-color: rgb(96, 90, 102);
+      }
+      span {
+        width: 150px;
+        height: 150px;
+      }
+
+      .span-1 {
+        background-color: red;
+      }
+      .span-2 {
+        background-color: rgb(190, 99, 99);
+      }
+      .span-3 {
+        background-color: rgb(107, 96, 168);
+      }
+      .span-4 {
+        background-color: rgb(90, 181, 52);
+      }
+      .span-5 {
+        background-color: rgb(212, 37, 78);
+      }
+      .span-6 {
+        background-color: rgb(159, 201, 182);
+      }
+      .span-7 {
+        background-color: rgb(5, 50, 30);
+      }
+    </style>
+  </head>
+
+  <body>
+    <main class="main-class">
+      <div class="div-1">1. This is a div</div>
+      <div class="div-2">2. This is a div</div>
+      <div class="div-3">3. This is a div</div>
+      <div class="div-4">4. This is a div</div>
+      <div class="div-5">5. This is a div</div>
+      <div class="div-6">6. This is a div</div>
+      <div class="div-7">7. This is a div</div>
+    </main>
+
+    <section class="section-class">
+      <span class="span-1">1. This is a span</span>
+      <span class="span-2">2. This is a span</span>
+      <span class="span-3">3. This is a span</span>
+      <span class="span-4">4. This is a span</span>
+      <span class="span-5">5. This is a span</span>
+      <span class="span-6">6. This is a span</span>
+      <span class="span-7">7. This is a span</span>
+    </section>
+  </body>
+</html>
