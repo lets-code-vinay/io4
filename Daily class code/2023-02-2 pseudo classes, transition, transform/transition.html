@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Transition</title>
+    <!--
+        Transition : 
+            1. Transition-property : targets which property needs to animate
+                    transition-property: width, background-color;
+            2. Transition-duration; How much time(in seconds) do you want to complete that transition
+                    transition-duration: 2s
+            3. transition-delay: after how much time(in seconds) you want to start you transition
+                    transition-delay: 1s
+            4. transition-timing-function: How's you transition starts and ends
+                    transition-timing-function: linear // normal transition
+                    transition-timing-function: ease-in // slow starts, fast ends
+                    transition-timing-function: ease-out // fast starts, slow ends
+            5. transition: property duration timing-function delay
+
+
+    -->
+    <style>
+      div {
+        width: 100px;
+        height: 100px;
+        margin: 2%;
+      }
+
+      .divs-1 {
+        background-color: goldenrod;
+        color: blueviolet;
+        transition: width 3s, background-color 2s, color 3s;
+        /* transition-delay: 2s; */
+        /* transition-timing-function: linear; */
+        transition-timing-function: ease-in;
+      }
+      .divs-1:hover {
+        background-color: aqua;
+        color: red;
+        width: 700px;
+      }
+
+      .divs-2 {
+        background-color: #456789;
+        color: goldenrod;
+        /* transition-property: height, background-color;
+        transition-duration: 3s; */
+        transition: width 3s, background-color 2s, color 3s;
+        transition-timing-function: ease-out;
+      }
+
+      .divs-2:hover {
+        background-color: aqua;
+        color: red;
+        width: 700px;
+      }
+
+      .divs-3 {
+        background-color: #0f69c2;
+        color: rgb(184, 24, 77);
+        transition-property: height, background-color;
+        transition-duration: 3s;
+      }
+
+      .divs-3:hover {
+        background-color: rgb(91, 13, 225);
+        color: red;
+        width: 700px;
+        transition: background-color 3s linear 1s;
+      }
+
+      .divs-4 {
+        background-color: black;
+        color: white;
+        text-align: right;
+        border: 2px solid red;
+        border-radius: 10px;
+        width: 100px;
+        transition: color 2s ease-in-out, text-align 2s ease-in-out,
+          border 2s ease-in-out, border-radius 2s ease-in-out, width 2s ease-in,
+          background-color 2s ease-in-out 1s;
+
+        /* transition: color 2s, text-align 2s, border 2s, border-radius 2s,
+          width 2s, background-color 2s;
+        transition-timing-function: ease-in; */
+      }
+
+      .divs-4:hover {
+        background-color: #fff;
+        color: #000;
+        text-align: left;
+        border: 2px solid rgb(26, 3, 96);
+        border-radius: 5px;
+        width: 600px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="divs-1">Div 1</div>
+    <div class="divs-2">Div 2</div>
+    <div class="divs-3">Div 3</div>
+    <div class="divs-4">Div 4</div>
+  </body>
+</html>
