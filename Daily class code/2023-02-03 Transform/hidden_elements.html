@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Transform</title>
+    <!--
+                      |Display: none | Visibility: hidden | Opacity: 0|
+    Existed on DOM    |    Yes       |     Yes            |    Yes    |
+    Space cover       |    No        |     Yes            |    Yes    |
+    Action Perform    |    No        |     No             |    Yes    |
+    -->
+
+    <style>
+      body {
+        background-color: aqua;
+      }
+      .parent {
+        /* display: flex;
+        flex-direction: row;
+        justify-content: space-between; */
+      }
+      .div_1,
+      .div_2,
+      .div_3 {
+        width: 100px;
+        height: 100px;
+        border: 1px solid green;
+        border-radius: 5px;
+      }
+      .div_1 {
+        background-color: red;
+        display: none;
+        cursor: pointer;
+      }
+      .div_1:hover {
+        background-color: black;
+      }
+      .div_2 {
+        background-color: rgb(25, 46, 146);
+        opacity: 0;
+        cursor: pointer;
+      }
+      .div_2:hover {
+        background-color: rgb(23, 11, 157);
+        opacity: 1;
+      }
+      .div_3 {
+        background-color: rgb(40, 146, 66);
+        cursor: pointer;
+        visibility: hidden;
+      }
+      .div_3:hover {
+        background-color: rgb(199, 14, 14);
+        visibility: visible;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Display: none
+    visibility
+    opacity -->
+    <div class="parent">
+      <div class="div_1">div_1</div>
+      <div class="div_2">div_2</div>
+      <div class="div_3">div_3</div>
+    </div>
+  </body>
+</html>

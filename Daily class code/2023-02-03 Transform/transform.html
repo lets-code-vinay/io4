@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Transform</title>
+    <style>
+      .parent {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        width: 100%;
+      }
+      div {
+        width: 100px;
+        height: 100px;
+        margin: 2%;
+      }
+
+      .divs-1 {
+        background-color: goldenrod;
+        color: blueviolet;
+        transition: background-color 3s ease-in;
+        cursor: pointer;
+      }
+      .divs-1:hover {
+        background-color: aqua;
+        color: red;
+        transform: translateX(150px);
+      }
+
+      .divs-2 {
+        background-color: #456789;
+        color: goldenrod;
+        cursor: pointer;
+        transition: background-color 2s ease-in-out;
+      }
+
+      .divs-2:hover {
+        background-color: aqua;
+        color: red;
+        transform: translateY(20px);
+      }
+
+      .divs-3 {
+        background-color: #0f69c2;
+        color: rgb(184, 24, 77);
+        cursor: pointer;
+        transition: background-color 2s ease-in-out;
+      }
+
+      .divs-3:hover {
+        background-color: rgb(91, 13, 225);
+        color: red;
+        transform: translate(50px, 20px);
+      }
+
+      .divs-4 {
+        background-color: black;
+        color: white;
+        cursor: pointer;
+        transition: background-color 2s ease-in-out;
+      }
+
+      .divs-4:hover {
+        background-color: #fff;
+        color: #000;
+        border: 1px solid red;
+        transform: skewX(10deg);
+      }
+      .divs-5 {
+        background-color: rgb(150, 28, 28);
+        color: rgb(138, 78, 78);
+        cursor: pointer;
+        transition: background-color 2s ease-in-out;
+      }
+
+      .divs-5:hover {
+        background-color: rgb(22, 206, 148);
+        color: rgb(79, 10, 10);
+        border: 1px solid red;
+        transform: skewY(10deg);
+      }
+      .divs-6 {
+        background-color: rgb(50, 128, 28);
+        color: rgb(38, 78, 178);
+        cursor: pointer;
+        transition: background-color 2s ease-in-out;
+      }
+
+      .divs-6:hover {
+        background-color: rgb(122, 26, 48);
+        color: rgb(179, 110, 110);
+        border: 1px solid red;
+        transform: skew(15deg, 15deg);
+      }
+      .divs-7 {
+        background-color: rgb(57, 229, 10);
+        color: rgb(5, 13, 33);
+        cursor: pointer;
+        transition: background-color 2s ease-in-out;
+      }
+
+      .divs-7:hover {
+        background-color: rgb(79, 4, 22);
+        color: rgb(230, 86, 86);
+        border: 1px solid red;
+        transform: scaleX(2);
+      }
+      .divs-8 {
+        background-color: rgb(157, 219, 110);
+        color: rgb(115, 13, 33);
+        cursor: pointer;
+        transition: background-color 2s ease-in-out, transform 1s ease-in-out;
+      }
+
+      .divs-8:hover {
+        background-color: rgb(179, 114, 202);
+        color: rgb(30, 186, 86);
+        border: 1px solid red;
+        transform: scaleY(1.5);
+      }
+
+      .divs-9 {
+        background-color: rgb(170, 119, 10);
+        color: rgb(15, 113, 133);
+        cursor: pointer;
+        transition: background-color 2s ease-in-out, transform 1s ease-in-out;
+      }
+
+      .divs-9:hover {
+        background-color: rgb(179, 114, 202);
+        color: rgb(30, 186, 86);
+        border: 1px solid red;
+        transform: scale(1.5, 1.2);
+      }
+      .divs-10 {
+        background-color: rgb(70, 189, 110);
+        color: rgb(125, 123, 123);
+        cursor: pointer;
+        transition: background-color 2s ease-in-out, transform 1s ease-in-out;
+      }
+
+      .divs-10:hover {
+        background-color: rgb(179, 114, 202);
+        color: rgb(149, 172, 157);
+        border: 1px solid red;
+        transform: rotate(45deg);
+      }
+      .divs-11 {
+        background-image: url("https://picsum.photos/200");
+        background-color: rgb(70, 11, 159);
+        border-radius: 50%;
+        color: rgb(219, 191, 191);
+        cursor: pointer;
+        transition: background-color 2s ease-in-out, transform 3s ease-in-out;
+      }
+
+      .divs-11:hover {
+        background-color: rgb(63, 3, 85);
+        color: rgb(75, 160, 104);
+        border: 1px solid red;
+        transform: rotate(360deg);
+        border-radius: 50%;
+      }
+      .img-1 {
+        background-color: rgb(70, 11, 159);
+        border-radius: 50%;
+        color: rgb(219, 191, 191);
+        cursor: pointer;
+        height: 100px;
+        width: 100px;
+
+        transition: background-color 2s ease-in-out, transform 3s ease-in-out;
+      }
+
+      .img-1:hover {
+        background-color: rgb(63, 3, 85);
+        color: rgb(75, 160, 104);
+        border: 1px solid red;
+        transform: rotate(360deg);
+        border-radius: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parent">
+      <div class="parent-2">
+        <div class="divs-1">TranslateX</div>
+        <div class="divs-2">TranslateY</div>
+        <div class="divs-3">Translate(x, y)</div>
+        <div class="divs-4">SkewX(10deg)</div>
+      </div>
+      <div class="parent-3">
+        <div class="divs-5">SkewY(10deg)</div>
+        <div class="divs-6">Skew(x,y)</div>
+        <div class="divs-7">scaleX(1)</div>
+        <div class="divs-8">scaleY(2)</div>
+      </div>
+      <div class="parent-4">
+        <div class="divs-9">scale(3,2)</div>
+        <div class="divs-10">rotate(45deg)</div>
+        <div class="divs-11"></div>
+        <img class="img-1" src="https://picsum.photos/200" alt="random" />
+      </div>
+    </div>
+  </body>
+</html>
