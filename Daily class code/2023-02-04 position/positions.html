@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--
+        CDN for Font awesome
+    -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/brands.min.css"
+      integrity="sha512-G/T7HQJXSeNV7mKMXeJKlYNJ0jrs8RsWzYG7rVACye+qrcUhEAYKYzaa+VFy6eFzM2+/JT1Q+eqBbZFSHmJQew=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Position</title>
+    <!--
+        POSITION:
+                Location of any element on browser or DOM
+                1. Static: default
+                2. Sticky: Element moves at particular area and then fixed
+                3. Fixed: Element would be fixed at some location and can not be moved
+                4. Relative: It makes element independent.
+                5. Absolute: Absolute depends on its parents, it could be relative or body or DOM 
+    top
+    bottom
+    right
+    left
+    z-index
+            -->
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      main {
+        background-color: bisque;
+      }
+      header {
+        background-color: brown;
+        color: aqua;
+      }
+      .div-contrainer {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-evenly;
+        align-items: center;
+      }
+      div {
+        height: 500px;
+        border: 1px solid black;
+        width: 25%;
+      }
+      .div_1 {
+        background-color: azure;
+      }
+      .div_2 {
+        background-color: teal;
+      }
+      .div_3 {
+        background-color: khaki;
+      }
+      .div_4 {
+        background-color: aquamarine;
+      }
+      .div_5 {
+        background-color: rosybrown;
+      }
+
+      .sticky-bar {
+        position: fixed;
+        top: 0%;
+        background-color: blue;
+        color: white;
+        width: 100%;
+        height: 50px;
+        z-index: 9;
+      }
+      .second-header {
+        margin-top: 50px;
+      }
+      footer {
+        position: fixed;
+        bottom: 0;
+        background-color: black;
+        color: wheat;
+        text-align: center;
+        width: 100%;
+      }
+
+      .chat-support {
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        z-index: 2;
+
+        display: flex;
+        flex-direction: column;
+        height: fit-content;
+        color: red;
+        border: none;
+        text-align: center;
+      }
+
+      .relative-position {
+        height: 300px;
+        width: 300px;
+        background-color: red;
+        color: black;
+        position: relative;
+        top: 10%;
+        left: 10%;
+        z-index: 1;
+      }
+      .absolute-common-class {
+        height: 100px;
+        width: 100px;
+        background-color: yellow;
+        color: brown;
+      }
+      .absolute-common-class-small {
+        height: 50px;
+        width: 50px;
+        background-color: rgb(117, 117, 27);
+        color: brown;
+      }
+      .absolute-1 {
+        position: absolute;
+        bottom: 5%;
+        right: 5%;
+      }
+      .absolute-2 {
+        position: absolute;
+        top: 5%;
+        right: 5%;
+        z-index: 10;
+      }
+
+      section {
+        position: relative;
+      }
+      .text {
+        width: 160px;
+        height: 50px;
+        border: 1px solid red;
+        background-color: aqua;
+        position: absolute;
+        top: 5%;
+
+        left: 10%;
+        z-index: 11;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <header>
+        <h1 class="sticky-bar">Suppose this is your nav bar</h1>
+        <h1 class="second-header">This is just for fun</h1>
+      </header>
+      <div class="relative-position">
+        <div class="absolute-1 absolute-common-class">
+          <div class="absolute-1 absolute-common-class-small">
+            Absolute Box -1
+          </div>
+        </div>
+      </div>
+      <div class="absolute-2 absolute-common-class">Absolute Box -2</div>
+
+      <section class="div-contrainer">
+        <div class="div_1">
+          Generating random paragraphs can be an excellent way for writers to
+          get their creative flow going at the beginning of the day. The writer
+          has no idea what topic the random paragraph will be about when it
+          appears. This forces the writer to use creativity to complete one of
+          three common writing challenges. The writer can use the paragraph as
+          the first one of a short story and build upon it. A second option is
+          to use the random paragraph somewhere in a short story they create.
+          The third option is to have the random paragraph be the ending
+          paragraph in a short story. No matter which of these challenges is
+          undertaken, the writer is forced to use creativity to incorporate the
+          paragraph into their writing.
+        </div>
+        <div class="div_2">
+          <div class="text">
+            creative flow going at the beginning of the day
+          </div>
+          Generating random paragraphs can be an excellent way for writers to
+          get their creative flow going at the beginning of the day. The writer
+          has no idea what topic the random paragraph will be about when it
+          appears. This forces the writer to use creativity to complete one of
+          three common writing challenges. The writer can use the paragraph as
+          the first one of a short story and build upon it. A second option is
+          to use the random paragraph somewhere in a short story they create.
+          The third option is to have the random paragraph be the ending
+          paragraph in a short story. No matter which of these challenges is
+          undertaken, the writer is forced to use creativity to incorporate the
+          paragraph into their writing.
+        </div>
+        <div class="div_3">
+          Generating random paragraphs can be an excellent way for writers to
+          get their creative flow going at the beginning of the day. The writer
+          has no idea what topic the random paragraph will be about when it
+          appears. This forces the writer to use creativity to complete one of
+          three common writing challenges. The writer can use the paragraph as
+          the first one of a short story and build upon it. A second option is
+          to use the random paragraph somewhere in a short story they create.
+          The third option is to have the random paragraph be the ending
+          paragraph in a short story. No matter which of these challenges is
+          undertaken, the writer is forced to use creativity to incorporate the
+          paragraph into their writing.
+        </div>
+        <div class="div_4">
+          Generating random paragraphs can be an excellent way for writers to
+          get their creative flow going at the beginning of the day. The writer
+          has no idea what topic the random paragraph will be about when it
+          appears. This forces the writer to use creativity to complete one of
+          three common writing challenges. The writer can use the paragraph as
+          the first one of a short story and build upon it. A second option is
+          to use the random paragraph somewhere in a short story they create.
+          The third option is to have the random paragraph be the ending
+          paragraph in a short story. No matter which of these challenges is
+          undertaken, the writer is forced to use creativity to incorporate the
+          paragraph into their writing.
+        </div>
+        <div class="div_5">
+          Generating random paragraphs can be an excellent way for writers to
+          get their creative flow going at the beginning of the day. The writer
+          has no idea what topic the random paragraph will be about when it
+          appears. This forces the writer to use creativity to complete one of
+          three common writing challenges. The writer can use the paragraph as
+          the first one of a short story and build upon it. A second option is
+          to use the random paragraph somewhere in a short story they create.
+          The third option is to have the random paragraph be the ending
+          paragraph in a short story. No matter which of these challenges is
+          undertaken, the writer is forced to use creativity to incorporate the
+          paragraph into their writing.
+        </div>
+      </section>
+
+      <div class="chat-support">
+        <i class="fa-solid fa-headset"></i> Your Assistant
+      </div>
+      <footer>This is &copy; To Infoxygen 2022-23</footer>
+    </main>
+  </body>
+</html>
