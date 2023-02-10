@@ -1,0 +1,201 @@
+.main-class {
+  background-color: #e6d8d8;
+  width: 50%;
+  height: 80vh;
+  border: 1px solid red;
+  margin: 5% auto;
+  position: relative;
+}
+
+.head {
+  width: 40%;
+  height: 40%;
+  background-color: #f8af56;
+  margin: 2% auto;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: row;
+}
+.body {
+  width: 45%;
+  height: 60%;
+  background-color: #75cee9;
+  margin: -7% auto;
+  border-radius: 50% 50% 45% 45%;
+}
+
+.ears {
+  background-color: #b0e3f3;
+  width: 30%;
+  height: 20%;
+  position: absolute;
+  top: 1%;
+}
+.ear-left {
+  left: 19%;
+  transform: rotate(20deg);
+  border-radius: 26px 180px 33px 180px;
+}
+
+.ear-right {
+  right: 19%;
+  transform: rotate(-20deg);
+  border-radius: 180px 33px 180px 26px;
+}
+.eyes {
+  background-color: #b0e3f3;
+  border-radius: 50%;
+  width: 30%;
+  height: 40%;
+  top: 5%;
+  z-index: 2;
+  position: absolute;
+}
+
+.eyes-1 {
+  left: 23%;
+}
+
+.eyes-2 {
+  right: 23%;
+}
+
+.eye-socket {
+  background-color: #72cce8;
+  border-radius: 50%;
+  width: 70%;
+  height: 70%;
+  position: absolute;
+  top: 20%;
+}
+
+.eye-socket-1 {
+  left: 10%;
+}
+.eye-socket-2 {
+  right: 10%;
+}
+
+.eye-ball {
+  background-color: #a4e5f0;
+  border-radius: 50%;
+  width: 60%;
+  height: 70%;
+  top: 17%;
+  position: absolute;
+}
+
+.eye-ball-1 {
+  left: 30%;
+}
+
+.eye-ball-2 {
+  right: 30%;
+}
+
+.pupil {
+  background-color: #23211d;
+  border-radius: 50%;
+  width: 65%;
+  height: 65%;
+  position: absolute;
+  top: 20%;
+}
+
+.pupil-1 {
+  right: 12%;
+}
+
+.pupil-2 {
+  left: 12%;
+}
+
+.reflection-1 {
+  border-radius: 50%;
+  background-color: #fff6fd;
+  width: 35%;
+  height: 35%;
+  position: absolute;
+  top: 10%;
+}
+
+.reflection-2 {
+  border-radius: 50%;
+  background-color: #fff6fd;
+  width: 25%;
+  height: 25%;
+  position: absolute;
+  bottom: 8%;
+  right: 8%;
+}
+
+.beak {
+  background-color: #fead5f;
+  border: 1px solid #bc8d54;
+  width: 8%;
+  height: 10%;
+  transform: rotate(45deg);
+  position: absolute;
+  top: 31%;
+  left: 45.8%;
+  z-index: 10;
+  border-radius: 56px 30px 5px 30px;
+}
+
+.wings {
+  background-color: #faaf57;
+  width: 20%;
+  height: 40%;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 20%;
+  border: 1px solid #d9af66;
+}
+
+.wing-1 {
+  left: 22%;
+  transform: rotate(15deg);
+}
+.wing-2 {
+  right: 22%;
+  transform: rotate(-15deg);
+}
+
+/**
+-----Claws---
+*/
+.claw {
+  background-color: #e5af43;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 2%;
+  width: 3%;
+  height: 6%;
+  border: 1px solid #d9af66;
+}
+
+.claw-1 {
+  left: 38%;
+}
+
+.claw-2 {
+  left: 40%;
+  z-index: 10;
+}
+
+.claw-3 {
+  left: 42%;
+}
+
+.claw-4 {
+  right: 38%;
+}
+
+.claw-5 {
+  right: 40%;
+  z-index: 10;
+}
+
+.claw-6 {
+  right: 42%;
+}
