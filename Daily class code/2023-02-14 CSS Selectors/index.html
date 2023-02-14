@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Selectors</title>
+    <style>
+      /*--universal Selector*/
+      * {
+        background-color: blanchedalmond;
+        margin: 0;
+        padding: 0;
+        font-size: 50px;
+      }
+
+      /*--Select by Tag name--*/
+      body {
+        background-color: aqua;
+        color: aqua;
+      }
+      div {
+        background-color: blueviolet;
+        height: 100px;
+        width: 100%;
+        color: black;
+      }
+
+      #div_id {
+        background-color: brown;
+        color: gold;
+      }
+      .div_2 {
+        background-color: red;
+      }
+
+      .p_5 {
+        background-color: black;
+        color: aquamarine;
+      }
+    </style>
+  </head>
+  <!--
+    Types of selectors
+
+    1. Universal Selectors
+        * 
+    2. Select by Tag name
+        div{}
+        p{}
+        h1{}
+        a{}
+    3. Select by class Name
+        .first_div{}
+        .main-component{}
+        .first-name-input{}
+    4. Select by Id name
+       #first_div{}
+        #main-component{}
+        #first-name-input{}
+    
+        Id has more priority then tag or class
+        * < tag < class < id < inline-style
+    -->
+  <body>
+    <div class="div_1">abc</div>
+    <div class="div_2" id="div_id" style="background-color: green">def</div>
+    <div class="div_3">ghi</div>
+    <div class="div_4">jkl</div>
+    <div class="div_5">mno</div>
+    <p class="p_5">pqr</p>
+  </body>
+</html>
