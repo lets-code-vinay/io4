@@ -5,42 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Selectors</title>
-    <style>
-      /*--universal Selector*/
-      * {
-        background-color: blanchedalmond;
-        margin: 0;
-        padding: 0;
-        font-size: 50px;
-      }
-
-      /*--Select by Tag name--*/
-      body {
-        background-color: aqua;
-        color: aqua;
-      }
-      div {
-        background-color: blueviolet;
-        height: 100px;
-        width: 100%;
-        color: black;
-      }
-
-      #div_id {
-        background-color: brown;
-        color: gold;
-      }
-      .div_2 {
-        background-color: red;
-      }
-
-      .p_5 {
-        background-color: black;
-        color: aquamarine;
-      }
-    </style>
-  </head>
-  <!--
+    <!--
     Types of selectors
 
     1. Universal Selectors
@@ -61,13 +26,237 @@
     
         Id has more priority then tag or class
         * < tag < class < id < inline-style
+
+    5. Select by child
+        a. first-child
+        b. last-child
+        c. nth-child()
     -->
+    <style>
+      /*--universal Selector*/
+      * {
+        margin: 0;
+        padding: 0;
+        font-size: 15px;
+      }
+
+      /*--Select by Tag name--*/
+      body {
+        color: aqua;
+      }
+
+      #div_id {
+        background-color: brown;
+        color: gold;
+      }
+      .div_2 {
+        background-color: red;
+      }
+
+      .p_5 {
+        background-color: black;
+        color: aquamarine;
+      }
+
+      .parent p {
+        border: 1px solid green;
+        margin: 1% 0%;
+      }
+      /*
+            --Select by Child
+            */
+      /*--First-child--*/
+
+      .parent p:first-child {
+        background-color: red;
+        font-weight: 600;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+        color: white;
+        text-indent: 50px;
+      }
+
+      .parent p:last-child {
+        background-color: brown;
+        color: white;
+        text-indent: 20px;
+        font-weight: 600;
+      }
+
+      .parent p:nth-child(4) {
+        background-color: blueviolet;
+        color: yellowgreen;
+        font-weight: 600;
+        text-indent: 20px;
+      }
+
+      div.groups {
+        border: 2px solid black;
+      }
+
+      /*--group styling --*/
+      .thor,
+      .hulk,
+      .spider-man,
+      .ant-man,
+      #wasp {
+        background-color: red;
+        color: white;
+        margin: 5px auto;
+        padding: 2px 10px;
+        border: 1px solid black;
+        border-radius: 10px;
+        width: 50%;
+      }
+      div.pokemon {
+        /* background-color: rgb(167, 14, 14);
+        color: yellow; */
+      }
+      p.pokemon {
+        background-color: black;
+        color: yellow;
+      }
+
+      .pokemon #pikachu p span {
+        background-color: yellow;
+        color: red;
+        font-weight: 600;
+      }
+
+      .pokemon #charmendar span ol li:nth-child(2) {
+        background-color: rgb(99, 32, 214);
+        color: aqua;
+      }
+
+      input[type="email"] {
+        background-color: red;
+      }
+
+      input[type="text"] {
+        background-color: yellow;
+        color: brown;
+      }
+
+      input[placeholder="Enter your last name"] {
+        background-color: rgb(164, 164, 14);
+        color: rgb(70, 6, 6);
+      }
+
+      input[value="12345"] {
+        background-color: blue;
+        color: aliceblue;
+      }
+    </style>
+  </head>
+
   <body>
-    <div class="div_1">abc</div>
+    <!-- <div class="div_1">abc</div>
     <div class="div_2" id="div_id" style="background-color: green">def</div>
     <div class="div_3">ghi</div>
     <div class="div_4">jkl</div>
     <div class="div_5">mno</div>
-    <p class="p_5">pqr</p>
+    <p class="p_5">pqr</p> -->
+
+    <div class="parent">
+      <p>
+        "Marvel's The Avengers" redirects here. For the original comic book
+        characters, see Avengers (comics).
+      </p>
+      <p>
+        Marvel's The Avengers[5] (classified under the name Marvel Avengers
+        Assemble in the United Kingdom and Ireland),
+      </p>
+
+      <p>
+        The film's development began when Marvel Studios received a loan from
+        Merrill Lynch in April 2005. After the success of the film Iron Man in
+        May 2008,
+      </p>
+
+      <p>
+        The Avengers premiered in Los Angeles on April 11, 2012, and was
+        released in the United States on May 4, as the final film in Phase One
+      </p>
+
+      <p>
+        Iron Man has been adapted for several animated television shows and
+        films.
+      </p>
+
+      <div>
+        <p>April 11, 2012</p>
+      </div>
+    </div>
+
+    <div class="groups">
+      <div class="thor">
+        <p>I'm Thor. The <span>Thunder God</span></p>
+      </div>
+
+      <div class="hulk">
+        <p>I'm Hulk. The <span>Hulk Smash</span></p>
+      </div>
+
+      <div class="spider-man">
+        <p>I'm Spider-man. Your <span>Friendly neighbour</span></p>
+      </div>
+
+      <div class="ant-man">
+        <p>I'm Ant-man. The <span>Shape Shifter</span></p>
+      </div>
+
+      <div id="wasp">
+        <p>I'm Wasp. Most <span>Dangerous Avenger</span></p>
+      </div>
+
+      <div id="pikachu">
+        <p>I'm HAwkeye. Electric pokemon <span>Arrows</span></p>
+      </div>
+    </div>
+
+    <div class="pokemon">
+      <div id="pikachu" class="pokemon-name">
+        <p id="pikachu_id">
+          I'm Pikachu. Electric pokemon <span>Thunderbolt</span>
+        </p>
+      </div>
+
+      <div id="charmendar" class="pokemon-name">
+        <p>I'm charmendar. Fire pokemon</p>
+        <span>
+          <ol>
+            <li>Heat blast</li>
+            <li>Dragon claw</li>
+            <li>Iron tail</li>
+          </ol>
+        </span>
+      </div>
+
+      <div id="bulbasour" class="pokemon-name">
+        <p id="bulbasour_id">
+          I'm bulbasour. Grass pokemon <span>Solar beam</span>
+        </p>
+      </div>
+    </div>
+
+    <p class="pokemon">I love pokemons</p>
+
+    <input type="text" placeholder="Enter your name" />
+    <br />
+    <br />
+
+    <input type="text" placeholder="Enter your  last name" />
+    <br />
+    <br />
+
+    <input type="email" placeholder="Enter your email" />
+    <br />
+    <br />
+
+    <input type="password" placeholder="Enter your password" value="12345" />
+    <br />
+    <br />
+
+    <input placeholder="Enter your mobile" />
   </body>
 </html>
