@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>REM</title>
+  </head>
+  <style>
+    /* 1 rem == 16pixel */
+    /* 1 rem == 10pixel --> (16px/62.5 --> 10) */
+    * {
+      font-size: 62.5%;
+    }
+    .element {
+      font-size: 62.5%;
+    }
+
+    .penguins-data {
+      color: blue;
+      font-size: 16px;
+    }
+    .penguins-data-2 {
+      color: red;
+      /* font-size: 1rem; */
+      font-size: calc(1rem + 2px);
+    }
+    .penguins-data-3 {
+      color: green;
+      font-size: 1rem;
+    }
+  </style>
+  <body>
+    <p class="penguins-data">
+      Penguins are a group of aquatic flightless birds. They live almost
+      exclusively in the Southern Hemisphere: only one species, the Galápagos
+      penguin, is found north of the Equator. Highly adapted for life in the
+      water, penguins have counter shaded dark and white plumage and flippers
+      for swimming
+    </p>
+    <p class="penguins-data-2">
+      Penguins are a group of aquatic flightless birds. They live almost
+      exclusively in the Southern Hemisphere: only one species, the Galápagos
+      penguin, is found north of the Equator. Highly adapted for life in the
+      water, penguins have counter shaded dark and white plumage and flippers
+      for swimming
+    </p>
+    <div class="element">
+      <p class="penguins-data-3">
+        Penguins are a group of aquatic flightless birds. They live almost
+        exclusively in the Southern Hemisphere: only one species, the Galápagos
+        penguin, is found north of the Equator. Highly adapted for life in the
+        water, penguins have counter shaded dark and white plumage and flippers
+        for swimming
+      </p>
+    </div>
+  </body>
+</html>

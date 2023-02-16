@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--
+        Units
+        What are units in HTML CSS?
+        units are used to measure any elements
+        1. px: 
+            pixels
+            96px == 1inch
+        2. %
+            Percentage
+            Provide units according to parents in percentage
+        3. vw
+            viewport Width
+            used for width
+        4. vh
+            viewport height
+            used for height
+        5. em
+            element size
+            child adjusts itself according to parent size
+            font-size, margin, padding 
+
+        6. rem
+            root element
+            child adjusts itself according to body size
+            font-size, margin, padding
+            
+    -->
+    <title>units</title>
+
+    <style>
+      html {
+        /* font-size: 10px; */
+        /* font-size: 16px; */
+        /*default browser font-size */
+        font-size: 62.5%; /*-- 10px*/
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        background-color: bisque;
+      }
+      .unit_1 {
+        background-color: red;
+        width: 100px;
+        height: 50px;
+      }
+      .unit_2 {
+        background-color: blue;
+        /* width: calc(50% + 10px); */
+        width: 50%;
+
+        height: 50px;
+      }
+
+      .parent {
+        width: 800px;
+        height: 400px;
+        background-color: yellow;
+        font-size: 10px;
+      }
+
+      .unit_3 {
+        background-color: blue;
+        width: 50%;
+        height: 50%;
+      }
+
+      .grand_parent {
+        background-color: green;
+        width: 10vw;
+        height: 10vh;
+      }
+      /* .unit_3 p:nth-child(1) {
+        font-size: 20px;
+        color: red;
+      } */
+      /*
+      1em == 10px *1 == 10px
+      3em == 10px *3 == 30px
+      */
+      /* .unit_3 p:nth-child(2) {
+        font-size: 3em;
+        color: yellow;
+      }
+
+      .unit_3 p:nth-child(3) {
+        color: brown;
+        font-size: 1em;
+      }
+
+      .unit_3 p:nth-child(4) {
+        color: lavender;
+        font-size: 2em;
+        margin: 1em;
+      } */
+
+      /*
+      2rem --> 2*parent fontsize
+      2*20px = 40px
+      */
+      .rem_1 {
+        color: darkcyan;
+        font-size: 2rem;
+      }
+
+      /*3*10px = 30px*/
+      .rem_2 {
+        color: darkgreen;
+        font-size: 3rem; /*30px*/
+      }
+
+      .rem_3 {
+        color: black;
+        /*35px*/
+
+        font-size: calc(3rem + 5px);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="grand_parent"></div>
+    <div class="unit_1"></div>
+    <div class="unit_2"></div>
+
+    <div class="parent">
+      <div class="unit_1"></div>
+      <div class="unit_3">
+        <!-- <p>Hello!! i'm learning units- em1</p>
+        <p>Hello!! i'm learning units- em2</p>
+        <p>Hello!! i'm learning units- em3</p>
+        <p>Hello!! i'm learning units- em4</p> -->
+        <p class="rem_1">Hello!! i'm learning units- rem5</p>
+      </div>
+    </div>
+
+    <p class="rem_2">Hello!! i'm learning units in- rem</p>
+    <p class="rem_3">Hello!! i'm learning units in- rem</p>
+  </body>
+</html>

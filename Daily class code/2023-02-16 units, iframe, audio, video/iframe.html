@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>iFrame</title>
+    <style>
+      .common {
+        border: 1px solid red;
+        margin: 1% auto;
+        width: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="insert_audio">
+      <h1>This is fav song</h1>
+      <!--
+              1. audio
+                  controls
+                  autoplay
+                  loop
+                  muted
+                  preload
+                      none
+                      auto
+              2. source
+                  src
+                  type
+              3. Audio tags supports
+                  mp3, wav, ogg
+          -->
+
+      <audio controls preload="none">
+        <source src="dark.mp3" type="audio/mp3" />
+      </audio>
+    </div>
+
+    <div class="video_inserted">
+      <!--
+            1. video
+                controls
+                autoplay
+                loop
+                muted
+                preload
+                    auto
+                    none
+                width
+                height
+                poster
+            2. source
+                src
+                type
+        -->
+      <video controls width="400" preload="none" poster="thumbnail.png">
+        <source src="down.mp4" type="video/mp4" />
+      </video>
+
+      <video controls width="400" preload="auto" autoplay>
+        <source src="lab.mov" type="video/mov" />
+      </video>
+    </div>
+    <div class="div_iframe">
+      <div class="search_engine common">
+        <h1>This is my search Engine</h1>
+        <iframe src="https://www.bing.com" width="70%" height="300px"></iframe>
+      </div>
+
+      <div class="external_website common">
+        <h2>This is my external website</h2>
+        <iframe src="http://vinaymaurya.in" width="50%" height="200px"></iframe>
+      </div>
+
+      <div class="youtube_videos common">
+        <h1>Here is Youtube Videos</h1>
+        <iframe
+          width="460"
+          height="200"
+          src="https://www.youtube.com/embed/G3e-cpL7ofc"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        ></iframe>
+      </div>
+    </div>
+  </body>
+</html>
