@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Figure and Figure Caption</title>
+    <!--
+    figure & caption
+        1. tags
+            figure
+            img
+            figCaption
+-->
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-size: 62.5%;
+      }
+
+      .figure {
+        border: 2px solid red;
+        background-color: aqua;
+        border-radius: 2%;
+        width: 30%;
+        margin: auto;
+      }
+      .figcaption {
+        background-color: aqua;
+        color: brown;
+        font-size: 1.5rem;
+        width: fit-content;
+        margin: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Figure and caption</h1>
+
+    <figure class="figure">
+      <img
+        src="https://upload.wikimedia.org/wikipedia/en/thumb/1/17/Thor_by_Olivier_Coipel.png/220px-Thor_by_Olivier_Coipel.png"
+        alt="thor"
+        width="140px"
+        height="180px"
+      />
+      <figcaption class="figcaption">Thor: the thunder god</figcaption>
+    </figure>
+  </body>
+</html>

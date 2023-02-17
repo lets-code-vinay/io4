@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Picture</title>
+    <!--
+        Picture
+            To make images responsive and adjustable according to screen size
+            tags:
+                picture
+                source
+                    media= 'min-width:375px' (screen width)
+                    srcset='image path'
+    
+                -->
+
+    <style>
+      .source {
+        width: 100vw;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Picture changing according to screen sizes</h1>
+    <picture>
+      <source
+        media="(min-width:1200px)"
+        srcset="
+          https://www.koimoi.com/wp-content/new-galleries/2022/10/robert-downey-jr-is-coming-back-as-iron-man-in-avengers-the-kang-dynasty-avengers-secret-wars-001.jpg
+        "
+      />
+      <source
+        media="(min-width:768px)"
+        srcset="
+          https://m.media-amazon.com/images/M/MV5BOThlNjdhZmQtNzlkOS00M2VjLWI0ZjUtZDExZDI1MjRhZGFkXkEyXkFqcGdeQW1yb3NzZXI@._V1_QL75_UX500_CR0,0,500,281_.jpg
+        "
+      />
+      <source
+        media="(min-width:360px)"
+        srcset="
+          https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSeBLGAJJtxEY6QxA3zuUzMRgBlqtUWlbhR5w&usqp=CAU
+        "
+      />
+
+      <img
+        src="
+          https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrhV4fKkh26WYnnXsA6UYhdGO2wkgDz81c_A&usqp=CAU
+        "
+      />
+    </picture>
+  </body>
+</html>

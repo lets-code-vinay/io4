@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Progress & Meter</title>
+    <style></style>
+  </head>
+  <body>
+    <h1>Progress</h1>
+    <!--
+        label
+            for: same id of progress
+
+        progress
+            id
+            value
+            min
+            max
+    -->
+
+    <label for="download"> Downloading </label>
+    <progress class="progress-bar" id="download" value="30" min="0" max="100">
+      10%
+    </progress>
+
+    <hr />
+    <h1>Meter</h1>
+    <!--
+        Meter
+            label
+                for : id of meter
+            meter
+                id
+                value
+                min
+                max
+    -->
+    <label for="html">HTML</label>
+    <meter id="html" value="95" min="0" max="100">95 out of 100</meter>
+
+    <label for="css">CSS</label>
+    <meter id="css" value="0.7" max="1">70%</meter>
+  </body>
+</html>

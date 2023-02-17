@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Accordion</title>
+    <!--
+        Accordion:
+            1. Tags: 
+                details
+                    open
+                summary
+                anything data
+
+    -->
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-size: 62.5%;
+      }
+      .details {
+        width: 50%;
+        margin: 2px auto;
+      }
+      .summary {
+        background-color: beige;
+        font-size: 1rem;
+      }
+      .accordion-data {
+        background-color: bisque;
+        width: 100%;
+        margin: auto;
+      }
+
+      .accordion-data p {
+        width: 80%;
+        margin: auto;
+        font-size: 0.8rem;
+        color: brown;
+      }
+      .accordion-data p img {
+        float: right;
+        margin-left: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>This is Accordion</h1>
+
+    <details class="details">
+      <summary class="summary">Captain America</summary>
+      <div class="accordion-data">
+        <p>
+          <img
+            src="https://i.pinimg.com/550x/97/bf/27/97bf27becd0df4ff387b882572925416.jpg"
+            alt="captain america"
+            width="30px"
+            height="40px"
+          />
+          Given retroactive "founding member" status in place of the Hulk.
+          Former leader of the Avengers Unity Division and the Black Ops Secret
+          Avengers, as well as former member of the New Avengers. Current member
+          of the main Avengers team.
+        </p>
+      </div>
+    </details>
+
+    <details class="details">
+      <summary class="summary">Iron Man</summary>
+      <div class="accordion-data">
+        <p>
+          <img
+            src="https://www.shutterstock.com/image-photo/singapore-8-march-2017-human-260nw-615514712.jpg"
+            alt="Iron Man"
+            width="30px"
+            height="40px"
+          />
+          Co-Founder of the main Avengers team. Former member of the New
+          Avengers, Pym's Mighty Avengers, and the Fifty-States Initiative
+          Mighty Avengers. An alternate adolescent version of the original
+          replaced him for a time until they merged. Current member of the main
+          Avengers team
+        </p>
+      </div>
+    </details>
+
+    <details class="details" open>
+      <summary class="summary">Thor</summary>
+      <div class="accordion-data">
+        <p>
+          <img
+            src="https://w0.peakpx.com/wallpaper/477/401/HD-wallpaper-thor-in-avengers-endgame-thumbnail.jpg"
+            alt="Thor"
+            width="30px"
+            height="40px"
+          />
+          Co-Founder of the main Avengers team. Former member of A.I.M.'s New
+          Avengers and the Avengers Unity Division. Current member of the main
+          Avengers team.
+        </p>
+      </div>
+    </details>
+
+    <details class="details">
+      <summary class="summary">Hulk</summary>
+      <div class="accordion-data">
+        <p>
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4ukfbmVX0Ecf1QCQHhW4yHr6MaOR25VcQrLtT8AQnajDdpgmaRiZRZpQI5lpELM6bYyc&usqp=CAU"
+            alt="Thor"
+            width="30px"
+            height="40px"
+          />
+          Co-Founder and former member of main team, Pym's Mighty Avengers, and
+          S.H.I.E.L.D.'s Secret Avengers. Resigns from the team in Avengers #2
+          (November 1963), rejoins the Avengers in Avengers vs. X-Men #11.
+          Former member of the main Avengers team.
+        </p>
+        <details class="details">
+          <summary class="summary">She Hulk</summary>
+          <div class="accordion-data">
+            <p>
+              <img
+                src="https://static.independent.co.uk/2022/08/18/15/newFile-6.jpg?quality=75&width=982&height=726&auto=webp"
+                alt="Thor"
+                width="30px"
+                height="40px"
+              />
+              Co-Founder and former member of main team, Pym's Mighty Avengers,
+              and S.H.I.E.L.D.'s Secret Avengers. Resigns from the team in
+              Avengers #2 (November 1963), rejoins the Avengers in Avengers vs.
+              X-Men #11. Former member of the main Avengers team.
+            </p>
+          </div>
+        </details>
+      </div>
+    </details>
+  </body>
+</html>
