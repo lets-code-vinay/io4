@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Display:Grid</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-size: 62.5%;
+      }
+      .container {
+        background-color: aqua;
+        height: 100vh;
+
+        display: grid;
+        /* grid-template-columns: 100px 100px 100px 100px 100px;
+        grid-template-rows: 100px 100px 100px; */
+
+        /*fr = fraction unit*/
+        grid-template-columns: 0.5fr 1fr 1fr 1fr 0.5fr;
+        grid-template-rows: 1fr 1fr 3fr 1fr;
+
+        /* grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(4, 1fr); */
+
+        /* row-gap: 10px;
+        column-gap: 10px; */
+      }
+
+      .child {
+        background-color: red;
+        font-size: 3rem;
+      }
+
+      .child1 {
+        font-size: 3rem;
+        grid-column-start: 1;
+        grid-column-end: 6;
+        background-color: rebeccapurple;
+      }
+      .child2 {
+        grid-row-start: 2;
+        grid-row-end: 4;
+        background-color: tan;
+        height: 550px;
+      }
+
+      .child3 {
+        grid-column-start: 2;
+        grid-column-end: 5;
+        background-color: brown;
+      }
+
+      .child4 {
+        grid-column-start: 5;
+        grid-column-end: 6;
+
+        grid-row-start: 2;
+        grid-row-end: 4;
+        background-color: gold;
+      }
+
+      .child5 {
+        background-color: honeydew;
+      }
+      .child6 {
+        background-color: firebrick;
+      }
+      .child7 {
+        background-color: khaki;
+      }
+
+      .child8 {
+        grid-column-start: 1;
+        grid-column-end: 6;
+        background-color: saddlebrown;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="child child1">Header</div>
+      <div class="child child2">
+        <p>
+          Pikachu is a yellow, mouse-like creature with electrical abilities. It
+          is a major character in the Pokémon franchise, serving as its mascot
+          and as a major mascot for Nintendo. Pikachu. Pokémon character.
+          Pikachu, as depicted in promotional artwork for Pokémon FireRed and
+          LeafGreen.
+        </p>
+        <p>
+          Pikachu is a yellow, mouse-like creature with electrical abilities. It
+          is a major character in the Pokémon franchise, serving as its mascot
+          and as a major mascot for Nintendo. Pikachu. Pokémon character.
+          Pikachu, as depicted in promotional artwork for Pokémon FireRed and
+          LeafGreen.
+        </p>
+      </div>
+      <div class="child child3">3</div>
+      <div class="child child4">4</div>
+      <div class="child child5">5</div>
+      <div class="child child6">6</div>
+      <div class="child child7">7</div>
+      <div class="child child8">8</div>
+    </div>
+  </body>
+</html>
