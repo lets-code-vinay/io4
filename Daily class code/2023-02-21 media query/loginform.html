@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/brands.min.css"
+      integrity="sha512-L+sMmtHht2t5phORf0xXFdTC0rSlML1XcraLTrABli/0MMMylsJi3XA23ReVQkZ7jLkOEIMicWGItyK4CAt2Xw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/fontawesome.min.css"
+      integrity="sha512-cHxvm20nkjOUySu7jdwiUxgGy11vuVPE9YeK89geLMLMMEOcKFyS2i+8wo0FOwyQO/bL8Bvq1KMsqK4bbOsPnA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Login</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-size: 62.5%;
+      }
+      .login-container {
+        display: flex;
+        flex-direction: row;
+        padding: 2%;
+      }
+      .side {
+        width: 50%;
+        border: 1px solid red;
+      }
+
+      form {
+        width: 80%;
+        margin: auto;
+      }
+
+      .login-form-image {
+        background-image: url("https://images.squarespace-cdn.com/content/v1/6036d9e1e5934b79b3bc8312/1617107929202-VRXUHAS9LBSRJ9NF2RKR/Final+Pan+Guy+camera.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position-x: right;
+        background-position-y: center;
+      }
+
+      label {
+        font-size: 1.5rem;
+        color: black;
+      }
+
+      input[type="text"],
+      input[type="password"] {
+        width: 80%;
+        margin: auto;
+      }
+
+      .small-screens{
+        color: blue;
+        font-size: 3rem;
+        width: fit-content;
+        padding: 0px 5px;
+        display: none;
+
+      }
+      .big-screens{
+        background-color: blue ;
+        color: white;
+        border-radius: 5px;
+        font-size: 2rem;
+        width: fit-content;
+    padding: 0px 5px;
+      }
+
+      @media screen and (min-width: 250px) and (max-width: 460px) {
+        .login-container {
+          display: flex;
+          flex-direction: column-reverse;
+          padding: 2%;
+          justify-content: center;
+          align-items: center;
+          height: 500px;
+        }
+        .login-form-image {
+          width: 90%;
+          height: 218px;
+          background-size: cover;
+          background-position-x: right;
+          background-position-y: center;
+        }
+        .login-form {
+          width: 90%;
+          height: 218px;
+        }
+        form {
+          height: 200px;
+          margin-top: 2%;
+        }
+
+        .big-screens{
+            display: none;
+
+        }
+
+        .small-screens{
+            display: block;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <main>
+      <section class="login-container">
+        <div class="side left-side login-form">
+          <form>
+            <fieldset>
+              <legend>Login</legend>
+
+              <label for="username">User name:</label>
+              <input
+                id="username"
+                type="text"
+                required
+                placeholder="Enter you user name "
+              />
+              <br />
+              <br />
+
+              <label for="password">Password</label>
+              <input
+                id="password"
+                type="password"
+                required
+                placeholder="Enter you password"
+              />
+              <br />
+              <br />
+
+              <input type="submit" value="Login" />
+            </fieldset>
+
+            <div class="small-screens">
+              <i class="fa-brands fa-square-facebook"></i></i>
+            </div>
+
+            <div class="big-screens">
+              <i class="fa-brands fa-square-facebook"></i></i> Facebook
+            </div>
+          </form>
+        </div>
+        <div class="side right-side login-form-image"></div>
+      </section>
+    </main>
+  </body>
+</html>
