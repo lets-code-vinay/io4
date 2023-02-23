@@ -1,18 +1,46 @@
 /* ---- Font family of -- Shantell Sans -----*/
 /* @import url("https://fonts.googleapis.com/css2?family=Shantell+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&display=swap"); */
 
+/*
+ font-family: 'Kanit', sans-serif;
+font-family: 'Shantell Sans', cursive;
+ */
+
+/* --common class -- */
+.pointer:hover {
+  cursor: pointer;
+}
+
+.product-rotation-30deg {
+  transform: rotate(-30deg);
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-size: 62.5%;
   font-family: "Shantell Sans", cursive;
+}
+body {
   background-color: #fef9f5;
 }
 
-/* --common class -- */
-.pointer:hover {
-  cursor: pointer;
+.buy-button {
+  background-color: #3c4ff2;
+  color: white;
+  border-radius: 6px;
+  border: none;
+  padding: 1.5%;
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-family: "Kanit", sans-serif;
+  font-family: sans-serif;
+}
+.buy-button i {
+  background-color: #3c4ff2;
+  margin-right: 5px;
+  font-size: 2rem;
 }
 
 header {
@@ -35,6 +63,7 @@ header nav {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
+  align-items: center;
   font-size: 5rem;
   font-weight: 800;
 }
@@ -79,12 +108,14 @@ header nav {
   height: 50vh;
   width: 80%;
   margin: 1% auto;
-
   display: flex;
-  flex: row;
+  flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+}
+.banner-section .banner {
+  padding: 0 5%;
 }
 .banner-section .banner .banner-left,
 .banner-section .banner .banner-right {
@@ -99,14 +130,10 @@ header nav {
   position: absolute;
   background-color: #757a80;
   border-radius: 50%;
-  width: 52%;
-  height: 376px;
+  width: 48%;
+  height: 329px;
   bottom: -46%;
   left: 10%;
-}
-
-.banner-section .banner .banner-left img {
-  transform: rotate(-30deg);
 }
 
 .banner-section .banner .banner-right {
@@ -122,5 +149,113 @@ header nav {
 
 .banner-section .banner .banner-right p {
   font-size: 2rem;
+  font-family: "Kanit", sans-serif;
 }
 /* -- banner section ends*/
+
+/* <!-- Products section start here --> */
+.products-section {
+  background-color: #e4e4e5;
+  width: 100%;
+  height: auto;
+}
+.products-section .products {
+  width: 80%;
+  margin: auto;
+}
+
+.products-section .products h2 {
+  font-size: 4rem;
+  font-family: "Kanit", sans-serif;
+  color: #363958;
+  padding: 1.2% 0;
+}
+.products-section .products .products-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.products-section .products .products-container .product-card {
+  background-color: #fffefe;
+  width: 30%;
+  padding: 1%;
+  border-radius: 20px;
+}
+
+.products-section
+  .products
+  .products-container
+  .product-card
+  .product-image-container {
+  background-color: rgb(240, 241, 240);
+  width: 100%;
+  border-radius: 20px;
+  height: 350px;
+}
+.products-section
+  .products
+  .products-container
+  .product-card
+  .product-image-container
+  .product-image {
+  margin: -15% 0 0 -10%;
+}
+
+.products-section
+  .products
+  .products-container
+  .second-product
+  .product-image-container
+  .product-image {
+  margin: 17% 0 0 -8%;
+  height: 200px;
+}
+
+.products-section
+  .products
+  .products-container
+  .third-product
+  .product-image-container
+  .product-image {
+  margin: 8% 0 0 -8%;
+}
+
+.products-section .products .product-card .product-captions .product-title {
+  font-size: 2.5rem;
+  font-family: "Kanit", sans-serif;
+  color: #363958;
+  font-weight: 500;
+}
+
+.products-section .products .product-card .product-captions .product-details {
+  font-size: 1.8rem;
+  font-family: "Kanit", sans-serif;
+  color: #46484c;
+}
+
+.products-section .products .product-card .price-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.products-section .products .product-card .price-section .price {
+  font-size: 2.2rem;
+  font-family: "Kanit", sans-serif;
+  font-weight: 600;
+  text-align: center;
+  color: #fe8366;
+}
+.shoes-red {
+  margin-top: -10%;
+}
+
+.product-image-black {
+  margin-top: 14%;
+}
+
+/* <!-- Products section ends here --> */
