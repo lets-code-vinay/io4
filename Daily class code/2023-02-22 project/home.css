@@ -76,6 +76,12 @@ header nav {
   color: #222222;
 }
 
+.mobile-menus .hamburger {
+  font-size: 3rem;
+  color: #908f8b;
+  display: none;
+}
+
 .brand-title {
   text-transform: uppercase;
 }
@@ -448,6 +454,16 @@ High-res laptop or desktop: 1920 x 1080 */
 @media only screen and (min-width: 360px) and (max-width: 720px) {
   * {
     font-size: 40%;
+  }
+
+  .nav-right ul {
+    display: none;
+  }
+
+  .mobile-menus .hamburger {
+    font-size: 3rem;
+    color: #908f8b;
+    display: block;
   }
 
   .buy-button {
