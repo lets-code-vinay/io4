@@ -4,7 +4,311 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <!--
+      Animation with css
+       To animate using CSS widely we are using 2 keywords
+          1. Animation
+              a) animation-name: progress
+                  To provide name of animation on that element which you need to animate
+              b) animation-duration: 4s;
+                  Provide timing for animation
+              c) animation-iteration-count: 5;
+                  animation-iteration-count: infinite;
+                    How many times you want to run you animation     
+              d) animation-delay: 2s;
+                    When you want some delay in your animation to start
+              e) animation-timing-function: ;
+                    linear
+                    ease
+                    ease-in
+                    ease-out
+                    ease-in-out
+              f)animation-direction: normal; // it will not work with animation-iteration-count: infinite
+                  normal: it works normal and is by default
+                  reverse: it will animate in reverse order
+                  alternate: it will animate forwards and backwards
+                  alternate-reverse: it will animate backwards and then forwards
+
+
+          2. @keyframes
+                use animation-name with keyframes
+
+    -->
+    <style>
+      .progress-bar-container {
+        background-color: red;
+        width: 80%;
+        height: 50px;
+        border: 1px solid black;
+        position: relative;
+      }
+      .progress-bar {
+        background-color: yellow;
+        width: 0%;
+        height: 95%;
+        position: absolute;
+        top: 2%;
+        left: 0%;
+        animation-name: progress;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+
+        animation-delay: 2s;
+      }
+
+      @keyframes progress {
+        from {
+          background-color: yellow;
+          width: 0%;
+        }
+        to {
+          background-color: blue;
+          width: 100%;
+        }
+      }
+
+      /*
+      animation-timing-function:linear
+      */
+      /* .progress-bar-container1 {
+        background-color: red;
+        width: 80%;
+        height: 50px;
+        border: 1px solid black;
+        position: relative;
+      }
+      .progress-bar1 {
+        background-color: yellow;
+        width: 0%;
+        height: 95%;
+        position: absolute;
+        top: 2%;
+        left: 0%;
+        animation-name: progress1;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+        animation-delay: 2s;
+        animation-timing-function: linear;
+      }
+
+      @keyframes progress1 {
+        from {
+          background-color: yellow;
+          width: 0%;
+        }
+        to {
+          background-color: blue;
+          width: 100%;
+        }
+      } */
+      /*
+      animation-timing-function:ease
+      */
+      /* .progress-bar-container2 {
+        background-color: red;
+        width: 80%;
+        height: 50px;
+        border: 1px solid black;
+        position: relative;
+      }
+      .progress-bar2 {
+        background-color: yellow;
+        width: 0%;
+        height: 95%;
+        position: absolute;
+        top: 2%;
+        left: 0%;
+        animation-name: progress2;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+        animation-delay: 2s;
+        animation-timing-function: ease;
+      }
+
+      @keyframes progress2 {
+        from {
+          background-color: yellow;
+          width: 0%;
+        }
+        to {
+          background-color: blue;
+          width: 100%;
+        }
+      } */
+
+      /*
+      animation-timing-function:ease-in
+      */
+      /* .progress-bar-container3 {
+        background-color: red;
+        width: 80%;
+        height: 50px;
+        border: 1px solid black;
+        position: relative;
+      }
+      .progress-bar3 {
+        background-color: yellow;
+        width: 0%;
+        height: 95%;
+        position: absolute;
+        top: 2%;
+        left: 0%;
+        animation-name: progress3;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+        animation-delay: 2s;
+        animation-timing-function: ease-in;
+      }
+
+      @keyframes progress3 {
+        from {
+          background-color: yellow;
+          width: 0%;
+        }
+        to {
+          background-color: blue;
+          width: 100%;
+        }
+      } */
+      /*
+      animation-timing-function:ease-out
+      */
+      /* .progress-bar-container4 {
+        background-color: red;
+        width: 80%;
+        height: 50px;
+        border: 1px solid black;
+        position: relative;
+      }
+      .progress-bar4 {
+        background-color: yellow;
+        width: 0%;
+        height: 95%;
+        position: absolute;
+        top: 2%;
+        left: 0%;
+        animation-name: progress4;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+        animation-delay: 2s;
+        animation-timing-function: ease-out;
+      }
+
+      @keyframes progress4 {
+        from {
+          background-color: yellow;
+          width: 0%;
+        }
+        to {
+          background-color: blue;
+          width: 100%;
+        }
+      } */
+
+      /*
+      animation-timing-function:ease-in-out
+      */
+      /* .progress-bar-container5 {
+        background-color: red;
+        width: 80%;
+        height: 50px;
+        border: 1px solid black;
+        position: relative;
+      }
+      .progress-bar5 {
+        background-color: yellow;
+        width: 0%;
+        height: 95%;
+        position: absolute;
+        top: 2%;
+        left: 0%;
+        animation-name: progress5;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+        animation-delay: 2s;
+        animation-timing-function: ease-in-out;
+      }
+
+      @keyframes progress5 {
+        from {
+          background-color: yellow;
+          width: 0%;
+        }
+        to {
+          background-color: blue;
+          width: 100%;
+        }
+      } */
+
+      .spider-man-container {
+        background-color: aqua;
+        width: 80%;
+        height: 300px;
+        position: relative;
+      }
+      .spider-man {
+        position: absolute;
+        animation-name: spider-man-animation;
+        animation-duration: 5s;
+        animation-timing-function: ease-in-out;
+        animation-delay: 1s;
+        animation-iteration-count: 20;
+        /* animation-direction: normal; */
+        /* animation-direction: reverse; */
+        animation-direction: alternate;
+        /* animation-direction: alternate-reverse; */
+      }
+
+      @keyframes spider-man-animation {
+        from {
+          top: 0%;
+          left: 0%;
+          transform: rotate(0deg);
+        }
+        to {
+          top: 83%;
+          left: 90%;
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+    <title>Animation</title>
+
+    <main>
+      <div class="progress-bar-container">
+        <div class="progress-bar"></div>
+      </div>
+
+      <!--Animation-timing-function - starts-->
+      <!-- 
+        <div class="progress-bar-container1">
+        <div class="progress-bar1"></div>
+      </div>
+
+      <div class="progress-bar-container2">
+        <div class="progress-bar2"></div>
+      </div>
+      <div class="progress-bar-container3">
+        <div class="progress-bar3"></div>
+      </div>
+      <div class="progress-bar-container4">
+        <div class="progress-bar4"></div>
+      </div>
+      <div class="progress-bar-container5">
+        <div class="progress-bar5"></div>
+      </div> 
+    -->
+      <!--Animation-timing-function - ends-->
+
+      <div class="spider-man-container">
+        <img
+          class="spider-man"
+          src="Spider-Man.png"
+          alt="spider man"
+          height="50px"
+        />
+      </div>
+    </main>
   </head>
   <body></body>
 </html>
