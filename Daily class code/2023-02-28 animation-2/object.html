@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rotations</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      .container {
+        width: 50%;
+        height: 500px;
+        background-color: azure;
+        border: 1px solid red;
+        position: relative;
+      }
+      .container-box {
+        margin: 10% auto;
+        width: 150px;
+        height: 150px;
+        border: 1px solid black;
+        border-radius: 50%;
+        animation-name: black;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        animation-direction: normal;
+      }
+
+      .planet {
+        position: absolute;
+        top: 8%;
+        left: 8%;
+        border-radius: 50%;
+
+        z-index: 2;
+        width: 20px;
+        height: 20px;
+      }
+      @keyframes black {
+        0% {
+          transform: rotate(36deg);
+        }
+        10% {
+          transform: rotate(72deg);
+        }
+        20% {
+          transform: rotate(108deg);
+        }
+        30% {
+          transform: rotate(144deg);
+        }
+        40% {
+          transform: rotate(180deg);
+        }
+        50% {
+          transform: rotate(216deg);
+        }
+        60% {
+          transform: rotate(252deg);
+        }
+        70% {
+          transform: rotate(288deg);
+        }
+        80% {
+          transform: rotate(324deg);
+        }
+
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <main>
+      <div class="container">
+        <div class="container-box">
+          <img class="planet" src="earth.jpg" alt="earth" />
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
