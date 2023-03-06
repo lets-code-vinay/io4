@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--Font awesome CDN-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/brands.min.css"
+      integrity="sha512-G/T7HQJXSeNV7mKMXeJKlYNJ0jrs8RsWzYG7rVACye+qrcUhEAYKYzaa+VFy6eFzM2+/JT1Q+eqBbZFSHmJQew=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/fontawesome.min.css"
+      integrity="sha512-giQeaPns4lQTBMRpOOHsYnGw1tGVzbAIHUyHRgn7+6FmiEgGGjaG0T2LZJmAPMzRCl+Cug0ItQ2xDZpTmEc+CQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <title>Bootstrap-Grid- sys</title>
+    <style>
+      body {
+        background-color: red;
+      }
+      .container-class {
+        background-color: blue;
+      }
+      .row-class {
+        background-color: yellow;
+      }
+      .col-class {
+        background-color: green;
+        border: 1px solid black;
+        height: 50px;
+      }
+
+      .col-class-2 {
+        background-color: azure;
+        border: 1px solid black;
+        height: 50px;
+      }
+      .col-class-3 {
+        background-color: bisque;
+        border: 1px solid black;
+        height: 50px;
+      }
+
+      .col-class-4 {
+        background-color: gold;
+        border: 1px solid black;
+        height: 50px;
+      }
+
+      .row-class-5 {
+        color: yellow;
+      }
+      .col-class-5 {
+        background-color: rgb(197, 197, 233);
+        border: 1px solid black;
+        height: 50px;
+      }
+
+      .col-class-6 {
+        background-color: rgb(73, 73, 226);
+        border: 1px solid black;
+        height: 50px;
+      }
+
+      .pokemon-container {
+        border: 1px solid black;
+        background-color: aqua;
+      }
+
+      .nested-cols {
+        height: 100px;
+        background-color: brown;
+        border: 1px solid white;
+      }
+      .col-nested-under-row {
+        background-color: hotpink;
+        border: 1px solid black;
+        height: 100px;
+      }
+      .fa-solid {
+        color: black;
+        font-size: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container-fluid container-class">
+      <!-- <div class="row row-class text-center">
+        <div class="col col-class">col</div>
+        <div class="col col-class">col</div>
+        <div class="col col-class">col</div>
+        <div class="col col-class">col</div>
+      </div>
+
+      <div class="row text-center row-class-2">
+        <div class="col-6 col-class-2">col-6</div>
+        <div class="col-6 col-class-2">col-6</div>
+      </div>
+
+      <div class="row text-center row-class-3">
+        <div class="col-4 col-class-3">col-4</div>
+        <div class="col-8 col-class-3">col-8</div>
+      </div>
+
+      <div class="row text-center row-class-4">
+        <div class="col-3 col-class-4">col-3</div>
+        <div class="col-6 col-class-4">col-6</div>
+        <div class="col-3 col-class-4">col-3</div>
+      </div>
+
+      <div class="row text-center row-class-5">
+        <div class="col-3 col-class-5">col-3</div>
+        <div class="col-7 col-class-5">col-7</div>
+        <div class="col-2 col-class-5">col-2</div>
+      </div> -->
+
+      <div class="row text-center row-class-6 nav-bar">
+        <div class="col-2 col-sm-12 col-md-4 col-lg-2 col-xl-2 col-class-6">
+          sec-1
+        </div>
+        <div class="col-8 col-sm-12 col-md-4 col-lg-8 col-xl-7 col-class-6">
+          sec-2
+        </div>
+        <div class="col-2 col-sm-12 col-md-4 col-lg-2 col-xl-3 col-class-6">
+          sec-3
+        </div>
+      </div>
+    </div>
+
+    <div class="container mx-auto my-2 pokemon-container">
+      <div class="row row-sec-1 px-2 py-2">
+        <div class="col-12 col-sm-6 col-md-3 col-lg-4">
+          <p>
+            Pokémon is a Japanese media franchise managed by The Pokémon
+            Company, founded by Nintendo, Game Freak, and Creatures. The
+            franchise was created by Satoshi Tajiri in 1996, and is centered
+            around fictional creatures called "Pokémon".
+          </p>
+        </div>
+        <div class="col-12 col-sm-6 col-md-4 col-lg-4">
+          <img
+            src="https://www.pokemon.com/static-assets/app/static3/img/og-default-image.jpeg"
+            alt="pikachu"
+            width="100%"
+          />
+        </div>
+        <div class="col-12 col-sm-12 col-md-5 col-lg-4">
+          <div class="accordion" id="accordionExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingOne">
+                <button
+                  class="accordion-button"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseOne"
+                  aria-expanded="true"
+                  aria-controls="collapseOne"
+                >
+                  Accordion Item #1
+                </button>
+              </h2>
+              <div
+                id="collapseOne"
+                class="accordion-collapse collapse show"
+                aria-labelledby="headingOne"
+                data-bs-parent="#accordionExample"
+              >
+                <div class="accordion-body">
+                  <strong>This is the first item's accordion body.</strong> It
+                  is shown by default, until the collapse plugin adds the
+                  appropriate classes that we use to style each element. These
+                  classes control the overall appearance, as well as the showing
+                  and hiding via CSS transitions.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingTwo">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseTwo"
+                  aria-expanded="false"
+                  aria-controls="collapseTwo"
+                >
+                  Accordion Item #2
+                </button>
+              </h2>
+              <div
+                id="collapseTwo"
+                class="accordion-collapse collapse"
+                aria-labelledby="headingTwo"
+                data-bs-parent="#accordionExample"
+              >
+                <div class="accordion-body">
+                  <strong>This is the second item's accordion body.</strong> It
+                  is hidden by default, until the collapse plugin adds the
+                  appropriate classes that we use to style each element. These
+                  classes control the overall appearance, as well as the showing
+                  and hiding via CSS transitions. You can modify any of this
+                  with custom CSS or overriding our default variables. It's also
+                  worth noting that just about any HTML can go within the
+                  <code>.accordion-body</code>, though the transition does limit
+                  overflow.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingThree">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseThree"
+                  aria-expanded="false"
+                  aria-controls="collapseThree"
+                >
+                  Accordion Item #3
+                </button>
+              </h2>
+              <div
+                id="collapseThree"
+                class="accordion-collapse collapse"
+                aria-labelledby="headingThree"
+                data-bs-parent="#accordionExample"
+              >
+                <div class="accordion-body">
+                  <strong>This is the third item's accordion body.</strong> It
+                  is hidden by default, until the collapse plugin adds the
+                  appropriate classes that we use to style each element. These
+                  classes control the overall appearance, as well as the showing
+                  and hiding via CSS transitions. You can modify any of this
+                  with custom CSS or overriding our default variables. It's also
+                  worth noting that just about any HTML can go within the
+                  <code>.accordion-body</code>, though the transition does limit
+                  overflow.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row row-nested">
+        <div class="col-12 col-sm-6 col-md-3 col-lg-4 nested-cols">
+          <div class="row row-inside-nested-row">
+            <div class="col-6 col-nested-under-row">
+              <div class="row icon-section">
+                <div class="col"><i class="fa-solid fa-house"></i></div>
+                <div class="col"><i class="fa-solid fa-address-book"></i></div>
+                <div class="col"><i class="fa-solid fa-cart-shopping"></i></div>
+                <div class="col"><i class="fa-solid fa-tag"></i></div>
+              </div>
+            </div>
+            <div class="col-2 col-nested-under-row">B</div>
+            <div class="col-4 col-nested-under-row">C</div>
+          </div>
+        </div>
+        <div class="col-12 col-sm-6 col-md-3 col-lg-4 nested-cols">col-2</div>
+        <div class="col-12 col-sm-6 col-md-3 col-lg-4 nested-cols">col-3</div>
+      </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+      integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+      integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
