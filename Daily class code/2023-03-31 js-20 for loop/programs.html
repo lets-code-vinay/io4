@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Your choice</title>
+  </head>
+  <body>
+    <h1>Your choice</h1>
+    <h2>Select your choice</h2>
+    <ol type="1">
+      <li>Find Even/odd</li>
+      <li>Find leap year</li>
+      <li>Find factorial</li>
+      <li>Find negative number</li>
+      <li>Print table</li>
+      <li>Pyramid</li>
+    </ol>
+
+    <script>
+      let choice = Number(prompt("Enter your choice"));
+
+      function findMyChoice(choice) {
+        switch (choice) {
+          case 1:
+            let num = prompt("Enter any number to find Even/Odd");
+            let isEven =
+              num % 2 == 0
+                ? `${num} is an even number`
+                : `${num} is an Odd number`;
+            return document.write(`<h2 style="color:red">${isEven}</h2>`);
+          case 2:
+            let year = Number(prompt("Enter any year"));
+            let isLeapYear =
+              year % 4 == 0
+                ? `${year} is a Leap Year`
+                : `${year} is not a Leap Year`;
+            return document.write(`<h2 style="color:blue">${isLeapYear}</h2>`);
+
+          case 3:
+            let n = Number(prompt("Enter any number to find factorial"));
+            let fact = n;
+            let dec;
+
+            for (let i = 1; i < n; i++) {
+              dec = n - i;
+              fact = fact * dec;
+            }
+            return document.write(
+              `<h2 style="color:green">Factorial of ${n} is  ${fact}</h2>`
+            );
+
+          default:
+            return document.write(
+              `<h2 style="color:red">Enter a valid input</h2>`
+            );
+        }
+      }
+      findMyChoice(choice);
+    </script>
+  </body>
+</html>
