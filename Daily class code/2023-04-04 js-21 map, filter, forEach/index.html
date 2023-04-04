@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Map/Filter</title>
+  </head>
+  <body>
+    <h1>forEach</h1>
+    <h1>Map</h1>
+    <h1>Filter</h1>
+
+    <ol>
+      Array prototypes(ES6)
+      <li>.length</li>
+      <li>.map()</li>
+      <li>.filter()</li>
+      <li>.find()</li>
+      <li>.findIndex()</li>
+      <li>.indexOf()</li>
+      <li>.splice()</li>
+      <li>.split()</li>
+      <li>.reduce()</li>
+      <li>.forEach()</li>
+    </ol>
+
+    <script>
+      const str = "Alice finds herself in an apple orchard,";
+      const arr = ["Alice", "finds", "herself", "in", "an", "apple", "orchard"];
+      console.log("1. ---->", arr.length);
+
+      const arr2 = [
+        "h",
+        "e",
+        "l",
+        "l",
+        "o",
+        2,
+        4,
+        6,
+        8,
+        "eat",
+        "sleep",
+        "exercise",
+      ];
+      console.log("2. ---->", arr2.length);
+
+      const even = [];
+      const odd = [];
+
+      const arr3 = [7, 87, 6, 1, 2, 45, 10, 55, 78, 365, 78, 90, 01, 154, 7];
+
+      for (let i = 0; i < arr3.length; i++) {
+        if (arr3[i] % 2 == 0) {
+          even.push(arr3[i]);
+        } else {
+          odd.push(arr3[i]);
+        }
+      }
+      console.log("3. --->", even);
+      console.log("4. --->", odd);
+
+      //---------------------------------
+      //   forEach -- use to iterate loop. it doesn't return any value
+      // altered original array
+      const forEachVariable = arr3.forEach(function (element, index) {
+        console.log(`Element is ${element} and index is ${index}`);
+      });
+      console.log("5-->forEachVariable--", forEachVariable);
+
+      //-----------------------------
+      // map - use to iterate the loop, it returns a new array
+      //and doesn't spoil original
+      const mapVariable = arr3.map(function (element, index) {
+        return `${element}-${index}`;
+      });
+      console.log("7-->mapVariable--", mapVariable);
+
+      //----------------------
+      // filter-- it iterates the loop
+      // and return a new array after applying some condition
+      // and it doesn't mutate original array
+
+      const filterVariable = arr3.filter(function (element, index) {
+        return element > 50;
+      });
+      console.log("8-->filterVariable--", filterVariable);
+
+      const filterVar = arr3.filter((element, index) => element > 50);
+      console.log("9-->filterVar--", filterVar);
+
+      const arrOfNum = [
+        8, 42, 5, 89, 44, 65256, 7484, 14, 378, 484, 48, 78, 55, 12,
+      ];
+      console.log("10 -->arrOfNum ORIGINAL ", arrOfNum);
+
+      const newArr = arrOfNum.forEach((element, index) => {
+        console.log("aaaa", element * 2);
+      });
+      console.log("newArr", newArr);
+
+      const newArrWithMap = arrOfNum.map((chander, ind) => chander * 2);
+
+      console.log("newArrWithMap", newArrWithMap);
+
+      const newArrWithFilter = arrOfNum
+        .filter((ele, ind) => ele > 40)
+        .map((e, i) => e * 2);
+
+      console.log("newArrWithFilter", newArrWithFilter);
+
+      console.log("11 -->arrOfNum after operation ", arrOfNum);
+
+      const arr4 = [
+        "h",
+        "e",
+        "l",
+        "l",
+        "o",
+        2,
+        4,
+        6,
+        8,
+        "eat",
+        "sleep",
+        "exercise",
+      ];
+    </script>
+  </body>
+</html>
