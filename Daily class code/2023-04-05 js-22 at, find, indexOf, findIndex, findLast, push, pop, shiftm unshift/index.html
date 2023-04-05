@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array Prototype</title>
+  </head>
+  <body>
+    <h1>at</h1>
+
+    <script>
+      const arr = [
+        "h",
+        "e",
+        "l",
+        "l",
+        "o",
+        2,
+        4,
+        6,
+        8,
+        "eat",
+        "sleep",
+        "exercise",
+      ];
+
+      console.log("1--->", arr[9]);
+      // -------------------- at ----------------==
+      // find the element at given index in arr.at(5)
+      // similar to arr[5]
+
+      console.log("2--->", arr.at(9));
+      console.log("3--->", arr.at(11));
+      console.log("4--->", arr.at("e"));
+
+      //-------------------concat -----------------
+      const str1 = "Hi";
+      const str2 = "Infoxygens";
+      console.log("5--->", str1.concat(str2));
+
+      const arr2 = [8, 42, 5, 89, 44];
+      const arr3 = [65, 74, 14, 3, 78];
+      const arr4 = [4, 84, 48, 78, 55, 12];
+      const arr5 = [14, 18, 51, 12, [14, 18]];
+
+      console.log("6 --> ", arr2.concat(arr3));
+
+      console.log("7 --> ", arr2.concat(arr3, arr4));
+
+      const arr6 = arr2.concat(arr5);
+
+      console.log("8 --->", arr6);
+
+      // spread operator (ES6)->
+      // used to clone array without
+      // mutating original array
+      const arr7 = [...arr2, ...arr3];
+      console.log("9 --->", arr7);
+
+      const arr8 = [...arr4, ...arr2, ...arr3, ...arr5];
+      console.log("10 --->", arr8);
+
+      const arr9 = arr8.flat();
+      console.log("11 --->", arr9);
+
+      // sort
+      // To organize in ascending order
+      const arr10 = arr9.sort();
+      console.log("12 --->", arr10);
+
+      const arr11 = [
+        "Alice",
+        "finds",
+        "herself",
+        "in",
+        "an",
+        "apple",
+        "orchard",
+      ];
+      //   const arr = [
+      //     "h",
+      //     "e",
+      //     "l",
+      //     "l",
+      //     "o",
+      //     2,
+      //     4,
+      //     6,
+      //     8,
+      //     "eat",
+      //     "sleep",
+      //     "exercise",
+      //   ];
+      const arr12 = arr11.sort();
+      console.log("13 --->", arr12);
+
+      const arr13 = [...arr11, ...arr];
+      const arr14 = arr13.sort();
+      console.log("14 --->", arr14);
+
+      // reverse ---
+      // to reverse any array
+
+      // [56,15,89,78,5,1]
+      const arr15 = [56, 15, 89, 78, 5, 1];
+      //   const arr16 = arr15.reverse();
+      //   console.log("15--->", arr16);
+      console.log("16--->", arr11.reverse());
+
+      const arr16 = [56, 15, 89, 78, 5, 1];
+      const emptyArr = [];
+
+      for (let i = 1; i <= arr16.length; i++) {
+        const revIndex = arr16.length - i;
+
+        emptyArr.push(arr16[revIndex]);
+      }
+      console.log("16--->", emptyArr);
+
+      const arr17 = [
+        "Alice",
+        "finds",
+        "herself",
+        "in",
+        "an",
+        "Alice",
+        "apple",
+        "orchard",
+        "Alice",
+      ];
+
+      const emptyString = [];
+      for (let i = 1; i <= arr17.length; i++) {
+        const revIndex = arr17.length - i;
+        emptyString.push(arr17[revIndex]);
+      }
+      console.log("17--->", emptyString);
+
+      //indexOf
+      // return the index value of any element
+      const indexOfAlice = arr17.indexOf("apple");
+      console.log("18--->", indexOfAlice);
+      console.log("19--->", arr17.indexOf("an"));
+      console.log("20--->", arr17.indexOf("Alice"));
+      console.log("21--->", arr17.indexOf("Alice", 1));
+      console.log("22--->", arr17.indexOf("Green")); // -1
+
+      //lastIndex
+      // return the last index value of any element
+      const lastIndexOfAlice = arr17.lastIndexOf("apple");
+      console.log("23--->", lastIndexOfAlice);
+      console.log("24--->", arr17.lastIndexOf("an"));
+      console.log("25--->", arr17.lastIndexOf("Alice"));
+      console.log("26--->", arr17.lastIndexOf("Alice", 1));
+      console.log("27--->", arr17.lastIndexOf("Green")); // -1
+
+      // find()
+      // return the first matched value according to condition
+      const arr18 = [9, 15, 89, 78, 5, 1, 56];
+      const filteredArr = arr18.filter((ele, ind) => ele > 10);
+      console.log("28--->", filteredArr);
+
+      const found = arr18.find((ele, ind) => ele > 10);
+      console.log("29--->", found);
+
+      //findIndex()
+      // return the index on condition
+      const foundIndex = arr18.findIndex((ele, ind) => ele > 10);
+      console.log("30--->", foundIndex);
+
+      const foundIndex2 = arr18.findIndex((ele, ind) => ele % 2 == 0);
+      console.log("31--->", foundIndex2);
+    </script>
+  </body>
+</html>
