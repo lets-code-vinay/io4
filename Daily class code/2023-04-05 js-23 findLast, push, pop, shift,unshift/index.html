@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array Prototype</title>
+  </head>
+  <body>
+    <script>
+      const arr = [
+        "Alice",
+        "finds",
+        "herself",
+        "in",
+        "an",
+        "Alice",
+        "apple",
+        "orchard",
+        "Alice",
+      ];
+
+      console.log(`1. --->`, arr);
+      console.log(`2. --->`, arr.length);
+      console.log(`3. --->`, arr[6]);
+      console.log(`4. --->`, arr.at(7));
+
+      const arr1 = [...arr]; // shallow cloning/shallow copy
+      console.log(`5 --->`, arr1.reverse());
+
+      const revArr = [];
+      for (let i = 1; i <= arr1.length; i++) {
+        revArr.push(arr1[arr1.length - i]);
+      }
+      console.log(`6--->`, revArr);
+
+      const arr2 = [8, 42, 5, 89, 44];
+      const arr3 = [65, 74, 14, 3, 78];
+      const arr4 = [4, 84, 48, 78, 55, 12];
+      const arr5 = [14, 18, 51, 12, [14, 18]];
+
+      const conArr = arr2.concat(arr3, arr4, arr5);
+      console.log(`7--->`, conArr);
+
+      const conArr2 = [...arr2, ...arr3, ...arr4, ...arr5];
+      console.log(`8--->`, conArr2);
+
+      console.log(`9--->`, arr1.sort());
+      console.log(`10--->`, arr2.sort());
+      console.log(`11--->`, conArr2.sort());
+
+      console.log(`12--->`, arr.indexOf("apple"));
+      console.log(`13--->`, arr.indexOf("Alice"));
+      console.log(`14--->`, arr.indexOf("Alice", 1));
+
+      const foundEle = arr.find((ele, ind) => ele == "apple");
+      console.log("15--->", foundEle);
+
+      const foundEle2 = conArr2.find((ele, ind) => ele > 80);
+      console.log("16--->", foundEle2);
+
+      const foundIndex = arr.findIndex((ele, end) => ele == "an");
+      console.log("17--->", foundIndex);
+
+      const foundIndex2 = conArr2.findIndex((ele, ind) => ele > 60);
+      console.log("18--->", foundIndex2);
+
+      console.log(`19--->`, arr.lastIndexOf("apple"));
+      console.log(`20--->`, arr.lastIndexOf("Alice"));
+      console.log(`21--->`, arr.lastIndexOf("Alice", 1));
+      console.log(`22--->`, arr.lastIndexOf("Enter"));
+
+      // findLast
+      // It iterate the loop from end
+      // when it found any element it returns the element
+      const findLastEle = arr.findLast((ele, ind) => ele == "orchard");
+      console.log("23-->", findLastEle);
+
+      const findLastNum = conArr2.findLast((ele, ind) => ele % 4 == 0);
+      console.log("24-->", findLastNum);
+
+      // findLastIndex
+      // It iterate the loop from end
+      // when it found any element it returns the index value
+      const findLastIndex = arr.findLastIndex((ele, ind) => ele == "orchard");
+      console.log("25-->", findLastIndex);
+
+      const findLastNumIndex = conArr2.findLastIndex(
+        (ele, ind) => ele % 4 == 0
+      );
+      console.log("26-->", findLastNumIndex);
+
+      //includes ()
+      // it checks if the given value is existed in the array or not
+      // returns boolean- true/false
+
+      const isIncluded = arr.includes("an");
+      console.log(`27--->`, isIncluded);
+      console.log(`28--->`, arr.includes("Ashwin"));
+      console.log(`29--->`, conArr2.includes(50));
+      console.log(`30--->`, conArr2.includes(18));
+
+      // push()
+      // push is used to enter any element at the end or array or at last position of array
+      const arr6 = [8, 42, 5, 89, 44];
+      const arr7 = [...arr6];
+      arr7.push("Vinay");
+      arr7.push(78);
+      arr7.push("cat", 66);
+      arr7.push(true);
+      arr7.push(null, undefined);
+
+      console.log(`31--->`, arr6);
+      console.log(`32--->`, arr7);
+
+      // pop()
+      // pop() is used to remove any element from the last position
+      console.log(`33--->`, arr6.pop());
+      console.log(`34--->`, arr6);
+
+      arr7.pop();
+      arr7.pop();
+      arr7.pop();
+      console.log(`35--->`, arr7.pop());
+      console.log(`36--->`, arr7);
+
+      // unshift()
+      // is used to add any element at the initial position of array
+      const arr8 = [...arr];
+      arr8.unshift("vinay");
+      arr8.unshift("Cube");
+      arr8.unshift("css", "Board", "html");
+
+      console.log(`37--->`, arr8);
+
+      // shift()
+      // is used to remove any element from the first position
+      const arr9 = [...arr];
+      arr8.shift();
+      arr8.shift();
+      arr8.shift();
+      arr8.shift();
+
+      console.log("38--->", arr8.shift());
+      console.log("39--->", arr8);
+
+      // ever()
+      // it returns true when all elements fullfil the condition
+
+      const arr10 = [4, 8, 9, 12, 48, 63];
+      const isTrue = arr10.every((ele, ind) => ele % 2 === 0);
+      console.log(`40--->`, isTrue);
+
+      const arr11 = [4, 8, 90, 12, 48, 65];
+      const isTrue1 = arr11.every((ele, ind) => ele % 2 === 0);
+      console.log(`41--->`, isTrue1);
+
+      // const arr = [
+      //   "Alice",
+      //   "finds",
+      //   "herself",
+      //   "in",
+      //   "an",
+      //   "Alice",
+      //   "apple",
+      //   "orchard",
+      //   "Alice",
+      // ];
+
+      const arr12 = [...arr];
+      const greaterThan3 = arr12.every((ele, ind) => ele.length >= 2);
+      console.log(`42--->`, greaterThan3);
+
+      // some()
+      // returns true is any element got true
+      const arr13 = [4, 8, 9, 12, 48, 63];
+      const isTrue2 = arr13.some((ele, ind) => ele % 2 === 0);
+      console.log(`43--->`, isTrue2);
+
+      const arr14 = [41, 81, 91, 121, 481, 63];
+      const isTrue3 = arr14.some((ele, ind) => ele % 2 === 0);
+      console.log(`44--->`, isTrue3);
+
+      const arr15 = [...arr];
+      const greaterThan4 = arr15.some((ele, ind) => ele.length > 2);
+      console.log(`45--->`, greaterThan4);
+
+      // join()
+      // is used to merge array to string
+      // we need to provide character to join like, space, hyphen, underscore
+      const joinArr = arr15.join("");
+      console.log("46---->", joinArr);
+      console.log("47---->", arr15.join(" "));
+      console.log("48---->", arr15.join("-"));
+      console.log("49---->", arr15.join("__"));
+
+      // flat()
+      // makes a single array of nested array or matrix
+      const arr16 = [4, 5, 41, 7, [89, "jig", true], ["true", null]];
+      console.log("50--->", arr16.flat());
+
+      const arr17 = [
+        4,
+        5,
+        41,
+        7,
+        [
+          89,
+          "jig",
+          ,
+          [
+            "a",
+            "aa",
+            "bb",
+            [
+              4,
+              5,
+              41,
+              7,
+              [89, "jig", , ["a", "aa", "bb"]],
+              [
+                "true",
+                [
+                  [
+                    4,
+                    5,
+                    41,
+                    7,
+                    [89, "jig", , ["a", "aa", "bb"]],
+                    ["true", [89, "jig", true], null],
+                  ],
+                  89,
+                  "jig",
+                  true,
+                ],
+                null,
+              ],
+            ],
+          ],
+        ],
+        ["true", [89, "jig", true], null],
+      ];
+      console.log(
+        "50--->",
+        arr17.flat().flat().flat().flat().flat().flat().flat().flat()
+      );
+    </script>
+  </body>
+</html>
