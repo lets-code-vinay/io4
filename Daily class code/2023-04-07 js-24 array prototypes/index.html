@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array Prototype</title>
+  </head>
+  <body>
+    <script>
+      const arr = [
+        "Alice",
+        "finds",
+        "herself",
+        "in",
+        "an",
+        "Alice",
+        "apple",
+        "orchard",
+        "Alice",
+      ];
+      const str = "orchard";
+      const alice =
+        "Alice watches in awe as a pod of dolphins jumps and twirls through the water";
+
+      // Array.from()
+      // used to create shallow copy of any array of string
+      const shallow = Array.from(arr);
+      console.log("1--->", shallow);
+
+      const shallowStr = Array.from(str);
+      console.log("2--->", shallowStr);
+
+      const shallow2 = [...arr];
+      console.log("3--->", shallow2);
+
+      const str2 = Array.from(alice);
+      console.log("4--->", str2);
+
+      const toStr = arr.toString();
+      console.log("5--->", toStr);
+
+      const toStr2 = [4, 8, 9, 12, 48, 63];
+      let toSplit = toStr2.toString();
+      console.log("6--->", toSplit);
+
+      const arr2 = [4, 8, 9, 12, 48, 63];
+      const arr3 = [...arr2].fill(0);
+      console.log("7--->", arr3);
+
+      const arr4 = [...arr2].fill("vinay", 1, 4);
+      console.log("8--->", arr4);
+
+      const arr5 = [...arr2].fill("Shekhar", 4);
+      console.log("9--->", arr5);
+
+      console.log(`10--->`, Array.isArray(arr5));
+      console.log(`11--->`, Array.isArray(arr));
+      console.log(`12--->`, Array.isArray(toSplit));
+      console.log(`13--->`, Array.isArray([]));
+      console.log(`14--->`, Array.isArray("[]"));
+      console.log(`15--->`, Array.isArray(new Array(5)));
+
+      // slice
+      // to apart array
+      let slicedArr = arr.slice(2);
+      console.log(`16--->`, slicedArr);
+
+      slicedArr = arr.slice(2, 7);
+      console.log(`17--->`, slicedArr);
+
+      slicedArr = arr.slice(-2);
+      console.log(`18--->`, slicedArr);
+
+      slicedArr = arr.slice(5, -2);
+      console.log(`19--->`, slicedArr);
+
+      //splice
+      // to cut and add any value inside the array
+      let aliceArr = [...arr];
+      aliceArr.splice(4, 2, "a", "beautiful");
+      console.log(`20--->`, aliceArr);
+
+      // aliceArr.splice(4, 0, "a", "beautiful");
+      console.log(`21--->`, aliceArr);
+
+      const arrOfNumber = [4, 8, 9, 12, 23, 78, 69, 12, 74];
+
+      // Reduce
+      //
+      // find the sum of number in array using Reduce()
+      const total = arrOfNumber.reduce((accumulator, currentValue) => {
+        return accumulator + currentValue;
+      });
+      console.log(`22--sum with reduce->`, total);
+
+      // find the sum of number in array using for loop
+      const lengthOfArr = arrOfNumber.length;
+
+      let sum = 0;
+
+      for (let i = 0; i < 9; i++) {
+        sum = sum + arrOfNumber[i];
+      }
+      console.log("23 -->sum with for--", sum);
+
+      // find the sum of number in array using forEach
+      let forEachSum = 0;
+      arrOfNumber.forEach((ele, index) => {
+        forEachSum = forEachSum + ele;
+      });
+
+      console.log("24 -->sum with forEach--", forEachSum);
+
+      // find the sum of number in array using map
+      let mapSum = 0;
+      arrOfNumber.map((ele, index) => {
+        mapSum = mapSum + ele;
+      });
+
+      console.log(`25--> sum with map`, mapSum);
+    </script>
+  </body>
+</html>
