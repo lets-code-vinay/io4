@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Objects and prototypes</h1>
+    <script>
+      // 1. What is object?
+      // not primitive data-type
+      // It has set of key and values with colon (:), wrapped by curly braces and separated by comma(,)
+      // const car = {
+      //   carBrand: {
+      //     name: "Kia",
+      //     model: "Sonet",
+      //     type: "top model",
+      //     color: "red",
+      //   },
+      //   country: "Korea",
+      // };
+      //2.  What is different between JSON and Object?
+      // JSON- javascript object notation
+      // There is no major difference in b/w object and JSON
+      // JSON doesn't require any variable
+      // JSON's keys are wrapped in quotes
+      //  {
+      //   'carBrand': {
+      //     'name': "Kia",
+      //     'model': "Sonet",
+      //     'type': "top model",
+      //     'color': "red",
+      //   },
+      //   'country': "Korea",
+      // };
+
+      const data = {
+        id: 2,
+        name: "Ervin Howell",
+        username: "Antonette",
+        email: "Shanna@melissa.tv",
+        address: {
+          street: "Victor Plains",
+          suite: "Suite 879",
+          city: "Wisokyburgh",
+          zipcode: "90566-7771",
+          geo: {
+            lat: "-43.9509",
+            lng: "-34.4618",
+          },
+        },
+        phone: "010-692-6593 x09125",
+        website: "anastasia.net",
+        company: {
+          name: "Deckow-Crist",
+          catchPhrase: "Proactive didactic contingency",
+          bs: "synergize scalable supply-chains",
+        },
+      };
+      console.log("1 -->", data.name);
+      console.log("2 -->", data.email);
+      console.log("3 -->", data.address.geo.lat);
+      console.log("4 -->", data.company.catchPhrase);
+      console.log("5 -->", data.address.zipcode);
+      console.log("6 -->", data.company.bs);
+      console.log("7--->", data.company.catchPhrase);
+
+      // How to create object
+      // 1. using empty object
+      const sonet = {};
+      sonet.wheels = 4;
+      sonet.doors = 5;
+      sonet.color = "white";
+      console.log("8--->", sonet);
+
+      // 2. using constructor
+      const avengers = new Object();
+      avengers.thor = "Thunder God";
+      avengers.hulk = "Hulk smash";
+      console.log("9---->", avengers);
+
+      // 3. using create()
+      const pokemon = Object.create(null);
+      pokemon.pikachu = "Electric";
+      pokemon.treecko = "Grass";
+
+      console.log("10---->", pokemon);
+
+      // 4. using constructor and this keyword
+      function student(studentName, age, inWhichClass) {
+        this.name = studentName;
+        this.age = age;
+        this.className = inWhichClass;
+      }
+
+      const student_1 = new student("Nakul", 24, "B-tech");
+      const student_2 = new student("Neeta", 24, "BCA");
+
+      console.log("11---->", student_1);
+      console.log("12---->", student_2);
+
+      // 5. assign()
+      const languages = {};
+      const assignedObject = Object.assign(languages, { name: "C++" });
+      console.log("13---->", assignedObject);
+
+      //-----------Assign or add any value in object-------------------------------
+      const company = {
+        name: "Deckow-Crist",
+        catchPhrase: "Proactive didactic contingency",
+        bs: "synergize scalable supply-chains",
+      };
+      // 1.
+      // company.bankrupt = true;
+
+      // 2. using assign method/prototype
+      // Object.assign(company, { bankrupt: false });
+
+      // 3. using spread operator
+
+      const newCompany = { ...company };
+
+      newCompany.bankrupt = "About to";
+      newCompany.location = "Georgia";
+
+      // ------------------------How to update any existed value in Object---------------
+
+      const studentData = {
+        id: 3,
+        name: "Clementine Bauch",
+        username: "Samantha",
+        email: "Nathan@yesenia.net",
+      };
+      console.log("14.--->", studentData);
+
+      const newStudentData = { ...studentData };
+
+      newStudentData.name = "Rajni";
+      newStudentData.username = "rajni is coding";
+      newStudentData.id = 4578;
+      newStudentData.email = "rajni@abc.com";
+
+      console.log("15.--->", newStudentData);
+
+      // --------------------how to delete any key:value from array
+      delete studentData.username;
+      console.log("16.--->", studentData);
+
+      //---------Object.freeze()-------------
+      const companyData = Object.freeze({
+        id: 3,
+        name: "Clementine Bauch",
+        username: "Samantha",
+        email: "Nathan@yesenia.net",
+        location: "Texas",
+      });
+      companyData.location = "San Francisco";
+      companyData.id = 7845;
+
+      console.log("17.--->", companyData);
+
+      // -     -----------------check freezed object---------
+      console.log("18--> ", Object.isFrozen(companyData));
+      console.log("19--> ", Object.isFrozen(studentData));
+
+      // --------------Object.seal()----------------------------
+      const employeeData = Object.seal({
+        id: 3,
+        name: "Clementine Bauch",
+        username: "Samantha",
+        email: "Nathan@yesenia.net",
+      });
+      employeeData.location = "San Francisco";
+      employeeData.id = 7845;
+
+      console.log("20--> ", employeeData);
+
+      // ---------- How to check if any object is sealed or not------------
+      console.log("21--> ", Object.isSealed(employeeData));
+      console.log("22--> ", Object.isSealed(studentData));
+
+      // ------- How to get array of all keys ------------
+      const studentData2 = {
+        id: 3,
+        name: "Clementine Baruch",
+        username: "Samantha",
+        email: "Nathan@yesenia.net",
+      };
+
+      const keysArray = Object.keys(studentData);
+      console.log("23 --->", keysArray);
+
+      // ------- How to get array of all values ------------
+      const valuesArray = Object.values(studentData);
+      console.log("24 --->", valuesArray);
+
+      const entriesArray = Object.entries(studentData);
+      console.log("25 --->", entriesArray);
+    </script>
+  </body>
+</html>
