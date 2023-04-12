@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Objects and prototypes</h1>
+    <script>
+      // ------- How to get array of all keys ------------
+      const studentData2 = {
+        id: 3,
+        name: "Clementine Baruch",
+        username: "Samantha",
+        email: "Nathan@yesenia.net",
+      };
+
+      const keysArray = Object.keys(studentData2);
+      console.log("1 --->", keysArray);
+
+      // ------- How to get array of all values ------------
+      const valuesArray = Object.values(studentData2);
+      console.log("2 --->", valuesArray);
+
+      const entriesArray = Object.entries(studentData2);
+      console.log("3 --->", entriesArray);
+
+      // -------------2023-04-12 --------------
+
+      // ----Object.fromEntries() ---
+      const entry = [
+        ["id", 3],
+        ["name", "Clementine Baruch"],
+        ["username", "Samantha"],
+        ["email", "Nathan@yesenia.net"],
+      ];
+      console.log("4 --->", Object.fromEntries(entry));
+
+      // ----hasOwn() ---
+      // check if any key is existed in the object
+      console.log("5--->", Object.hasOwn(studentData2, "email"));
+      console.log("6--->", Object.hasOwn(studentData2, "address"));
+
+      //  ----hasOwnProperty() ---
+      console.log("7--->", studentData2.hasOwnProperty("id"));
+      console.log("8--->", studentData2.hasOwnProperty("location"));
+
+      // -------Exercise----
+      //       Create an object called "person" with the following properties:
+      // "firstName" (string)
+      // "lastName" (string)
+      // "age" (number)
+      // "hobbies" (array of strings)
+
+      // Then, add the following methods to the "person" object:
+      // "fullName" which returns the full name of the person (i.e. "firstName" + "lastName")
+      // "addHobby" which adds a new hobby to the "hobbies" array
+
+      // let person = {
+      //   firstName: "John",
+      //   lastName: "Doe",
+      //   age: 25,
+      //   hobbies: ["reading", "hiking"],
+      //   fullName: function() {
+      //     return this.firstName + " " + this.lastName;
+      //   },
+      //   addHobby: function(newHobby) {
+      //     this.hobbies.push(newHobby);
+      //   }
+      // };
+
+      // // Testing the object
+      // console.log(person.fullName()); // Output: "John Doe"
+
+      // person.addHobby("swimming");
+      // console.log(person.hobbies); // Output: ["reading", "hiking", "swimming"]
+
+      const person = {
+        firstName: "Abraham",
+        lastName: "Lincoln",
+        age: 45,
+        hobbies: ["Chess", "Horse Riding"],
+        fullName: function () {
+          return `${this.firstName}  ${this.lastName}`;
+        },
+        addHobbies: function (hobby) {
+          return this.hobbies.push(hobby);
+        },
+      };
+
+      person.firstName = "William";
+      person.fullName();
+      person.addHobbies("Swimming");
+      person.addHobbies("Cricket");
+
+      person.fullName2 = `${person.firstName} ${person.lastName}`;
+      console.log("9 --->", person);
+
+      console.log("10 --->", person.fullName());
+
+      //---------------------------Function---------
+
+      // 1.  function declaration
+      // we use function keyword here
+      // it must return something
+      // It has THIS keyword
+      function printValue() {
+        return "This is a small function";
+      }
+
+      console.log("12 ---->", printValue());
+
+      // 2. Arrow Function (Function Expression)
+      // We use => arrow as a a function
+      // This is feature of ES6
+      // It doesn't require any return or this keyword
+
+      const printValueArrow = () => {
+        return "This is a small function";
+      };
+
+      console.log("13 ---->", printValueArrow());
+
+      // 3. Anonymous function
+      const abc = function () {
+        return "This is anonymous function";
+      };
+
+      const array = [5, 7, 5, 144, 7].map(function (element, index) {
+        return element * 2;
+      });
+
+      console.log("14--->", abc());
+      console.log("15--->", array);
+
+      const xyz = () => {
+        return "This is arrow Anonymous function";
+      };
+      console.log("16--->", xyz());
+
+      const filtered = [5, 7, 5, 144, 7].filter(
+        (element, index) => element >= 7
+      );
+      console.log("17---->", filtered);
+
+      // Passing parameter
+
+      let s1 = 40;
+      let s2 = 45;
+      let s3 = 60;
+      let s4 = 48;
+
+      // 1st type
+      function getAverage(sub1, sub2, sub3, sub4) {
+        const total = sub1 + sub2 + sub3 + sub4;
+        const ave = total / 4;
+        return ave;
+      }
+
+      console.log("18--->", getAverage(s1, s2, s3, s4));
+
+      const findAverage = (sub1, sub2, sub3, sub4) => {
+        const total = sub1 + sub2 + sub3 + sub4;
+        const ave = total / 4;
+        return ave;
+      };
+      console.log("19----", findAverage(s1, s2, s3, s4));
+
+      // 2 default parameter
+      // ES6 part
+      function getAverageWithDefault(sub1, sub2, sub3, shekhar, abc = 10) {
+        console.log("--", abc + 56);
+        const total = sub1 + sub2 + sub3 + shekhar + abc;
+        const ave = total / 5;
+        return ave;
+      }
+
+      console.log("20--->", getAverageWithDefault(s1, 10, s3, 20, 70));
+
+      const findAverageWithDefault = (sub1, sub2, sub3, sub4, s5 = 20) => {
+        const total = sub1 + sub2 + sub3 + sub4 + s5;
+        const ave = total / 5;
+        return ave;
+      };
+      console.log("21----", findAverageWithDefault(s1, s2, s3, s4));
+
+      //------------------
+      let a = 10;
+      let b = 20;
+      let c = 30;
+      let d = 40;
+
+      const simpleFunction = ({ a1, b1, c1, d1 }) => {
+        console.log("----> a1", a1);
+        console.log("----> b1", b1);
+        console.log("----> c1", c1);
+        console.log("----> d1", d1);
+      };
+      console.log(
+        "22--->",
+        simpleFunction({
+          a1: a,
+          d1: d,
+          c1: c,
+          b1: b,
+        })
+      );
+    </script>
+  </body>
+</html>
