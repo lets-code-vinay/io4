@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="nav-sides nav-left pointer">
+          <img
+            src="./assets/images/logos/logo.png"
+            alt="nike logo"
+            width=" 70px"
+            height=" 30px"
+          />
+          <p class="brand-title"><span>Nike</span> <span>React</span></p>
+        </div>
+        <div class="nav-sides nav-right">
+          <ul>
+            <li class="menus pointer home">Home</li>
+            <li class="menus pointer product">Product</li>
+            <li class="menus pointer about-us">About us</li>
+            <li class="menus pointer contact-us">Contact us</li>
+          </ul>
+        </div>
+        <div class="mobile-menus">
+          <i class="fa-solid fa-bars hamburger" id="hamburger"></i>
+        </div>
+      </nav>
+    </header>
+    <!-- Main banner starts-->
+    <section class="banner-section">
+      <div class="banner">
+        <div class="banner-left">
+          <div class="shoe-background"></div>
+          <img
+            src="./assets/images/products/shoe10.png"
+            alt="shoes 9"
+            width="65%"
+            class="product-rotation-30deg"
+          />
+        </div>
+        <div class="banner-right">
+          <h2 class="banner-text">Nike React</h2>
+          <h2 class="banner-text">Infinity Run 2</h2>
+          <p>
+            Nike shoes offer great comfort and maintain your feet posture every
+            time you walk. Nike is one of the most popular brands of footwear
+          </p>
+          <button class="buy-button pointer" id="buy-button">
+            <i class="fa-solid fa-cart-shopping"></i>Buy Now
+          </button>
+        </div>
+      </div>
+    </section>
+    <!-- Main banner ends-->
+
+    <script>
+      const header = document.getElementsByTagName("header");
+      console.log("1 --> header", header[0]);
+
+      const spansGet = document.getElementsByTagName("span");
+      console.log("1.1--> getElementByTag tag--", spansGet);
+
+      // ---Types of Selectors in CSS/DOM
+      // Tag name --> document.getElementsByTagName('ul')
+      // Class --> document.getElementsByClassName('menus')
+      // id --> document.getElementById('hamburger')
+      // attributes --->
+
+      // QuerySelector
+      // Tag Name = document.querySelector('ul')
+      // class Name = document.querySelector('.menus')
+      // Id Name = document.querySelector('#hamburger')
+
+      const [navMenus] = header[0].getElementsByClassName("nav-right");
+      console.log("2 ---> navMenus---", navMenus);
+
+      const menus = navMenus.getElementsByClassName("menus");
+
+      console.log("3 ---> menus---", menus);
+      // const [, , thirdMenu, ...rest] = document.getElementsByClassName("menus");
+      // console.log("2 ---> thirdMenu---", thirdMenu);
+
+      // by id name
+      const hamburger = document.getElementById("hamburger");
+      console.log("4 ---> hamburger ---", hamburger);
+
+      // querySelectors
+      // by tag name
+      const spans = document.querySelector("span");
+      console.log("5--> querySelector tag--", spans);
+
+      const spansAll = document.querySelectorAll("span");
+      console.log("6--> querySelector All tag--", spansAll);
+
+      // by class Name
+      const pointer = document.querySelector(".pointer");
+      console.log("7--> querySelector by class--", pointer);
+
+      const pointers = document.querySelectorAll(".pointer");
+      console.log("8--> querySelector All by class--", pointers);
+
+      // by id
+      const buyButton = document.querySelector("#buy-button");
+      console.log("9--> querySelector by id--", buyButton);
+
+      const buyButtons = document.querySelectorAll("#buy-button");
+      console.log("10--> querySelector All by id--", buyButtons);
+
+      //------manipulating style of any element
+      const [firstElement, secondElement, ...rest] =
+        document.getElementsByClassName("banner-text");
+      console.log("11 --> firstElementbannerText--", firstElement);
+      console.log("12 --> secondElement", secondElement);
+      console.log("13 --> rest--", rest);
+
+      firstElement.style.color = "blue";
+      firstElement.style.backgroundColor = "red";
+      firstElement.style.border = "5px solid black";
+      firstElement.style.borderRadius = "50px";
+      firstElement.style.padding = "10px 20px 30px 30px";
+
+      secondElement.style.color = "white";
+      secondElement.style.backgroundColor = "black";
+      secondElement.style.borderRadius = "50px";
+      secondElement.style.padding = "10px 20px 30px 30px";
+    </script>
+  </body>
+</html>
