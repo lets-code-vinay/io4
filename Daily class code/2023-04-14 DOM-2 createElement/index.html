@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="nav-sides nav-left pointer">
+          <img
+            src="./assets/images/logos/logo.png"
+            alt="nike logo"
+            width=" 70px"
+            height=" 30px"
+          />
+          <p class="brand-title"><span>Nike</span> <span>React</span></p>
+        </div>
+        <div class="nav-sides nav-right">
+          <ul>
+            <li class="menus pointer home">Home</li>
+            <li class="menus pointer product">Product</li>
+            <li class="menus pointer about-us">About us</li>
+            <li class="menus pointer contact-us">Contact us</li>
+          </ul>
+        </div>
+        <div class="mobile-menus">
+          <i class="fa-solid fa-bars hamburger" id="hamburger"></i>
+        </div>
+      </nav>
+    </header>
+    <!-- Main banner starts-->
+    <section class="banner-section">
+      <div class="banner">
+        <div class="banner-left">
+          <div class="shoe-background"></div>
+          <img
+            src="./assets/images/products/shoe10.png"
+            alt="shoes 9"
+            width="65%"
+            class="product-rotation-30deg"
+          />
+        </div>
+        <div class="banner-right">
+          <h2 class="banner-text">Nike React</h2>
+          <h2 class="banner-text">Infinity Run 2</h2>
+          <p>
+            Nike shoes offer great comfort and maintain your feet posture every
+            time you walk. Nike is one of the most popular brands of footwear
+          </p>
+          <button class="buy-button pointer" id="buy-button">
+            <i class="fa-solid fa-cart-shopping"></i>Buy Now
+          </button>
+        </div>
+      </div>
+      <!-- <div class="avengers">
+        <ul>
+          <li>ironman</li>
+          <li>spiderman</li>
+
+        </ul>
+      </div> -->
+    </section>
+    <!-- Main banner ends-->
+
+    <script>
+      // 1 body target
+      // returned Array of nodes
+      // destructure/get node
+      const [bodyElement] = document.getElementsByTagName("body");
+
+      // 2. target section
+      // destructure array and get first element
+      const [firstSection] = bodyElement.querySelectorAll("section");
+      console.log("2--> firstSection--", firstSection);
+
+      //--------------How to create new element using DOM----------
+      // 3. document.createElement('h1') use to create element
+      // Store it in new variable
+      const sectionDiv = document.createElement("div");
+      // create attribute
+      sectionDiv.setAttribute("class", "avengers");
+
+      //4. appendChild() --. used to add any element to any element
+      // example: firstSection is targeted where i want to insert element
+      // .appendChild(sectionDiv) sectionDiv passed in .appendChild where it needs to join
+      firstSection.appendChild(sectionDiv);
+
+      // Creating new ul tag
+      const olTag = document.createElement("ol");
+
+      // create attribute of type in ul
+      olTag.setAttribute("type", "A");
+
+      // appending ul tag to sectionDiv
+      sectionDiv.appendChild(olTag);
+
+      // Creating new li tag
+      const liTagSpider = document.createElement("li");
+
+      // --------------how to add text in any element ---------------
+      // 1.  innerText = 'my text'
+      // 2.  document.createTextNode('my Text')
+
+      // inserting text using innerText
+      liTagSpider.innerText = "Spider-Man";
+
+      // 2nd li tag
+      const liTagIronMan = document.createElement("li");
+
+      // inserting text using createTextNode
+      const ironManText = document.createTextNode("Iron-man");
+      // adding text to li
+      liTagIronMan.append(ironManText);
+
+      // ---prepend
+      const liThor = document.createElement("li");
+      liThor.innerText = "Thor";
+
+      const liHulk = document.createElement("li");
+      liHulk.innerText = "Hulk";
+
+      // adding li to ul
+      olTag.appendChild(liTagSpider);
+      olTag.append(liTagIronMan);
+      olTag.prepend(liThor);
+      olTag.prepend(liHulk);
+
+      // styling
+      sectionDiv.style.border = "2px solid black";
+      sectionDiv.style.borderRadius = "100px";
+      sectionDiv.style.width = "20%";
+      sectionDiv.style.background = "yellow";
+
+      console.log("olTag", olTag.childNodes);
+
+      const liTags = olTag.childNodes;
+      for (let i = 0; i <= liTags.length; i++) {
+        if (i % 2 == 0) {
+          liTags[i].style.color = "red";
+          liTags[i].style.fontSize = "20px";
+
+          liTags[i].setAttribute("class", "red");
+        } else {
+          liTags[i].style.color = "blue";
+          liTags[i].setAttribute("class", "blue");
+        }
+      }
+
+      const inputTag = document.createElement("input");
+      inputTag.setAttribute("type", "text");
+      sectionDiv.appendChild(inputTag);
+      inputTag.style.width = "100px";
+      inputTag.style.height = "10px";
+    </script>
+  </body>
+</html>
