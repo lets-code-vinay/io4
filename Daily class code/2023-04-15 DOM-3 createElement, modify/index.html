@@ -138,17 +138,50 @@
       console.log("olTag", olTag.childNodes);
 
       const liTags = olTag.childNodes;
-      for (let i = 0; i <= liTags.length; i++) {
-        if (i % 2 == 0) {
-          liTags[i].style.color = "red";
-          liTags[i].style.fontSize = "20px";
+      // for (let i = 0; i <= liTags.length; i++) {
+      //   if (i % 2 == 0) {
+      //     liTags[i]?.style.color = "red";
+      //     liTags[i]?.style.fontSize = "20px";
 
-          liTags[i].setAttribute("class", "red");
-        } else {
-          liTags[i].style.color = "blue";
-          liTags[i].setAttribute("class", "blue");
-        }
-      }
+      //     liTags[i].setAttribute("class", "red");
+      //   } else {
+      //     liTags[i].style.color = "blue";
+      //     liTags[i].setAttribute("class", "blue");
+      //   }
+      // }
+
+      const paragraph = document.createElement("p");
+      paragraph.innerText = `Once upon a time, in a small village,
+         there was a little girl named Alice.
+         She had long curly hair and big brown eyes,
+        and she loved to play in the meadow behind her house.`;
+
+      // ------insertBefore--------------
+
+      firstSection.insertBefore(paragraph, sectionDiv);
+      // firstSection.append(paragraph);
+
+      // ------insertAfter------------
+
+      const h2Tag = document.createElement("h2");
+      h2Tag.innerText = "This is my h2Tag heading tag";
+
+      const secondDiv = document.createElement("div");
+      firstSection.append(secondDiv);
+
+      secondDiv.innerHTML = `<h2>This is innerHTML</h2>`;
+      secondDiv.innerHTML = `<p class='innerHTML-class' id='p-tag'>
+        One day, <strong>Alice</strong> was exploring the meadow when she came across a <span style='background-color:red'>tiny door</span>. 
+        She had never seen it before, and she was very curious. She opened the door
+        </P>`;
+
+      // adding attributes
+      h2Tag.setAttribute("class", "h2-tag");
+      h2Tag.setAttribute("id", "h2-id");
+
+      secondDiv.append(h2Tag);
+
+      secondDiv.removeAttribute("id");
     </script>
   </body>
 </html>
