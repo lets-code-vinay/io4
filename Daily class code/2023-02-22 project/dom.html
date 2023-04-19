@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Font family of Shantell Sans-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600&family=Shantell+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font awesome CDN-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/brands.min.css"
+      integrity="sha512-L+sMmtHht2t5phORf0xXFdTC0rSlML1XcraLTrABli/0MMMylsJi3XA23ReVQkZ7jLkOEIMicWGItyK4CAt2Xw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/fontawesome.min.css"
+      integrity="sha512-cHxvm20nkjOUySu7jdwiUxgGy11vuVPE9YeK89geLMLMMEOcKFyS2i+8wo0FOwyQO/bL8Bvq1KMsqK4bbOsPnA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Linking Stylesheet-->
+    <link rel="stylesheet" href="dom.css" />
+    <title>Nike-React</title>
+  </head>
+  <body>
+    <main>
+      <!-- Nav bar starts-->
+      <header>
+        <nav>
+          <div class="nav-sides nav-left pointer">
+            <img
+              src="./assets/images/logos/logo.png"
+              alt="nike logo"
+              width=" 70px"
+              height=" 30px"
+            />
+            <p class="brand-title"><span>Nike</span> <span>React</span></p>
+          </div>
+          <div class="nav-sides nav-right">
+            <ul>
+              <li class="menus pointer home">Home</li>
+              <li class="menus pointer product">Product</li>
+              <li class="menus pointer about-us">About us</li>
+              <li class="menus pointer contact-us">Contact us</li>
+              <li class="add-to-cart-menu" onclick="cartClick()">
+                <i class="fa-solid fa-cart-shopping cart-icon"
+                  ><span class="cart-count">0</span></i
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="mobile-menus">
+            <i class="fa-solid fa-bars hamburger"></i>
+          </div>
+        </nav>
+      </header>
+      <!-- Nav bar ends-->
+
+      <!-- Cart section start-->
+      <aside class="cart-aside d-none">
+        <h1>Shopping Cart</h1>
+
+        <div class="cart-shopping-cart">
+          <div class="cart-column-labels">
+            <label class="cart-product-image">Image</label>
+            <label class="cart-product-details">Product</label>
+            <label class="cart-product-price">Price</label>
+            <label class="cart-product-quantity">Quantity</label>
+            <label class="cart-product-removal">Remove</label>
+            <label class="cart-product-line-price">Total</label>
+          </div>
+
+          <div class="cart-product">
+            <div class="cart-product-image">
+              <img src="https://s.cdpn.io/3/dingo-dog-bones.jpg" />
+            </div>
+            <div class="cart-product-details">
+              <div class="cart-product-title">Dingo Dog Bones</div>
+              <p class="cart-product-description">
+                The best dog bones of all time. Holy crap. Your dog will be
+                begging for these things! I got curious once and ate one myself.
+                I'm a fan.
+              </p>
+            </div>
+            <div class="cart-product-price">12.99</div>
+            <div class="cart-product-quantity">
+              <input type="number" value="2" min="1" />
+            </div>
+            <div class="cart-product-removal">
+              <button class="cart-remove-product">Remove</button>
+            </div>
+            <div class="cart-product-line-price">25.98</div>
+          </div>
+
+          <div class="cart-product">
+            <div class="cart-product-image">
+              <img
+                src="https://s.cdpn.io/3/large-NutroNaturalChoiceAdultLambMealandRiceDryDogFood.png"
+              />
+            </div>
+            <div class="cart-product-details">
+              <div class="cart-product-title">
+                Nutro™ Adult Lamb and Rice Dog Food
+              </div>
+              <p class="cart-product-description">
+                Who doesn't like lamb and rice? We've all hit the halal cart at
+                3am while quasi-blackout after a night of binge drinking in
+                Manhattan. Now it's your dog's turn!
+              </p>
+            </div>
+            <div class="cart-product-price">45.99</div>
+            <div class="cart-product-quantity">
+              <input type="number" value="1" min="1" />
+            </div>
+            <div class="cart-product-removal">
+              <button class="cart-remove-product">Remove</button>
+            </div>
+            <div class="cart-product-line-price">45.99</div>
+          </div>
+
+          <div class="cart-totals">
+            <div class="cart-totals-item">
+              <label>Subtotal</label>
+              <div class="cart-totals-value" id="cart-subtotal">71.97</div>
+            </div>
+            <div class="cart-totals-item">
+              <label>Tax (5%)</label>
+              <div class="cart-totals-value" id="cart-tax">3.60</div>
+            </div>
+            <div class="cart-totals-item">
+              <label>Shipping</label>
+              <div class="cart-totals-value" id="cart-shipping">15.00</div>
+            </div>
+            <div class="cart-totals-item totals-item-total">
+              <label>Grand Total</label>
+              <div class="cart-totals-value" id="cart-total">90.57</div>
+            </div>
+          </div>
+
+          <button class="cart-checkout">Checkout</button>
+        </div>
+      </aside>
+      <!-- Cart section end-->
+
+      <!-- Main banner starts-->
+      <section class="banner-section">
+        <div class="banner">
+          <div class="banner-left">
+            <div class="shoe-background"></div>
+            <img
+              src="./assets/images/products/shoe10.png"
+              alt="shoes 9"
+              width="65%"
+              class="product-rotation-30deg"
+            />
+          </div>
+          <div class="banner-right">
+            <h2 class="banner-text">Nike React</h2>
+            <h2 class="banner-text">Infinity Run 2</h2>
+            <p>
+              Nike shoes offer great comfort and maintain your feet posture
+              every time you walk. Nike is one of the most popular brands of
+              footwear
+            </p>
+            <button class="buy-button pointer">
+              <i class="fa-solid fa-cart-shopping"></i>Buy Now
+            </button>
+          </div>
+        </div>
+      </section>
+      <!-- Main banner ends-->
+
+      <!-- Products section start here -->
+      <section class="products-section">
+        <div class="products">
+          <h2>CASUAL SHOES</h2>
+          <div class="products-container">
+            <!-- First Product-- starts -->
+            <div class="product-card">
+              <div class="product-image-container">
+                <img
+                  src="./assets/images/products/shoes3.png"
+                  alt="shoes 1"
+                  width="100%"
+                  class="product-rotation-30deg product-image"
+                />
+              </div>
+
+              <div class="product-captions">
+                <h5 class="product-title">Nike Shoes</h5>
+                <p class="product-details">
+                  Women Air Max 90 Women Running Shoe Running Shoes
+                </p>
+              </div>
+
+              <div class="price-section">
+                <span class="price">$234</span>
+                <button class="buy-button pointer">
+                  <i class="fa-solid fa-cart-shopping"></i>Buy Now
+                </button>
+              </div>
+            </div>
+            <!-- First Product-- ends -->
+            <!-- Second Product-- starts -->
+            <div class="product-card second-product">
+              <div class="product-image-container">
+                <img
+                  src="./assets/images/products/shoes9.png"
+                  alt="shoes 1"
+                  width="100%"
+                  class="product-rotation-30deg product-image"
+                />
+              </div>
+
+              <div class="product-captions">
+                <h5 class="product-title">Sneakers Skate Shoes</h5>
+                <p class="product-details">Men S Air Max Black White</p>
+              </div>
+
+              <div class="price-section">
+                <span class="price">$341</span>
+                <button class="buy-button pointer">
+                  <i class="fa-solid fa-cart-shopping"></i>Buy Now
+                </button>
+              </div>
+            </div>
+            <!-- Seconds Product-- ends -->
+
+            <!-- third Product-- starts -->
+            <div class="product-card third-product">
+              <div class="product-image-container">
+                <img
+                  src="./assets/images/products/shoes6.png"
+                  alt="shoes 1"
+                  width="100%"
+                  class="product-rotation-30deg product-image"
+                />
+              </div>
+
+              <div class="product-captions">
+                <h5 class="product-title">Sneakers Basket Skate Shoes</h5>
+                <p class="product-details">
+                  Revolution 6 Next Nature Men's Running Shoe - Black/University
+                </p>
+              </div>
+
+              <div class="price-section">
+                <span class="price">$541</span>
+                <button class="buy-button pointer">
+                  <i class="fa-solid fa-cart-shopping"></i>Buy Now
+                </button>
+              </div>
+            </div>
+            <!-- thirds Product-- ends -->
+          </div>
+        </div>
+
+        <!-- products second section- line-->
+        <div class="products">
+          <h2>SPORTS SHOES</h2>
+          <div class="products-container">
+            <!-- First Product-- starts -->
+            <div class="product-card">
+              <div class="product-image-container">
+                <img
+                  src="./assets/images/products/shoes1.png"
+                  alt="shoes 1"
+                  width="100%"
+                  class="shoes-red"
+                />
+              </div>
+
+              <div class="product-captions">
+                <h5 class="product-title">Nike Sport Shoes</h5>
+                <p class="product-details">Mens Gts 97 NSW Other Sports</p>
+              </div>
+
+              <div class="price-section">
+                <span class="price">$534</span>
+                <button class="buy-button pointer">
+                  <i class="fa-solid fa-cart-shopping"></i>Buy Now
+                </button>
+              </div>
+            </div>
+            <!-- First Product-- ends -->
+            <!-- Second Product-- starts -->
+            <div class="product-card second-product">
+              <div class="product-image-container">
+                <img
+                  src="./assets/images/products/shoes2.png"
+                  alt="shoes 1"
+                  width="100%"
+                  class=""
+                />
+              </div>
+
+              <div class="product-captions">
+                <h5 class="product-title">Sneakers Sports Shoes</h5>
+                <p class="product-details">
+                  Men's Mesh Layer Upper Comfort Running Shoes (White Black)
+                </p>
+              </div>
+
+              <div class="price-section">
+                <span class="price">$441</span>
+                <button class="buy-button pointer">
+                  <i class="fa-solid fa-cart-shopping"></i>Buy Now
+                </button>
+              </div>
+            </div>
+            <!-- Seconds Product-- ends -->
+
+            <!-- third Product-- starts -->
+            <div class="product-card third-product">
+              <div class="product-image-container">
+                <img
+                  src="./assets/images/products/shoes8.png"
+                  alt="shoes 1"
+                  width="100%"
+                  class="product-image-black"
+                />
+              </div>
+
+              <div class="product-captions">
+                <h5 class="product-title">Sports Shoes</h5>
+                <p class="product-details">
+                  ASICS Mens Gel-Peake 5 Gs White Other - Men's Sports
+                </p>
+              </div>
+
+              <div class="price-section">
+                <span class="price">$641</span>
+                <button class="buy-button pointer">
+                  <i class="fa-solid fa-cart-shopping"></i>Buy Now
+                </button>
+              </div>
+            </div>
+            <!-- thirds Product-- ends -->
+          </div>
+        </div>
+
+        <!-- Third products rows start-->
+        <div class="products">
+          <h2>Running SHOES</h2>
+          <div class="products-container">
+            <!-- First Product-- starts -->
+
+            <!-- First Product-- ends -->
+          </div>
+        </div>
+        <!-- Third products rows ends-->
+      </section>
+      <!-- Products section ends here -->
+
+      <!--  Third Section starts here-->
+      <section class="third-section">
+        <div class="third-div">
+          <div class="sides left-side">
+            <div class="steps first-step">
+              <img
+                src="./assets/images/icons/store.svg"
+                alt="Exchange"
+                width="100"
+              />
+              <div>
+                <h3 class="step-title first-step-type">Find the perfect Fit</h3>
+                <p class="step-text first-step-text">
+                  Everybody is different, Which is why we offer styles for
+                  everybody.
+                </p>
+              </div>
+            </div>
+
+            <div class="steps second-step">
+              <img src="./assets/images/icons/delivery.svg" width="100" />
+
+              <div>
+                <h3 class="step-title second-step-type">Free Exchanges</h3>
+                <p class="step-text second-step-text">
+                  One of the many reasons you can shop with peace of mind
+                </p>
+              </div>
+            </div>
+
+            <div class="steps third-step">
+              <img
+                src="./assets/images/icons/support-svgrepo-com (1).svg"
+                width="100"
+                alt="customer support"
+              />
+              <div>
+                <h3 class="step-title third-step-type">Contact Our Seller</h3>
+                <p class="step-text third-step-text">
+                  They are here to help you. That's quite literally what we pay
+                  for them.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="sides right-side">
+            <img
+              src="./assets/images/shoes-shopping.png"
+              alt="people doing shoes shopping"
+            />
+          </div>
+        </div>
+      </section>
+      <!--  Third Section ends here-->
+
+      <!-- Fourth section - subscribe starts here-->
+      <section class="subscribe-section">
+        <div class="fouth-div subscribe">
+          <h2>Subscribe to our New Letter</h2>
+          <div class="subscribe-input">
+            <input type="text" placeholder="Enter your Email" />
+            <button class="pointer">Subscribe</button>
+          </div>
+        </div>
+      </section>
+      <!-- Fourth section - subscribe ends here-->
+
+      <!-- Fifth section - Sitemap starts here-->
+      <section class="Sitemap-section">
+        <div class="sitemap">
+          <div class="sitemap-items featured">
+            <h3>Featured</h3>
+            <ul>
+              <li class="list pointer">Holiday Gift Card</li>
+              <li class="list pointer">Air force 1</li>
+              <li class="list pointer">Jordan 1</li>
+              <li class="list pointer">Air Max 2090</li>
+            </ul>
+          </div>
+
+          <div class="sitemap-items Shoes">
+            <h3>Shoes</h3>
+            <ul>
+              <li class="list pointer">All Shoes</li>
+              <li class="list pointer">Jordan Shoes</li>
+              <li class="list pointer">Running shoes</li>
+              <li class="list pointer">Basketball Shoes</li>
+            </ul>
+          </div>
+
+          <div class="sitemap-items Clothing">
+            <h3>Clothing</h3>
+            <ul>
+              <li class="list pointer">All Clothing</li>
+              <li class="list pointer">Tops & T-shirts</li>
+              <li class="list pointer">Shorts</li>
+              <li class="list pointer">Hoodies & Pullovers</li>
+            </ul>
+          </div>
+
+          <div class="sitemap-items Soccer">
+            <h3>Soccer</h3>
+            <ul>
+              <li class="list pointer">Infant & Toddlers shoes</li>
+              <li class="list pointer">Kid's shoes</li>
+              <li class="list pointer">Kid's basket ball shoes</li>
+              <li class="list pointer">Kid's running Shoes</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Fifth section - Sitemap ends here-->
+
+      <!-- Sixth section - Footer starts here-->
+      <footer class="footer">
+        <p class="footer-text">
+          &copy; 2023 | <span>Infoxygen</span> | All rights are reserved
+        </p>
+      </footer>
+      <!-- Sixth section - Footer starts here-->
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
