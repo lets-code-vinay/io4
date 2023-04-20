@@ -37,15 +37,11 @@ const data = [
   },
 ];
 
-console.log(data);
-
 const [, , thirdProductContainer] = document.querySelectorAll(
   ".products-container"
 );
-console.log("2--thirdProductContainer", thirdProductContainer);
 
 data.map((shoesDetails, index) => {
-  console.log("shoesDetails", shoesDetails);
   const productContainer = document.createElement("div");
 
   productContainer.classList.add("product-card");
@@ -88,52 +84,119 @@ data.map((shoesDetails, index) => {
 let cart = [];
 
 function handleAddToCart(index) {
-  console.log("cart button clicked", index);
-  console.log("----> data[index]--", data[index]); // data[1]
   cart.push(data[index]);
-
-  console.log("cart--->", cart);
 
   const cartCount = document.querySelector(".cart-count");
   cartCount.innerText = cart.length;
-  console.log("cartCount", cartCount);
 }
 
 let isCartClicked = false;
 const cartClick = () => {
   isCartClicked = !isCartClicked;
 
-  console.log("cart Click", cart);
-  const cartShow = document.querySelector(".cart-aside");
-  if (isCartClicked == true) {
+  const cartShow = document.querySelector(".cart-page");
+
+  // if (isCartClicked == true) {
+  //   cartShow.classList.remove("d-none");
+  //   cartShow.classList.add("d-block");
+  // } else {
+  //   cartShow.classList.remove("d-block");
+  //   cartShow.classList.add("d-none");
+  // }
+
+  if (isCartClicked) {
     cartShow.classList.remove("d-none");
     cartShow.classList.add("d-block");
+    handleCartShow(cart);
   } else {
     cartShow.classList.remove("d-block");
     cartShow.classList.add("d-none");
   }
 };
+
+//--- add to cart page
+
+const handleCartShow = (cart) => {
+  const cartPage = document.querySelector(".cart-list-data");
+
+  console.log("cart--->", cart);
+  console.log("cartCount", cart.length);
+
+  let subTotalOfProd = 0;
+
+  cart.map((cartData, index) => {
+    subTotalOfProd = Number(subTotalOfProd) + Number(cartData.price);
+
+    const cartProduct = document.querySelector("div");
+    cartProduct.classList.add("cart-product");
+    cartProduct.classList.remove("nav-left");
+
+    cartProduct.innerHTML = `
+            <div class="cart-product-image">
+              <img
+                src=${cartData.image}
+                alt=${cartData.alt}
+              />
+            </div>
+            <div class="cart-product-details">
+              <div class="cart-product-title">
+                ${cartData.title}
+              </div>
+                <p class="cart-product-description">
+                ${cartData.description}  
+                </p>
+            </div>
+            <div class="cart-product-price">${cartData.price}</div>
+            <div class="cart-product-quantity">
+              <input class='quantity' type="number" value="1" min="1" onchange=${"handleQuantity()"} />
+            </div>
+            <div class="cart-product-removal">
+              <button class="cart-remove-product">Remove</button>
+            </div>
+        <div class="cart-product-line-price">${cartData.price}</div>
+    `;
+
+    cartPage.append(cartProduct);
+  });
+
+  /**
+   * @description Handling total of cart
+   */
+  const subTotal = document.querySelector(".cart-totals-value");
+  const gstPrice = document.querySelector("#cart-tax");
+  const grandTotalId = document.querySelector("#cart-total");
+
+  const gst = (subTotalOfProd * 18) / 100;
+  const total = subTotalOfProd + gst + 50;
+
+  subTotal.innerText = subTotalOfProd;
+  gstPrice.innerText = gst;
+  grandTotalId.innerText = total;
+};
+
 {
-  /* <div class="product-card">
-              <div class="product-image-container">
-                <img
-                  src="./assets/images/products/shoes1.png"
-                  alt="shoes 1"
-                  width="100%"
-                  class="shoes-red"
-                />
-              </div>
-
-              <div class="product-captions">
-                <h5 class="product-title">Nike Sport Shoes</h5>
-                <p class="product-details">Mens Gts 97 NSW Other Sports</p>
-              </div>
-
-              <div class="price-section">
-                <span class="price">$534</span>
-                <button class="buy-button pointer">
-                  <i class="fa-solid fa-cart-shopping"></i>Buy Now
-                </button>
-              </div>
-            </div> */
+  /* <div class="cart-product">
+<div class="cart-product-image">
+  <img
+    src="https://s.cdpn.io/3/large-NutroNaturalChoiceAdultLambMealandRiceDryDogFood.png"
+  />
+</div>
+<div class="cart-product-details">
+  <div class="cart-product-title">
+    Nutro™ Adult Lamb and Rice Dog Food
+  </div>
+  <p class="cart-product-description">
+    Who doesn't like lamb and rice? We've all hit the halal cart at
+    3am while
+  </p>
+</div>
+<div class="cart-product-price">45.99</div>
+<div class="cart-product-quantity">
+  <input type="number" value="1" min="1" />
+</div>
+<div class="cart-product-removal">
+  <button class="cart-remove-product">Remove</button>
+</div>
+<div class="cart-product-line-price">45.99</div>
+</div> */
 }

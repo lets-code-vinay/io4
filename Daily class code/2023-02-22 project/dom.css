@@ -646,6 +646,14 @@ High-res laptop or desktop: 1920 x 1080 */
 }
 
 /* ---------------------- */
+.nav-bar-fixed {
+  position: fixed;
+  background: #fef9f5;
+  width: 100%;
+  padding: 0 10%;
+  z-index: 1;
+}
+
 .in-stock {
   font-size: 2.2rem;
   font-family: "Kanit", sans-serif;
@@ -690,30 +698,43 @@ High-res laptop or desktop: 1920 x 1080 */
   margin-right: 5px;
 }
 
-.cart-aside {
-  width: 40%;
-  height: 387px px;
+.cart-page {
+  width: 50%;
+  height: fit-content;
   float: right;
   font-size: 50px;
-  border: 2px solid black;
+  border: 2px solid #ff0000;
+  padding: 10px;
+  position: fixed;
+  background-color: #fefefe;
+  right: 0;
+  z-index: 2;
 }
 
 /* Global "table" column settings */
+.cart-product {
+  display: flex;
+  width: 100%;
+  margin-left: 2%;
+}
 .cart-product-image {
   float: left;
-  width: 20%;
+  /* width: 20%; */
 }
 .cart-product-details {
-  float: left;
-  width: 37%;
+  /* float: left;
+  width: 37%; */
+  font-size: 2rem;
 }
 .cart-product-price {
   float: left;
   width: 12%;
+  font-size: 2rem;
 }
 .cart-product-quantity {
   float: left;
   width: 10%;
+  font-size: 2rem;
 }
 .cart-product-removal {
   float: left;
@@ -723,6 +744,7 @@ High-res laptop or desktop: 1920 x 1080 */
   float: left;
   width: 12%;
   text-align: right;
+  font-size: 2rem;
 }
 
 h1 {
@@ -731,17 +753,21 @@ h1 {
 
 label {
   color: red;
+  font-size: 2rem;
 }
 
 .cart-shopping-cart {
-  margin-top: -45px;
+  /* margin-top: -45px; */
 }
 
+.cart-column-labels {
+  display: flex;
+  justify-content: end;
+}
 /* Column headers */
 .cart-column-labels label {
   padding-bottom: 15px;
-  margin-bottom: 15px;
-  border-bottom: 1px solid $color-border;
+  /* margin-bottom: 15px; */
 }
 .cart-column-labels .cart-product-image,
 .cart-column-labels .cart-product-details,
@@ -791,6 +817,7 @@ label {
 
 /* Totals section */
 .cart-totals {
+  width: 100%;
 }
 .cart-totals .cart-totals-item {
   float: right;
@@ -808,6 +835,7 @@ label {
   float: right;
   width: 21%;
   text-align: right;
+  font-size: 2rem;
 }
 
 .cart-checkout {
@@ -830,7 +858,8 @@ label {
   .cart-shopping-cart {
     margin: 0;
     padding-top: 20px;
-    border-top: 1px solid $color-border;
+    border-top: 1px solid black;
+    font-size: 2rem;
   }
 
   .cart-column-labels {
