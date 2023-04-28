@@ -120,12 +120,12 @@ const handleCartShow = (cart) => {
   const cartPage = document.querySelector(".cart-list-data");
 
   console.log("cart--->", cart);
-  console.log("cartCount", cart.length);
+  console.log("cartCount", cart?.length);
 
   let subTotalOfProd = 0;
 
   cart.map((cartData, index) => {
-    subTotalOfProd = Number(subTotalOfProd) + Number(cartData.price);
+    subTotalOfProd = Number(subTotalOfProd) + Number(cartData?.price);
 
     const cartProduct = document.querySelector("div");
     cartProduct.classList.add("cart-product");
@@ -148,7 +148,7 @@ const handleCartShow = (cart) => {
             </div>
             <div class="cart-product-price">${cartData.price}</div>
             <div class="cart-product-quantity">
-              <input class='quantity' type="number" value="1" min="1" onchange=${"handleQuantity()"} />
+              <input class='quantity' type="number" value="1" min="1" onchange=handleQuantity(index) />
             </div>
             <div class="cart-product-removal">
               <button class="cart-remove-product">Remove</button>
@@ -172,6 +172,10 @@ const handleCartShow = (cart) => {
   subTotal.innerText = subTotalOfProd;
   gstPrice.innerText = gst;
   grandTotalId.innerText = total;
+
+  const handleQuantity = (index) => {
+    console.log("----index", index);
+  };
 };
 
 {
