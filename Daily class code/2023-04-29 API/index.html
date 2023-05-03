@@ -16,6 +16,12 @@
     <h2>
       Get Countries
       <input type="button" value="click here" onclick="getCountries()" />
+      <input type="button" value="Clear LocalStorage" onclick="clearLocal()" />
+      <input
+        type="button"
+        value="value from LocalStorage"
+        onclick="getLocal()"
+      />
     </h2>
     <div class="countries-data" style="display: flex; flex-wrap: wrap"></div>
 
@@ -32,6 +38,10 @@
 
         countryDiv.innerHTML = `
         ${data.map((country, index) => {
+          localStorage.setItem(
+            `countries_data_name_${index}`,
+            country?.name?.common
+          );
           return `
       <div class="card" style="width: 18rem">
         <img src=${country?.flags?.svg} class="card-img-top" alt=${
@@ -98,6 +108,16 @@
 
       const getCountry = (country) => {
         console.log("country----", country);
+      };
+
+      const clearLocal = () => {
+        localStorage.clear();
+      };
+      const getLocal = () => {
+        const data = localStorage.getItem(
+          `countries_data_name_${(Math.random() * 100).toFixed(0)}`
+        );
+        console.log("data", data);
       };
     </script>
   </body>
