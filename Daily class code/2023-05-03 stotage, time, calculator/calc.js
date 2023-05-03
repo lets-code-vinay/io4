@@ -1,104 +1,26 @@
 const displayValue = document.getElementById("calc-operation");
+const sumValue = document.getElementById("calculation");
+
+const buttons = document.querySelectorAll(".button");
+
 let displayValueString = "";
 
-const getNine = () => {
-  displayValueString = displayValueString + "9";
-
-  getInputValues(displayValueString);
-};
-
-const getEight = () => {
-  displayValueString = displayValueString + "8";
-
-  getInputValues(displayValueString);
-};
-
-const getSeven = () => {
-  displayValueString = displayValueString + "7";
-
-  getInputValues(displayValueString);
-};
-
-const getSix = () => {
-  displayValueString = displayValueString + "6";
-
-  getInputValues(displayValueString);
-};
-
-const getFive = () => {
-  displayValueString = displayValueString + "5";
-
-  getInputValues(displayValueString);
-};
-
-const getFour = () => {
-  displayValueString = displayValueString + "4";
-
-  getInputValues(displayValueString);
-};
-
-const getThree = () => {
-  displayValueString = displayValueString + "3";
-
-  getInputValues(displayValueString);
-};
-
-const getTwo = () => {
-  displayValueString = displayValueString + "2";
-
-  getInputValues(displayValueString);
-};
-
-const getOne = () => {
-  displayValueString = displayValueString + "1";
-
-  getInputValues(displayValueString);
-};
-
-const getZero = () => {
-  displayValueString = displayValueString + "0";
-
-  getInputValues(displayValueString);
-};
-const getMultiplication = () => {
-  displayValueString = displayValueString + "*";
-
-  getInputValues(displayValueString);
-};
-
-const getSubtraction = () => {
-  displayValueString = displayValueString + "-";
-
-  getInputValues(displayValueString);
-};
-
-const getAddition = () => {
-  displayValueString = displayValueString + "+";
-
-  getInputValues(displayValueString);
-};
-
-const getDecimal = () => {
-  displayValueString = displayValueString + ".";
-
-  getInputValues(displayValueString);
-};
-
-const getBack = () => {
-  // displayValueString = displayValueString + ".";
-  // getInputValues(displayValueString);
-};
-
-const getResult = () => {
-  // displayValueString = displayValueString + ".";
-  // getInputValues(displayValueString);
-};
-
-const getAllClear = () => {
-  displayValueString = 0;
-
-  getInputValues(0);
-};
+Array.from(buttons).map((button) => {
+  button.addEventListener("click", (event) => {
+    if (event.target.value == "=") {
+      getEvaluation();
+    } else if (event.target.value == "ac") {
+      displayValueString = "";
+      displayValue.innerText = "0";
+      sumValue.innerText = "0";
+    } else if (event.target.value == "back") {
+      displayValueString = displayValueString.slice(0, -1);
+      displayValue.innerText = displayValueString;
+    } else {
+      getInputValues(event.target.innerText);
+    }
+  });
+});
 
 /**
  * @description Getting values to display
@@ -106,11 +28,23 @@ const getAllClear = () => {
  * @param {String} value
  */
 const getInputValues = (value) => {
-  displayValue.innerText = value;
-
-  localStorage.setItem("calculator_display", value);
+  if (
+    (displayValueString.includes("+") ||
+      displayValueString.includes("-") ||
+      displayValueString.includes("*") ||
+      displayValueString.includes("/") ||
+      displayValueString.includes("=")) &&
+    (value == "+" || value == "-" || value == "*" || value == "/")
+  ) {
+    getEvaluation();
+    return displayValueString;
+  } else {
+    displayValueString = displayValueString + value;
+    displayValue.innerText = displayValueString;
+  }
 };
 
-const valueFromLocalStorage = localStorage.getItem("calculator_display");
-
-console.log("valueFromLocalStorage", valueFromLocalStorage);
+const getEvaluation = () => {
+  const sum = eval(displayValueString);
+  sumValue.innerText = sum;
+};

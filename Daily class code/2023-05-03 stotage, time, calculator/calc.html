@@ -18,30 +18,26 @@
 
       <!-- Calculator Buttons -->
       <div class="calc-button-row">
-        <button class="ac" id="all-clear" onclick="getAllClear()">AC</button>
-        <button class="opt">&#43;&#47;&#8722;</button>
-        <button class="opt">&#37;</button>
-        <button class="opt">&#247;</button>
-        <button id="button-7" onclick="getSeven()">7</button>
-        <button id="button-8" onclick="getEight()">8</button>
-        <button id="button-9" onclick="getNine()">9</button>
-        <button class="opt" id="multiply" onclick="getMultiplication()">
-          &#215;
-        </button>
-        <button id="button-4" onclick="getFour()">4</button>
-        <button id="button-5" onclick="getFive()">5</button>
-        <button id="button-6" onclick="getSix()">6</button>
-        <button class="opt" id="substract" onclick="getSubtraction()">
-          &#8722;
-        </button>
-        <button id="button-1" onclick="getOne()">1</button>
-        <button id="button-2" onclick="getTwo()">2</button>
-        <button id="button-3" onclick="getThree()">3</button>
-        <button class="opt" id="add" onclick="getAddition()">&#43;</button>
-        <button id="button-0" onclick="getZero()">0</button>
-        <button id="button-dec" onclick="getDecimal()">.</button>
-        <button id="back" onclick="getBack()">&#9003;</button>
-        <button class="opt" id="equal" onclick="getResult()">&#61;</button>
+        <button class="button ac" value="ac">AC</button>
+        <button class="button opt" disabled>&#43;&#47;&#8722;</button>
+        <button class="button opt" disabled>&#37;</button>
+        <button class="button opt" value="/">/</button>
+        <button class="button" value="7">7</button>
+        <button class="button" value="8">8</button>
+        <button class="button" value="9">9</button>
+        <button class="button" value="*" id="multiply">*</button>
+        <button class="button" value="4">4</button>
+        <button class="button" value="5">5</button>
+        <button class="button" value="6">6</button>
+        <button class="button" value="-" id="substract">-</button>
+        <button class="button" value="1">1</button>
+        <button class="button" value="2">2</button>
+        <button class="button" value="3">3</button>
+        <button class="button" value="+">+</button>
+        <button class="button" value="0">0</button>
+        <button class="button" value=".">.</button>
+        <button class="button" value="back">&#9003;</button>
+        <button class="button" value="=" id="equal">=</button>
       </div>
     </div>
     <script src="./calc.js"></script>
