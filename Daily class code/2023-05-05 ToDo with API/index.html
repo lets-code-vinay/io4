@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>ToDo</title>
+  </head>
+  <body>
+    <h1>To Do Application</h1>
+    <input type="text" placeholder="Enter you To Do" id="todo-input" value="" />
+    <input
+      type="checkbox"
+      placeholder="Enter you To Do"
+      id="todo-isCompleted"
+      value=""
+      onchange="onCheckboxClick()"
+    />
+    <label>Is Completed</label>
+
+    <div class="error-msg"></div>
+
+    <button class="add-btn" id="add-btn">Add</button>
+    <button class="get-btn" id="get-btn">Get</button>
+
+    <ol class="to-do-lists"></ol>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Sr.No</th>
+          <th>ID</th>
+          <th>User ID</th>
+          <th>ToDo</th>
+          <th>Is completed</th>
+        </tr>
+      </thead>
+      <tbody id="table-body"></tbody>
+    </table>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
