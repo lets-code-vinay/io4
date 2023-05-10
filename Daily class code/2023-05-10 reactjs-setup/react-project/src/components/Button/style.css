@@ -1,0 +1,9 @@
+.basic-button {
+  background-color: aqua;
+  border: 1px solid black;
+  border-radius: 5px;
+  height: 50px;
+  width: 150px;
+  padding: 5px;
+  color: blue;
+}
