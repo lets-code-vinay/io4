@@ -1,14 +1,27 @@
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
-import Button from "./components/Button/index.js";
+
+import Homepage from "./pages/Homepage";
+import Products from "./pages/Products";
+import About from "./pages/About";
 
 function App() {
   return (
     <div className="App">
-      <Button buttonName={"Login"} />
-      <Button buttonName={"Logout"} />
-      <Button />
-      <Button buttonName={"Submit"} />
-      <Button buttonName={"Clear"} />
+      {/* 
+        --- For Routing---
+      1. BrowserRouter-
+      2. Routes -
+      3. Route
+      */}
+
+      <BrowserRouter>
+        <Routes>
+          <Route path="/homepage" element={<Homepage />}></Route>
+          <Route path="/products" element={<Products />}></Route>
+          <Route path="/about" element={<About />}></Route>
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }

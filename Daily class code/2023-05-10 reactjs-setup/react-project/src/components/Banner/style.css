@@ -1,0 +1,75 @@
+/* -- banner section start*/
+.banner-section {
+  background-color: #fef9f5;
+}
+
+.banner-section img {
+  background-color: transparent;
+}
+
+.banner-section .banner {
+  background-color: #fef9f5;
+  height: 50vh;
+  width: 80%;
+  margin: 1% auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.banner-section .banner {
+  padding: 0 5%;
+}
+.banner-section .banner .banner-left,
+.banner-section .banner .banner-right {
+  width: 50%;
+}
+
+.banner-section .banner .banner-left {
+  position: relative;
+}
+
+.banner-section .banner .banner-left .shoe-background {
+  position: absolute;
+  background-color: #757a80;
+  border-radius: 50%;
+  width: 48%;
+  height: 329px;
+  bottom: -46%;
+  left: 10%;
+}
+
+.banner-section .banner .banner-right {
+  font-size: 8rem;
+}
+.banner-section .banner .banner-right h2:first-child {
+  color: red;
+}
+
+.banner-section .banner .banner-right h2:last-child {
+  color: black;
+}
+
+.banner-section .banner .banner-right p {
+  font-size: 2rem;
+  font-family: "Kanit", sans-serif;
+}
+/* -- banner section ends*/
+
+.buy-button {
+  background-color: #3c4ff2;
+  color: white;
+  border-radius: 6px;
+  border: none;
+  padding: 1.5%;
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-family: "Kanit", sans-serif;
+  font-family: sans-serif;
+}
+.buy-button i {
+  background-color: #3c4ff2;
+  margin-right: 5px;
+  font-size: 2rem;
+}

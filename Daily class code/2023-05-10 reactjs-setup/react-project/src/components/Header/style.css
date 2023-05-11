@@ -1,0 +1,56 @@
+header {
+  background-color: #fef9f5;
+  height: 50px;
+  box-shadow: 0 2px 5px 2px #e0dad7;
+}
+
+header nav {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-left {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 5rem;
+  font-weight: 800;
+}
+
+.nav-left p span:first-child {
+  color: #fe8366;
+}
+.nav-left p span:last-child {
+  color: #222222;
+}
+
+.brand-title {
+  text-transform: uppercase;
+}
+
+.nav-right ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.nav-right ul li {
+  font-family: "Kanit", sans-serif;
+  list-style: none;
+  font-size: 2rem;
+  margin-right: 15px;
+  color: #908f8b;
+}
+
+.mobile-menus .hamburger {
+  font-size: 3rem;
+  color: #908f8b;
+  display: none;
+}

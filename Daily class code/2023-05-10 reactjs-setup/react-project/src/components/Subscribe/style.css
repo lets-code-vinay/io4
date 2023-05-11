@@ -1,0 +1,46 @@
+.subscribe-section {
+  background-color: #e4e5e4;
+  padding-bottom: 3%;
+}
+.subscribe-section .subscribe {
+  width: 80%;
+  margin: auto;
+  border-radius: 20px;
+  background-color: #fffefe;
+}
+.subscribe-section .subscribe h2 {
+  font-size: 3rem;
+  color: #373858;
+  width: fit-content;
+  margin: auto;
+  padding: 2% 0;
+  font-family: "Kanit", sans-serif;
+  font-weight: 600;
+}
+
+.subscribe-section .subscribe .subscribe-input {
+  width: 80%;
+  margin: auto;
+  padding-bottom: 4%;
+}
+.subscribe-section .subscribe .subscribe-input input {
+  width: 80%;
+  height: 50px;
+  margin: auto;
+  font-size: 2rem;
+  padding: 0 2%;
+  border-radius: 10px 0 0 10px;
+  border: 1px solid #ced4da;
+}
+
+.subscribe-section .subscribe .subscribe-input button {
+  width: 15%;
+  height: 50px;
+  margin: auto;
+  font-size: 2rem;
+  padding: 0 2%;
+  background-color: #3d4ff3;
+  border-radius: 0 10px 10px 0;
+  border: none;
+  color: white;
+}

@@ -1,0 +1,16 @@
+.footer {
+  background-color: #f9f8fa;
+  padding: 2% 0;
+}
+.footer .footer-text {
+  width: fit-content;
+  margin: auto;
+  font-size: 2rem;
+  color: #25292d;
+  font-family: "Kanit", sans-serif;
+}
+
+.footer .footer-text span {
+  font-size: 2rem;
+  color: #fdb2a3;
+}
