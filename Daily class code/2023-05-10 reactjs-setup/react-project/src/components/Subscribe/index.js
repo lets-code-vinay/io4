@@ -1,4 +1,5 @@
 import React from "react";
+import CustomButton from "../CustomButton";
 import "./style.css";
 
 class Subscribe extends React.Component {
@@ -11,7 +12,12 @@ class Subscribe extends React.Component {
             <h2>Subscribe to our New Letter</h2>
             <div className="subscribe-input">
               <input type="text" placeholder="Enter your Email" />
-              <button className="pointer">Subscribe</button>
+              {/* <button className="subscribe-button pointer">Subscribe</button> */}
+              <CustomButton
+                buttonName={"Subscribe"}
+                buttonClass={"subscribe-button"}
+                iconName=""
+              />
             </div>
           </div>
         </section>

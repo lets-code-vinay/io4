@@ -55,21 +55,3 @@
   font-size: 2rem;
   font-family: "Kanit", sans-serif;
 }
-/* -- banner section ends*/
-
-.buy-button {
-  background-color: #3c4ff2;
-  color: white;
-  border-radius: 6px;
-  border: none;
-  padding: 1.5%;
-  font-size: 2rem;
-  text-transform: uppercase;
-  font-family: "Kanit", sans-serif;
-  font-family: sans-serif;
-}
-.buy-button i {
-  background-color: #3c4ff2;
-  margin-right: 5px;
-  font-size: 2rem;
-}

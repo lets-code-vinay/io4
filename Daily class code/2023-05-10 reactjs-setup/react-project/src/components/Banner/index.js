@@ -1,7 +1,8 @@
 import React from "react";
 import Banner_shoes from "../../assets/images/shoe10.png";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCoffee } from "@fortawesome/fontawesome-free-solid";
+import { FaShoppingCart } from "react-icons/fa";
+import { BsFillCartCheckFill } from "react-icons/bs";
+import CustomButton from "../../components/CustomButton";
 
 import "./style.css";
 
@@ -29,11 +30,15 @@ class Banner extends React.Component {
                 every time you walk. Nike is one of the most popular brands of
                 footwear
               </p>
-              <button className="buy-button pointer">
-                {/* <i className="fa-solid fa-cart-shopping"></i> */}
-                <FontAwesomeIcon icon={faCoffee} />
+              {/* <button className="buy-button pointer">
+                <BsFillCartCheckFill className="icons cart-icon" />
                 Buy Now
-              </button>
+              </button> */}
+              <CustomButton
+                buttonClass={"buy-button"}
+                buttonName={"Buy Now"}
+                iconName={"cartIcon"}
+              />
             </div>
           </div>
         </section>

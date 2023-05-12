@@ -7,3 +7,8 @@
 .product-rotation-30deg {
   transform: rotate(-30deg);
 }
+
+.icons {
+  font-size: 2rem;
+  margin-right: 0.5rem;
+}

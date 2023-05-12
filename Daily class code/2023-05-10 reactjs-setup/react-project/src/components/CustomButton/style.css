@@ -1,0 +1,40 @@
+.basic-button {
+  background-color: aqua;
+  border: 1px solid black;
+  border-radius: 5px;
+  height: 50px;
+  width: 150px;
+  padding: 5px;
+  color: blue;
+}
+
+/* -- banner section ends*/
+
+.buy-button {
+  background-color: #3c4ff2;
+  color: white;
+  border-radius: 6px;
+  border: none;
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-family: "Kanit", sans-serif;
+  font-family: sans-serif;
+  padding: 15px;
+}
+.buy-button i {
+  background-color: #3c4ff2;
+  margin-right: 5px;
+  font-size: 2rem;
+}
+/* --- Subscribe button --- */
+.subscribe-button {
+  width: 15%;
+  height: 50px;
+  margin: auto;
+  font-size: 2rem;
+  padding: 0 2%;
+  background-color: #3d4ff3;
+  border-radius: 0 10px 10px 0;
+  border: none;
+  color: white;
+}

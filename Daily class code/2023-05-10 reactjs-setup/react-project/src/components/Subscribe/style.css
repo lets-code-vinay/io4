@@ -32,15 +32,3 @@
   border-radius: 10px 0 0 10px;
   border: 1px solid #ced4da;
 }
-
-.subscribe-section .subscribe .subscribe-input button {
-  width: 15%;
-  height: 50px;
-  margin: auto;
-  font-size: 2rem;
-  padding: 0 2%;
-  background-color: #3d4ff3;
-  border-radius: 0 10px 10px 0;
-  border: none;
-  color: white;
-}

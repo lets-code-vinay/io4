@@ -1,0 +1,57 @@
+.third-section {
+  background-color: #e4e5e4;
+}
+
+.third-section .third-div {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 3% 0;
+}
+
+.third-section .third-div .left-side {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 475px;
+}
+
+.third-section .third-div .left-side .steps {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4%;
+  background-color: #fffefe;
+  border-radius: 20px;
+}
+
+.third-section .third-div .left-side .steps div {
+  margin-left: 4%;
+}
+.third-section .third-div .left-side .steps .step-title {
+  font-size: 3rem;
+  font-family: "Kanit", sans-serif;
+  color: #373858;
+  font-weight: 500;
+}
+
+.third-section .third-div .left-side .steps .step-text {
+  font-size: 1.8rem;
+  font-family: "Kanit", sans-serif;
+  color: #202429;
+}
+
+.third-section .third-div .right-side {
+  width: 60%;
+}
+
+.third-section .third-div .right-side img {
+  height: 558px;
+  width: 100%;
+}
