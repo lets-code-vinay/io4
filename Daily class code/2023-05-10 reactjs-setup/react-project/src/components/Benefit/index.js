@@ -1,8 +1,6 @@
 import React from "react";
 
 const Benefit = (props) => {
-  console.log("props benefit", props);
-
   const { benefitClass, img, alt, title, description, uniqueKey } = props || {};
   return (
     <>

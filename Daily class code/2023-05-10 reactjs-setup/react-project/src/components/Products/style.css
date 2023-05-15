@@ -1,0 +1,180 @@
+.products-section {
+  background-color: #e4e4e5;
+  width: 100%;
+  height: auto;
+}
+.products-section .products {
+  width: 80%;
+  margin: auto;
+}
+
+.products-section .products h2 {
+  font-size: 4rem;
+  font-family: "Kanit", sans-serif;
+  color: #363958;
+  padding: 1.2% 0;
+}
+.products-section .products .products-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.products-section .products .products-container .product-card {
+  background-color: #fffefe;
+  width: 30%;
+  padding: 1%;
+  border-radius: 20px;
+  height: 630px;
+  margin-top: 1%;
+}
+
+.products-section
+  .products
+  .products-container
+  .product-card
+  .product-image-container {
+  background-color: rgb(240, 241, 240);
+  width: 100%;
+  border-radius: 20px;
+  height: 350px;
+}
+
+.products-section
+  .products
+  .products-container
+  .product-card
+  .product-image-container
+  img:hover {
+  transform: scale(1.05);
+  border-radius: 15px;
+}
+.products-section
+  .products
+  .products-container
+  .product-card
+  .product-image-container
+  .product-image {
+  height: 100%;
+}
+
+.products-section .products .product-card .product-captions .product-title {
+  font-size: 2.5rem;
+  font-family: "Kanit", sans-serif;
+  color: #363958;
+  font-weight: 500;
+
+  word-break: break-all;
+  overflow: hidden;
+  height: 40px;
+  text-overflow: ellipsis;
+  width: 100%;
+}
+
+.products-section .products .product-card .product-captions .product-brand {
+  font-size: 1.8rem;
+  font-family: "Kanit", sans-serif;
+  color: #2f3462;
+  font-weight: 500;
+}
+
+.products-section
+  .products
+  .product-card
+  .product-captions
+  .product-brand
+  span {
+  font-size: 2rem;
+  font-family: "Kanit", sans-serif;
+  font-weight: 600;
+  text-align: center;
+  color: #da1212;
+}
+
+.products-section .products .product-card .product-captions .product-details {
+  font-size: 1.8rem;
+  font-family: "Kanit", sans-serif;
+  color: #46484c;
+
+  width: 100%;
+  word-break: break-all;
+  text-overflow: clip;
+  height: 48px;
+  white-space: normal;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.products-section .products .product-card .price-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1% 0 1% 0;
+}
+
+.products-section .products .product-card .price-section .price {
+  font-size: 2.2rem;
+  font-family: "Kanit", sans-serif;
+  font-weight: 600;
+  text-align: center;
+  color: #fe8366;
+}
+
+.products-section .products .product-card .price-section .stock {
+  font-size: 2rem;
+  font-family: "Kanit", sans-serif;
+  font-weight: 600;
+  text-align: center;
+  color: #fe8366;
+}
+.products-section .products .product-card .price-section .stock span {
+  font-size: 2.2rem;
+  font-family: "Kanit", sans-serif;
+  font-weight: 600;
+  text-align: center;
+  color: #3a12da;
+}
+.products-section .products .product-card .price-section .discount {
+  font-size: 2rem;
+  font-family: "Kanit", sans-serif;
+  font-weight: 400;
+  text-align: center;
+  color: #fe8366;
+}
+.products-section .products .product-card .price-section .discount div {
+  font-size: 2rem;
+  font-family: "Kanit", sans-serif;
+  font-weight: 400;
+  text-align: center;
+  color: white;
+  background-color: #cc0d38;
+  padding: 1%;
+  width: 100px;
+}
+
+.products-section .products .product-card .rating {
+  font-size: 2.2rem;
+  font-family: "Kanit", sans-serif;
+  font-weight: 600;
+  text-align: left;
+  color: #3a12da;
+  margin: 1% 0 1% 0;
+}
+
+.button-group {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0% 0 1% 0;
+}
+
+.shoes-red {
+  margin-top: -10%;
+}
+
+.product-image-black {
+  margin-top: 14%;
+}

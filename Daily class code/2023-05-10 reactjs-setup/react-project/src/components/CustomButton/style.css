@@ -11,15 +11,15 @@
 /* -- banner section ends*/
 
 .buy-button {
-  background-color: #3c4ff2;
+  background-color: #fea41d;
   color: white;
   border-radius: 6px;
   border: none;
-  font-size: 2rem;
+  font-size: 1.5rem;
   text-transform: uppercase;
   font-family: "Kanit", sans-serif;
   font-family: sans-serif;
-  padding: 15px;
+  padding: 12px;
 }
 .buy-button i {
   background-color: #3c4ff2;
@@ -37,4 +37,16 @@
   border-radius: 0 10px 10px 0;
   border: none;
   color: white;
+}
+
+.add-to-cart {
+  background-color: #fed815;
+  color: white;
+  border-radius: 6px;
+  border: none;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  font-family: "Kanit", sans-serif;
+  font-family: sans-serif;
+  padding: 12px;
 }
