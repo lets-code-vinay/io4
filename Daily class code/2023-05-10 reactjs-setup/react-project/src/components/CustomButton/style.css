@@ -50,3 +50,35 @@
   font-family: sans-serif;
   padding: 12px;
 }
+
+/* 
+// Temporary
+function updateValues(array1, array2, condition) {
+  return array1.map(obj1 => {
+    const obj2 = array2.find(obj => obj.uniqueIdentifier === obj1.uniqueIdentifier); // Modify the condition to match your requirements
+
+    if (obj2 && condition) {
+      return {
+        ...obj1,
+        value: obj2.newValue // Update the value property as needed
+      };
+    }
+
+    return obj1;
+  });
+}
+
+// Example usage
+const array1 = [
+  { uniqueIdentifier: 1, value: 10 },
+  { uniqueIdentifier: 2, value: 20 },
+  { uniqueIdentifier: 3, value: 30 }
+];
+
+const array2 = [
+  { uniqueIdentifier: 1, newValue: 100 },
+  { uniqueIdentifier: 3, newValue: 300 }
+];
+
+const updatedArray = updateValues(array1, array2, true);
+console.log(updatedArray); */
