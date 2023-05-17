@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./style.css";
 import axios from "axios";
 import CustomButton from "../CustomButton";
+import SimpleSpinner from "../SimpleLoader";
 
 // React-- Hooks
 // Hooks are used in --> Functional components
@@ -11,6 +12,7 @@ import CustomButton from "../CustomButton";
 const Products = () => {
   const [data, setData] = useState([]);
   const [status, setStatus] = useState(0);
+  const [isLoading, setLoader] = useState(false);
 
   const api = "https://dummyjson.com/products";
 
@@ -49,6 +51,7 @@ const Products = () => {
 
   // 3rd method
   const fetchProducts = async () => {
+    setLoader(true);
     try {
       const result = await axios.get(api);
       const { data, status } = result || {};
@@ -56,8 +59,11 @@ const Products = () => {
 
       setData(products);
       setStatus(status);
+      setLoader(false);
     } catch (err) {
       console.error("---> ", err);
+
+      setLoader(false);
     }
   };
 
@@ -73,6 +79,7 @@ const Products = () => {
 
   return (
     <>
+      {isLoading && <SimpleSpinner />}
       <section class="products-section">
         <div class="products">
           <h2>Products</h2>
