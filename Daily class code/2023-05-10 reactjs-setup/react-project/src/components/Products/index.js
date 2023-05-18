@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import ReactStars from "react-rating-stars-component";
 import "./style.css";
 import axios from "axios";
 import CustomButton from "../CustomButton";
@@ -77,45 +78,59 @@ const Products = () => {
   // console.log(" status state", status);
   // console.log("data state", data);
 
+  const starRating = (originalRating) => (rating) => {
+    console.log("rating", rating);
+    return originalRating;
+  };
+
   return (
     <>
       {isLoading && <SimpleSpinner />}
-      <section class="products-section">
-        <div class="products">
+      <section className="products-section">
+        <div className="products">
           <h2>Products</h2>
-          <div class="products-container">
+          <div className="products-container">
             {data.map((product, index) => {
-              console.log(index, "product", product);
               return (
-                <div class="product-card" id="id" key={index}>
-                  <div class="product-image-container">
+                <div className="product-card" id="id" key={index}>
+                  <div className="product-image-container">
                     <img
                       src={product.thumbnail}
                       alt="shoes 1"
                       width="100%"
-                      class=" product-image"
+                      className=" product-image"
                     />
                   </div>
 
-                  <div class="product-captions">
-                    <h5 class="product-title">{product.title}</h5>
-                    <h6 class="product-brand">
+                  <div className="product-captions">
+                    <h5 className="product-title">{product.title}</h5>
+                    <h6 className="product-brand">
                       Brand: <span>{product.brand}</span>
                     </h6>
 
-                    <p class="product-details">{product.description}</p>
+                    <p className="product-details">{product.description}</p>
                   </div>
 
-                  <div class="price-section">
-                    <span class="price">${product.price}</span>
-                    <span class="stock">
+                  <div className="price-section">
+                    <span className="price">${product.price}</span>
+                    <span className="stock">
                       Stock: <span>{product.stock}</span>
                     </span>
-                    <span class="discount">
+                    <span className="discount">
                       <div>{product.discountPercentage}% off</div>
                     </span>
                   </div>
-                  <div className="rating">Rating: {product.rating}</div>
+                  <div className="rating">
+                    Rating:
+                    <ReactStars
+                      count={6}
+                      size={20}
+                      isHalf={true}
+                      activeColor="yellow"
+                      value={product.rating}
+                      onChange={starRating(product.rating)}
+                    />
+                  </div>
 
                   <div className="button-group">
                     <CustomButton

@@ -162,6 +162,7 @@
   text-align: left;
   color: #3a12da;
   margin: 1% 0 1% 0;
+  display: flex;
 }
 
 .button-group {

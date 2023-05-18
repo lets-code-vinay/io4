@@ -4,8 +4,10 @@ import { BsGoogle } from "react-icons/bs";
 import { FaFacebookF } from "react-icons/fa";
 import axios from "axios";
 import SimpleSpinner from "../../components/SimpleLoader";
+import { ERROR_MESSAGES, SUCCESS_MESSAGES } from "../../Configs/messages";
 
 import "./style.css";
+import Notifications from "../../components/Notifications";
 
 const Login = () => {
   const navigate = useNavigate();
@@ -14,6 +16,7 @@ const Login = () => {
   const [password, setPassword] = useState("");
   const [isSubmit, setSubmit] = useState(false);
   const [isLoading, setLoading] = useState(false);
+  const [successRes, setSuccess] = useState(false);
 
   const handleChange = (inputType) => (event) => {
     setSubmit(false);
@@ -46,17 +49,18 @@ const Login = () => {
 
       const response = await axios.post(api, userData);
 
-      console.log(response);
-
       // To set Data in localStorage
       localStorage.setItem("user", JSON.stringify(userData));
       localStorage.setItem("token", response.data.token);
+      if (response.status == 200) setSuccess(true);
 
-      // navigate to homepage
-      if (email.length > 3 && password.length > 5) {
-        navigate("/homepage");
-      }
-      setLoading(false);
+      setTimeout(() => {
+        // navigate to homepage
+        if (email.length > 3 && password.length > 5) {
+          navigate("/homepage");
+        }
+        setLoading(false);
+      }, 2000);
     } catch (error) {
       console.error("error in login api", error);
       setLoading(false);
@@ -65,16 +69,42 @@ const Login = () => {
 
   return (
     <>
-      {isSubmit && !email && alert("Please Enter a valid user name")}
-      {isSubmit && !password && alert("Please Enter a valid password")}
-      {isSubmit &&
-        email.length <= 3 &&
-        alert("Please Enter user name greater than 3 characters")}
-      {isSubmit &&
-        password.length <= 5 &&
-        alert("Please Enter password greater than 5 characters")}
-
       <div className="login-page">
+        {isSubmit && successRes && (
+          <Notifications
+            notificationType={"success"}
+            primaryText={SUCCESS_MESSAGES.login_success}
+            secondaryText={""}
+          />
+        )}
+        {isSubmit && !email && (
+          <Notifications
+            notificationType={"error"}
+            primaryText={ERROR_MESSAGES.invalid_email}
+            secondaryText={""}
+          />
+        )}
+        {isSubmit && !password && (
+          <Notifications
+            notificationType={"error"}
+            primaryText={ERROR_MESSAGES.invalid_password}
+            secondaryText={""}
+          />
+        )}
+        {isSubmit && email.length <= 3 && (
+          <Notifications
+            notificationType={"error"}
+            primaryText={ERROR_MESSAGES.email_length}
+            secondaryText={""}
+          />
+        )}
+        {isSubmit && password.length <= 5 && (
+          <Notifications
+            notificationType={"error"}
+            primaryText={ERROR_MESSAGES.password_length}
+            secondaryText={""}
+          />
+        )}
         {isLoading && isSubmit && <SimpleSpinner />}
 
         <div className="background">
